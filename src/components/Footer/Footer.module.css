@@ -28,8 +28,7 @@
   width: 4.5px;
   height: 6px;
   fill: var(--macaroni-and-cheese);
-  /* object-fit: contain;
-  background-color: var(--macaroni-and-cheese); */
+  /* object-fit: contain; */
 }
 
 .text {
