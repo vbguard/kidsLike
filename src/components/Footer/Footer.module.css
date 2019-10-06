@@ -1,3 +1,8 @@
+.footer {
+  text-align: end;
+  padding-right: 30px;
+}
+
 .KidsLike {
   width: 23.5px;
   height: 4px;
@@ -11,13 +16,20 @@
   letter-spacing: 0.77px;
   text-align: left;
   color: var(--blue-grey);
+  text-decoration: none;
+  transition: color 0.2s ease-out 0.1s;
+}
+
+.KidsLike:hover {
+  color: var(--macaroni-and-cheese);
 }
 
 .icon {
   width: 4.5px;
   height: 6px;
-  object-fit: contain;
-  background-color: var(--macaroni-and-cheese);
+  fill: var(--macaroni-and-cheese);
+  /* object-fit: contain;
+  background-color: var(--macaroni-and-cheese); */
 }
 
 .text {
