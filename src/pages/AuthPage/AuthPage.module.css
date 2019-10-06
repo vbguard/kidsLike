@@ -39,7 +39,7 @@
   border-radius: 6px;
   box-shadow: 0px 4px 6px 0 var(--black-15);
   background-color: var(--macaroni-and-cheese);
-  border-color: var(--white);
+  border: none;
   display: block;
   margin: 0 auto;
   padding: 0;
@@ -48,7 +48,6 @@
 
 .btn:hover {
   color: var(--macaroni-and-cheese);
-  border-color: var(--macaroni-and-cheese);
   background-color: var(--white);
 }
 
