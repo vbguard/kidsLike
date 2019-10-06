@@ -6,11 +6,10 @@ import Icon from '../Icon/Icon';
 const Footer = () => (
   <footer className={css.footer}>
     <Link to="/" className={css.KidsLike}>
-      KidsLike
+      KidsLike <Icon icon="Logo" className={css.icon} />
     </Link>
-    <Icon icon="Logo" className={css.icon} />
-
-    <span className={css.text}> | Робимо життя батьків і дітей ізі | 2019</span>
+    <span className={(css.text, css.borders)}>Робимо життя батьків і дітей ізі</span>
+    <span className={css.text}>2019</span>
   </footer>
 );
 
