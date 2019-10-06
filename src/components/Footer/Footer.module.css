@@ -1,0 +1,36 @@
+.KidsLike {
+  width: 23.5px;
+  height: 4px;
+  object-fit: contain;
+  font-family: Montserrat;
+  font-size: 4.5px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.33;
+  letter-spacing: 0.77px;
+  text-align: left;
+  color: var(--blue-grey);
+}
+
+.icon {
+  width: 4.5px;
+  height: 6px;
+  object-fit: contain;
+  background-color: var(--macaroni-and-cheese);
+}
+
+.text {
+  width: 102px;
+  height: 5px;
+  object-fit: contain;
+  font-family: Montserrat;
+  font-size: 4.5px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.33;
+  letter-spacing: 0.77px;
+  text-align: left;
+  color: var(--blue-grey);
+}
