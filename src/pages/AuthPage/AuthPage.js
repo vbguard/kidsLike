@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Login = () => (
   <>
@@ -8,11 +8,6 @@ const Login = () => (
   </>
 );
 
-const AuthPage = () => (
-  <Switch>
-    <Route path="/" render={() => <Login />} />
-    <Route path="/register" render={() => <h1>Register</h1>} />
-  </Switch>
-);
+const AuthPage = () => <Login />;
 
 export default AuthPage;

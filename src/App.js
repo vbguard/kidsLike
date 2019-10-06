@@ -7,8 +7,8 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <Switch>
-      <Route path="/" components={<AuthPage />} />
-      <Route path="/footer" components={<Footer />} />
+      <Route exact path="/" components={AuthPage} />
+      <Route path="/footer" components={Footer} />
     </Switch>
   );
 }
