@@ -1,3 +1,19 @@
 :root {
-  --sample: #000000
+  --black: #000000;
+  --macaroni-and-cheese: #efbb43;
+  --black-15: rgba(29, 29, 27, 0.15);
+  --white: #ffffff;
+  --blue-grey: #858598;
+  --apple: #8ec63f;
+  --off-yellow: #f5d53b;
+  --clay-brown-31: rgba(178, 138, 61, 0.31);
+  --macaroni-and-cheese-two: #ecb146;
+  --white-54: rgba(255, 255, 255, 0.54);
+  --very-light-pink: #f1f1f1;
+  --copper-27: rgba(165, 112, 36, 0.27);
+  --azure: #27aae2;
+  --watermelon: #ff4b64;
+  --light-olive-green: #9ecb45;
+  --off-white: #fdf8ed;
+  --white-two: #fafafa;
 }
