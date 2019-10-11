@@ -6,7 +6,7 @@ import AuthPage from './pages/AuthPage/AuthPage';
 function App() {
   return (
     <Switch>
-      <Route path="/" components={<AuthPage />} />
+      <Route exact path="/" component={AuthPage} />
     </Switch>
   );
 }
