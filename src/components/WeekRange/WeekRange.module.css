@@ -1,0 +1,12 @@
+.text {
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 500;
+  }
+  
+  @media (min-width >= 1280) {
+    .text {
+      font-size: 18px;
+    }
+  }
+  
