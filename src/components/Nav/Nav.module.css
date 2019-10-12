@@ -34,7 +34,7 @@
 
   .nav {
     margin: 0;
-    width: 500px;
+    width: 400px;
     height: 80px;
   display: flex;
   justify-content: space-between;
@@ -63,10 +63,10 @@
   position: absolute;
   opacity: 0.2;
   background-color: var(--blue-grey);
-  width: 0.5px;
+  width: 1px;
   height: 90%;
   bottom: 0;
-  left:-25px; 
+  left:-20px; 
   }
 
   .navLinkBorders::after {
@@ -74,10 +74,10 @@
   position: absolute;
   opacity: 0.2;
   background-color: var(--blue-grey);
-  width: 0.5px;
+  width: 1px;
   height: 90%;
   bottom: 0;
-  right:-25px;
+  right:-20px;
  
 
   }
@@ -89,6 +89,10 @@
 
 @media screen and (min-width: 1280px) {
   
+
+  .nav {
+    width: 500px;
+  }
   .navLink,
   .navLinkBorders {
     font-weight: 500;

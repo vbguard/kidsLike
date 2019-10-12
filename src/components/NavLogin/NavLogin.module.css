@@ -6,3 +6,78 @@
     right: 18px;
 }
 
+
+.container {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    margin-top: 38px;
+}
+.burger {
+    width: 65px;
+    height: 20px;
+    object-fit: contain;
+  fill: #18191d;
+}
+
+.user {
+    text-decoration: none;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 0.18px;
+    text-align: right;
+    color: var(--blue-grey);
+}
+
+.img {
+    display: none;
+}
+
+
+@media screen and (min-width:768px) {
+    
+    .container {
+      justify-content: space-between;
+      margin-top: 30px;
+      width: 65px;
+      align-items: center;
+    }
+    .burger {
+        display: none;
+    }
+
+    .user {
+        text-align: left;
+      
+    }
+    .img {
+        display: unset;
+        object-fit: contain;
+        width: 23px;
+        height: 23px;
+    }       
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        width: 120px;
+        justify-content: space-between;
+        margin-top: 11px;
+    }
+    .user {
+        font-size: 16px;
+    }
+    .img {
+      
+        width: 50px;
+        height: 50px;
+    }       
+}
