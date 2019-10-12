@@ -1,10 +1,10 @@
-import React from 'react';
+import React from './node_modules/react';
 import * as Icons from '../../assets/icons';
 
 const Icon = ({ icon, ...rest }) => {
-  let Svg = Icons[icon]
+  const Svg = Icons[icon];
 
-  return <Svg {...rest}/>;
+  return <Svg {...rest} />;
 };
 
 export default Icon;

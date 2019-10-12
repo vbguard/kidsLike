@@ -1,0 +1,81 @@
+
+
+.container {
+    width: 320px;
+    height: 100vh;
+  object-fit: contain;
+  background-color: var(--macaroni-and-cheese);
+  padding: 0 10px;
+  margin: 0 auto;
+  position: relative;
+  
+}
+
+.logoIcon 
+ {
+    width: 49px;
+    height: 18px;
+    object-fit: contain;
+   margin-top: 18px;
+   fill: white;
+ }
+
+
+.link {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: 0.64px;
+  text-align: left;
+  color: var(--black);
+  text-decoration: none;
+  margin-top: 18px;
+  margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 768px;
+        height: 80px;
+        display: flex;
+        flex-direction: row;  
+        justify-content: space-between;
+        box-shadow: 1px 1.7px 4px 0 rgba(29, 29, 27, 0.1);
+  background-color: var(--white); 
+ 
+    }
+
+.link {
+    display: flex;
+   width: 130px;
+  font-size: 16px;
+  margin-top: 0;
+  height: 80px;
+  align-items: center;
+
+}
+
+.logoIcon {
+    fill: var(--macaroni-and-cheese);
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+}
+
+@media (min-width: 1280px) {
+    .container {
+        width: 1280px;
+      justify-content: space-between;
+    }
+
+    .link {
+        font-size: 18px;
+    }
+
+    
+    
+}
