@@ -13,7 +13,7 @@ const Nav = () => (
       </NavLink>
     </li>
     <li>
-      <NavLink to="*" className={styles.navLink} activeStyle={activeStyle}>
+      <NavLink to="*" className={styles.navLinkBorders} activeStyle={activeStyle}>
         Планування
       </NavLink>
     </li>
