@@ -9,12 +9,12 @@
 
 .container {
     display: flex;
-    width: 100px;
+    width: 90px;
     justify-content: space-between;
     margin-top: 38px;
 }
 .burger {
-    width: 65px;
+    width: 40px;
     height: 20px;
     object-fit: contain;
   fill: #18191d;
@@ -33,7 +33,7 @@
     font-stretch: normal;
     line-height: 1.33;
     letter-spacing: 0.18px;
-    text-align: right;
+    text-align: left;
     color: var(--blue-grey);
 }
 
