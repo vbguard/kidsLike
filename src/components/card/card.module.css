@@ -1,0 +1,34 @@
+.task {
+    width: 140px;
+    height: 130px;
+    object-fit: contain;
+
+}
+
+.box {
+    width: 140px;
+    height: 96px;
+    object-fit: contain;
+    background-color: var(--white);
+}
+
+.pic {
+  width: 92px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.title {
+    width: 64px;
+    height: 4px;
+    object-fit: contain;
+    font-family: Montserrat;
+    font-size: 5px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.64;
+    letter-spacing: 0.44px;
+    text-align: left;
+    color: var(--black);
+}
