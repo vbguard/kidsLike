@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as Icons from '../../assets/icons';
+import Icons from '../../assets';
 
 const Icon = ({ icon, ...rest }) => {
   const Svg = Icons[icon];
@@ -13,3 +13,13 @@ Icon.propTypes = {
 };
 
 export default Icon;
+
+// import Icon from 'components/Icon/Icon';
+
+// <Icon icon="Logo" className={s.iconStyle} />
+// <Icon icon="ArrowDropDown" className={s.iconStyle} />
+// <Icon icon="CheckboxOut" className={s.iconStyle} />
+// <Icon icon="GiftBox" className={s.iconStyle} />
+// <Icon icon="Checkbox" className={s.iconStyle} />
+// <Icon icon="Close" className={s.iconStyle} />
+// <Icon icon="Burger" className={s.iconStyle} />
