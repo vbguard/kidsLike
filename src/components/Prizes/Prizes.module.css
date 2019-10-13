@@ -1,4 +1,6 @@
    .prizeConteiner {
+     display: flex;
+     flex-wrap: wrap;
     width: 210px;
     background-color: #fdf8ed;
     border-radius: 5px;
@@ -11,10 +13,16 @@
     line-height: 21px;
     font-weight: 500;
   }
+
+  .image {
+    vertical-align: middle;
+    margin: 0 15px;
+  }
   
   @media (min-width: 769px and max-width: 1279) {
     .prizeConteiner {
       display: flex;
+      flex-wrap: nowrap;
       justify-content: space-between;
       min-width: 250px;
     }

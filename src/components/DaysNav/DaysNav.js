@@ -31,37 +31,37 @@ const daysContent = findTypeOfContent(screenWidth);
 const DaysNav = () => (
   <ul className={styles.nav}>
     <li className={styles.item}>
-      <NavLink className={styles.link} to="/dashboard/mon">
+      <NavLink className={styles.link} to="/dashboard/monday">
         {daysContent.mon}
       </NavLink>
     </li>
     <li className={styles.item}>
-      <NavLink className={styles.link} to="/dashboard/tues">
+      <NavLink className={styles.link} to="/dashboard/tuesday">
         {daysContent.tues}
       </NavLink>
     </li>
     <li className={styles.item}>
-      <NavLink className={styles.link} to="/dashboard/wed">
+      <NavLink className={styles.link} to="/dashboard/wednesday">
         {daysContent.wed}
       </NavLink>
     </li>
     <li className={styles.item}>
-      <NavLink className={styles.link} to="/dashboard/thurs">
+      <NavLink className={styles.link} to="/dashboard/thursday">
         {daysContent.thurs}
       </NavLink>
     </li>
     <li className={styles.item}>
-      <NavLink className={styles.link} to="/dashboard/fri">
+      <NavLink className={styles.link} to="/dashboard/friday">
         {daysContent.fri}
       </NavLink>
     </li>
     <li className={styles.item}>
-      <NavLink className={styles.link} to="/dashboard/sart">
+      <NavLink className={styles.link} to="/dashboard/sarturday">
         {daysContent.sart}
       </NavLink>
     </li>
     <li className={styles.item}>
-      <NavLink className={styles.link} to="/dashboard/sun">
+      <NavLink className={styles.link} to="/dashboard/sunday">
         {daysContent.sun}
       </NavLink>
     </li>

@@ -1,0 +1,10 @@
+.text::after {
+    display: inline-block;
+    content: '';
+    width: 150px;
+    height: 10px;
+    background-color: #53f533;
+    border-radius: 5px;
+    margin-left: 10px;
+    box-shadow: 100px 0 0 #cfccc9
+}
