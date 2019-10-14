@@ -1,0 +1,23 @@
+.bonusConteiner {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    font-size: 11px;
+    color: #858598;
+    }
+
+.btn    {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background-image: linear-gradient(to bottom, #ecb146, #f5d53b);
+        color: #fff;
+        font-size: 42px;
+        text-align: center;
+        border: none;
+        outline-style: none;
+        margin-left: 10px;
+}
+

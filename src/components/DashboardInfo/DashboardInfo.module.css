@@ -1,0 +1,18 @@
+.infoConteiner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 130px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media(min-width: 1280px) {
+    .infoConteiner {
+        flex-direction: row;
+        width: 100%;
+        height: 130px;
+        justify-content: space-around;
+        align-items: center;
+    }
+}

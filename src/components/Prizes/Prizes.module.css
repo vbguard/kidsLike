@@ -1,12 +1,17 @@
-   .prizeConteiner {
-     display: flex;
-     flex-wrap: wrap;
+  .prizeConteiner {
+    display: flex;
+    flex-direction: column;
     width: 210px;
     background-color: #fdf8ed;
     border-radius: 5px;
-    padding: 20px 30px;
+    padding: 20px;
+    margin: 0 auto;
   }
   
+  .prize {
+    display: flex;
+    justify-content: space-around;
+  }
   .text {
     margin: 0;
     font-size: 14px;
@@ -14,17 +19,33 @@
     font-weight: 500;
   }
 
+  .text::after {
+    display: inline-block;
+    content:'';
+    width: 20px;
+    height: 10px;
+    background: url('../../assets/images/arrow-right.jpg') no-repeat;
+    background-position: center;
+    margin-left: 10px;
+  }
+
   .image {
     vertical-align: middle;
-    margin: 0 15px;
+
   }
-  
-  @media (min-width: 769px and max-width: 1279) {
+
+  .icon {
+    width: 15px;
+    height: 15px;
+    fill: #efbb43;
+    }
+
+  @media (min-width: 769px) and (max-width: 1279px) {
     .prizeConteiner {
-      display: flex;
-      flex-wrap: nowrap;
+      flex-direction: row;
       justify-content: space-between;
-      min-width: 250px;
+      width: 350px;
+      background-color: transparent;
     }
   }
   
@@ -38,6 +59,7 @@
     }
   
     .prizeConteiner {
+      margin: 0;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }

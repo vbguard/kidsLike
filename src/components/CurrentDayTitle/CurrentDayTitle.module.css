@@ -1,0 +1,9 @@
+.text {
+font-size: 11px;
+color: #858598;
+}
+
+.selectedDay {
+    font-size: 12px;
+    text-transform: uppercase;
+}

@@ -1,10 +1,37 @@
-.text::after {
+.progressConteiner {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    font-size: 11px;
+    color: #858598;
+}
+
+.selectedPoints {
+    font-weight: 700;
+    font-size: 14px
+
+}
+
+.allPoints {
+    font-size: 14px
+}
+
+.progressRange {
+    display: flex;
+    width: 125px;
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.progressRange::before {
     display: inline-block;
     content: '';
-    width: 150px;
-    height: 10px;
-    background-color: #53f533;
-    border-radius: 5px;
-    margin-left: 10px;
-    box-shadow: 100px 0 0 #cfccc9
+    width: 70px;
+    height: 6px;
+    background-color: #8ec63f;
+    border-radius: 3px;
 }
