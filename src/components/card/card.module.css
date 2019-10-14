@@ -1,15 +1,8 @@
-.task {
+.card {
     width: 140px;
     height: 130px;
     object-fit: contain;
 
-}
-
-.box {
-    width: 140px;
-    height: 96px;
-    object-fit: contain;
-    background-color: var(--white);
 }
 
 .pic {
