@@ -11,7 +11,45 @@
    
 }
 
-.checkboxImage {
+/* .checkboxImage {
     fill: aliceblue;
     margin: 0 10px 0 6px;
+} */
+
+.label {
+    display: inline-block;
+    cursor: pointer;
+}
+.checkboxs {
+    display: none;
+}
+.fake {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    background-image: url(../../assets/icons/check_box_outline_blank-24px.svg);
+    
+}
+
+.fake::before {
+    content: "";
+    position: absolute;
+    background-image: url(../../assets/icons/check_box-24px.svg);
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+    transition: 0.4s;
+
+}
+
+.checkboxs:checked +  .fake::before {
+    opacity: 1;
+    
+}
+.days {
+    margin-left: 10px;
+    display: inline-flex;
+    justify-content: center;
+    
 }

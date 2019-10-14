@@ -1,35 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from '../Icon/Icon';
 import styles from './DayOne.module.css';
 
 const stylesSelectDay = [styles.selectday];
-const checkboxImage = [styles.checkboxImage];
+const label = [styles.label];
+const checkboxs = [styles.checkboxs];
+const fake = [styles.fake];
+const days = [styles.days];
 
-const DayOne = ({ day, checked }) => {
-  if (checked) {
-    return (
-      <div className={stylesSelectDay}>
-        <Icon icon="Checkbox" className={checkboxImage} />
-        <span>{day}</span>
-      </div>
-    );
-  }
-  return (
-    <div className={stylesSelectDay}>
-      <Icon icon="CheckboxOut" className={checkboxImage} />
-      <span>{day}</span>
-    </div>
-  );
-};
+const DayOne = ({ day }) => (
+  <div className={stylesSelectDay}>
+    <label className={label}>
+      <input type="checkbox" className={checkboxs} id="sw1" />
+      <span className={fake}></span>
+      <span className={days}>{day}</span>
+    </label>
+  </div>
+);
 
 DayOne.propTypes = {
-  day: PropTypes.string,
-  checked: PropTypes.bool
+  day: PropTypes.string
 };
 
 DayOne.defaultProps = {
-  day: 'Пн',
-  checked: true
+  day: 'Пн'
 };
 export default DayOne;

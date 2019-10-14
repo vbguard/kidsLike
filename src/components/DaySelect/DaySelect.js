@@ -8,13 +8,13 @@ const stylesDay = [styles.week];
 
 const DaySelect = () => (
   <div className={stylesDay}>
-    <DayOne checked={false} />
-    <DayOne day="Вт" checked={false} />
+    <DayOne />
+    <DayOne day="Вт" />
     <DayOne day="Ср" />
-    <DayOne day="Чт" checked={false} />
-    <DayOne day="Пт" checked={false} />
-    <DayOne day="Сб" checked={false} />
-    <DayOne day="Нд" checked={false} />
+    <DayOne day="Чт" />
+    <DayOne day="Пт" />
+    <DayOne day="Сб" />
+    <DayOne day="Нд" />
   </div>
 );
 
