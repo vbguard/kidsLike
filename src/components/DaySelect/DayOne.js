@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 import Icon from '../Icon/Icon';
 import styles from './DayOne.module.css';
 
-const stylesDay = [styles.day];
+const stylesSelectDay = [styles.selectday];
 const checkboxImage = [styles.checkboxImage];
 
 const DayOne = ({ day, checked }) => {
   if (checked) {
     return (
-      <div className={stylesDay}>
+      <div className={stylesSelectDay}>
         <Icon icon="Checkbox" className={checkboxImage} />
         <span>{day}</span>
       </div>
     );
   }
   return (
-    <div className={stylesDay}>
+    <div className={stylesSelectDay}>
       <Icon icon="CheckboxOut" className={checkboxImage} />
       <span>{day}</span>
     </div>
