@@ -47,12 +47,12 @@ export default class NavLogin extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to="*" className={styles.menuOpenNavLink} activeStyle={activeStyle}>
+              <NavLink to="/planning" className={styles.menuOpenNavLink} activeStyle={activeStyle}>
                 Планування
               </NavLink>
             </li>
             <li>
-              <NavLink to="*" className={styles.menuOpenNavLink} activeStyle={activeStyle}>
+              <NavLink to="contact" className={styles.menuOpenNavLink} activeStyle={activeStyle}>
                 Зворотнiй зв&apos;язок
               </NavLink>
             </li>
