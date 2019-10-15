@@ -9,12 +9,12 @@
 
 .container {
     display: flex;
-    width: 90px;
-    justify-content: space-between;
+    width: 70px;
+    justify-content: space-evenly;
     margin-top: 38px;
 }
 .burger {
-    width: 40px;
+    width: 20px;
     height: 20px;
     object-fit: contain;
   fill: #18191d;
@@ -22,7 +22,7 @@
 
 .user {
     text-decoration: none;
-    text-align: center;
+    display: block;
     width: 20px;
     height: 20px;
     object-fit: contain;
@@ -41,15 +41,85 @@
     display: none;
 }
 
+/* styles for open modal menu */
+
+.menuOpenContainer {
+  background-color: var(--macaroni-and-cheese);
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  padding: 0 30px;
+}
+
+.menuOpenIcon {
+    width: 29px;
+    height: 18px;
+   margin-top: 26px;
+   fill: white;
+}
+
+.menuOpenLink {
+    font-family: Montserrat;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: 0.64px;
+  text-align: left;
+  color: var(--black);
+  text-decoration: none;
+  margin-top: 18px;
+  display: block;
+  margin-bottom: 58px;
+
+}
+
+.menuCloseIcon {
+    fill: white;
+}
+
+.menuOpenNavLink {
+    width: 87px;
+  height: 13px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.11;
+  letter-spacing: 1.8px;
+  text-align: center;
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.menuOpenBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 38px;
+}
 
 @media screen and (min-width:768px) {
     
     .container {
       justify-content: space-between;
       margin-top: 30px;
-      width: 65px;
+      width: 88px;
       align-items: center;
     }
+
+    
+
+    .menuOpenContainer {
+        display: none;
+    }
+
+
     .burger {
         display: none;
     }
@@ -68,13 +138,16 @@
 
 @media screen and (min-width: 1280px) {
     .container {
-        width: 120px;
+        width: 130px;
         justify-content: space-between;
         margin-top: 11px;
     }
     .user {
         font-size: 16px;
-    }
+        text-align: right;
+       margin-top: 8px;
+    }   
+
     .img {
       
         width: 50px;

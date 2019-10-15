@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Nav from '../Nav/Nav';
 import Icon from '../Icon/Icon';
 import NavLogin from '../NavLogin/NavLogin';
@@ -10,8 +9,9 @@ import styles from './Header.module.css';
 export default class Header extends Component {
   state = {
     isLogged: true
-    // isMenuOpen: false
   };
+
+  toggleModal = () => this.setState(prevState => ({ isOpen: !prevState.isOpen }));
 
   render() {
     const { isLogged } = this.state;

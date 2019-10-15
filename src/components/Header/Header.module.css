@@ -20,7 +20,7 @@ img {
     height: 60px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .logoIcon {
@@ -31,29 +31,6 @@ img {
    fill: var(--macaroni-and-cheese);
 }
 
-
-.MenuOpenContainer {
-    width: 320px;
-    height: 100vh;
-  object-fit: contain;
-  background-color: var(--macaroni-and-cheese);
-  padding: 0 10px;
-  margin: 0 auto;
-  position: relative;
-  
-}
-
-.MenuOpenLogoIcon 
- {
-    width: 49px;
-    height: 18px;
-    object-fit: contain;
-   margin-top: 18px;
-   fill: white;
- }
-
-
-.MenuOpenlink,
 .link {
   font-family: Montserrat;
   font-size: 16px;
@@ -68,6 +45,14 @@ img {
   margin-top: 18px;
 }
 
+.burger {
+    width: 50px;
+    height: 20px;
+   display: block;
+   margin-top: 36px;
+  fill: #18191d;
+}
+
 @media screen and (min-width: 768px) {
     .container {
         width: 768px;
@@ -78,6 +63,9 @@ img {
         box-shadow: 1px 1.7px 4px 0 rgba(29, 29, 27, 0.1);
   background-color: var(--white); 
  
+    }
+    .burger {
+        display: none;
     }
 
 .link {
@@ -112,5 +100,8 @@ img {
     .logoIcon {
        width: 18px;
     }
-    
+    .burger {
+        display: none;
+    }
+
 }
