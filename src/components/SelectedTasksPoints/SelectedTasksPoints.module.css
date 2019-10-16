@@ -1,4 +1,12 @@
-
+    .conteiner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+        background-color: #e8e8e8;
+    }
+    
     .text {
         font-size: 11px;
         color: #858598;
@@ -13,7 +21,21 @@
         background-color: #8ec63f;
         font-size: 14px;
         color: #fff;
+        font-weight: 700;
         line-height: 30px;
         text-align: center;
         margin: 0 6px;
     }
+
+@media(min-width: 768px) {
+        .conteiner {
+            background-color: #fff;
+    }
+}
+
+@media(min-width: 1280px) {
+    .conteiner {
+        width: 400px;
+        flex-direction: row;
+    }
+}

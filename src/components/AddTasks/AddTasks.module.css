@@ -1,6 +1,9 @@
-.bonusConteiner {
+.conteiner {
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
 }
 
 .text {
@@ -8,7 +11,8 @@
     color: #858598;
     }
 
-.btn    {
+
+.btn   {
         width: 54px;
         height: 54px;
         border-radius: 50%;
@@ -19,5 +23,17 @@
         border: none;
         outline-style: none;
         margin-left: 10px;
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+    }
+
+@media(min-width: 768px) {
+.conteiner {
+    width: 400px;
 }
 
+    .btn{
+        position: static;
+    }
+}

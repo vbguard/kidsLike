@@ -3,11 +3,10 @@ import styles from './ProgressBar.module.css';
 
 const ProgressBar = () => (
   <div className={styles.progressConteiner}>
-    <p className={styles.text}>
-      Балів з початку тиждня: <span className={styles.selectedPoints}>22</span>
-      <span className={styles.allPoints}> / 22</span>
-    </p>
-    <span className={styles.progressRange}></span>
+    <p className={styles.text}>Балів з початку тиждня:</p>
+    <span className={styles.selectedPoints}>6</span>
+    <span className={styles.allPoints}> / 22</span>
+    <progress max="22" value="6" className={styles.progressRange}></progress>
   </div>
 );
 

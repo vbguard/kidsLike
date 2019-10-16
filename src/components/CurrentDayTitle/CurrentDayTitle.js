@@ -3,7 +3,7 @@ import styles from './CurrentDayTitle.module.css';
 
 const CurrentDayTitle = () => (
   <p className={styles.text}>
-    Мої завдання: <span className={styles.selectedDay}></span>
+    Мої завдання: <span className={styles.selectedDay}> Середа, 09.10.</span>
   </p>
 );
 

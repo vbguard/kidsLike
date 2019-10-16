@@ -33,13 +33,13 @@
 
 @media (min-width: 769px) and (max-width: 1279px) {
   .navConteiner {
+    width: 100%;
     height: 70px;
     background-color: #efbb43; 
   }
 
   .nav {
     min-width: 370px;
-    max-width: 700px;
   }
 
   .link {

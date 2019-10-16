@@ -5,12 +5,11 @@
     background-color: #fdf8ed;
     border-radius: 5px;
     padding: 20px;
-    margin: 0 auto;
   }
   
   .prize {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .text {
     margin: 0;
@@ -40,12 +39,16 @@
     fill: #efbb43;
     }
 
-  @media (min-width: 769px) and (max-width: 1279px) {
+  @media (min-width: 769px) and (max-width: 1279px){
     .prizeConteiner {
       flex-direction: row;
       justify-content: space-between;
-      width: 350px;
+      width: 400px;
       background-color: transparent;
+    }
+
+    .prize {
+       width: 130px;
     }
   }
   
@@ -57,7 +60,11 @@
       line-height: 21px;
       padding: 20px 0;
     }
-  
+
+  /* .prizeConteiner {
+    padding-left: 0;
+    margin-right: auto;
+  } */
     .prizeConteiner {
       margin: 0;
       border-top-right-radius: 0;
