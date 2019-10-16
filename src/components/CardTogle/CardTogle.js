@@ -6,10 +6,7 @@ import CardTogleOn from './CardTogleOn/CardTogleOn';
 
 const CardTogle = props => {
   const { isTogleOn } = props;
-  if (isTogleOn) {
-    return <CardTogleOn />;
-  }
-  return <CardTogleOff />;
+  return isTogleOn ? <CardTogleOn /> : <CardTogleOff />;
 };
 
 CardTogle.defaultProps = { isTogleOn: false };

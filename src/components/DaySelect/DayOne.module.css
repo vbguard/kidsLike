@@ -38,7 +38,7 @@
     background-image: url(../../assets/icons/check_box-24px.svg);
     width: 24px;
     height: 24px;
-    opacity: 0;
+    
     transition: 0.4s;
 
 }
@@ -48,8 +48,7 @@
     
 }
 .days {
-    margin-left: 10px;
-    display: inline-flex;
-    justify-content: center;
+    margin-left: 10px ;
+    
     
 }
