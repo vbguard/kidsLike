@@ -2,20 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './card.module.css';
 
-const Card = ({ image, title, Toggle }) => (
+const Card = ({ image, title }) => (
     <div className={styles.card}>
         <div className={styles.pic}>
             <img src={image} alt="img" />
         </div>
         <h2 className={styles.title}>{title}</h2>
-        <Toggle />
     </div>
 );
 
 Card.propTypes = {
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    Toggle: PropTypes.func.isRequired,
 }
 
 // class Toggle extends Component {

@@ -42,8 +42,8 @@ module.exports = {
     'import/no-webpack-loader-syntax': 0,
     'import/prefer-default-export': 0,
     indent: [
-      2,
-      2,
+      4,
+      4,
       {
         SwitchCase: 1,
       },
