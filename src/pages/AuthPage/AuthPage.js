@@ -5,9 +5,9 @@ import css from './AuthPage.module.css';
 const Login = () => (
   <div className={css.container}>
     <h2 className={css.h2}>Виконуй завдання - отримай класні призи!</h2>
-    <button type="button" className={css.btn}>
+    <Link to="/login" className={css.btn}>
       Вхід
-    </button>
+    </Link>
     <Link to="/register" className={css.regText}>
       Реєстрація
     </Link>
