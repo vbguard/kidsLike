@@ -1,20 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './card.module.css';
+import styles from './Card.module.css';
 
-const Card = ({ image, title }) => (
-    <div className={styles.card}>
-        <div className={styles.pic}>
-            <img src={image} alt="img" />
-        </div>
-        <h2 className={styles.title}>{title}</h2>
+const Card = ({ image = '', title = '' }) => (
+  <div className={styles.Card}>
+    <div className={styles.pic}>
+      <img src={image} alt="img" />
     </div>
+    <h2 className={styles.title}>{title}</h2>
+  </div>
 );
 
+Card.defaultProps = {
+  image: '../assets/images/tasksImage/pic-6@2x.png',
+  title: 'Прибрати у шафi'
+};
+
 Card.propTypes = {
-    image: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-}
+  image: PropTypes.string,
+  title: PropTypes.string
+};
 
 // class Toggle extends Component {
 //     state = { on: false };
