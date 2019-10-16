@@ -5,7 +5,7 @@ import css from './AuthPage.module.css';
 const AuthPage = () => (
   <>
     <div className={css.container}>
-      <h2 className={css.h2}>Виконуй завдання - отримай класні призи!</h2>
+      <h2 className={css.title}>Виконуй завдання - отримай класні призи!</h2>
       <Link to="/login" className={css.btn}>
         Вхід
       </Link>
