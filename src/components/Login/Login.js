@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import css from './Login.module.css';
 
-const LoginPage = () => (
+const Login = () => (
   <div className={css.container}>
     <h2 className={css.h2}>Вхід</h2>
     <form className={css.form}>
@@ -24,4 +24,4 @@ const LoginPage = () => (
   </div>
 );
 
-export default LoginPage;
+export default Login;

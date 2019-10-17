@@ -1,49 +1,26 @@
 .container {
-  width: 400px;
-  height: 430px;
-  background-color: rgb(241, 237, 237);
-  margin: 0 auto;
-  margin-top: 170px;
+  height: 100vh;
+  background-image: url("../../assets/images/bg-auth.jpg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
 }
 
 .h2 {
+  width: 244px;
+  height: 47px;
   font-family: Montserrat;
-  font-size: 26px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  margin-left: 40px;
-  padding-top: 40px;
-}
-
-.form {
-  width: 320px;
+  line-height: 1.56;
+  letter-spacing: 0.9px;
+  text-align: center;
+  color: var(--black);
   margin: 0 auto;
-  margin-top: 26px;
-  display: flex;
-  flex-direction: column;
-}
-
-.label {
-  font-family: Montserrat;
-  font-size: 12px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  color: var(--blue-grey);
-  margin-bottom: 10px;
-}
-
-.input {
-  width: 320px;
-  height: 40px;
-  text-indent: 10px;
-  font-family: Montserrat;
-  font-size: 12px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  margin-bottom: 20px;
+  padding-bottom: 25px;
+  margin-top: 170px;
 }
 
 .btn {
@@ -75,7 +52,9 @@
 }
 
 .regText {
+    width: 91px;
     height: 13px;
+    object-fit: contain;
     font-family: Montserrat;
     font-size: 12px;
     font-weight: 500;
@@ -85,7 +64,7 @@
     letter-spacing: 2.04px;
     text-align: center;
     color: var(--blue-grey);
-    /* text-decoration: none; */
+    text-decoration: none;
     padding-top: 15px;
     display: block;
     margin: 0 auto;
@@ -97,13 +76,23 @@
 }
 
 @media (min-width: 769px) {
-  .h2 {
+  .container {
+    background-image: url("../../assets/images/bg-auth@2x.jpg");
+  }
 
+  .h2 {
+    width: 487px;
+    height: 85px;
+    font-size: 36px;
+    letter-spacing: 1.8px;
+    padding-bottom: 50px;
+    margin-top: 270px;
   }
 
   .btn {
     font-size: 20px;
     height: 40px;
+    margin-top: 50px;
   }
 
   .regText {
@@ -113,7 +102,11 @@
 }
 
 @media (min-width: 1280px) {
-  .h2 {
+  .container {
+    background-image: url("../../assets/images/bg-auth@3x.jpg");
+  }
 
+  .h2 {
+    margin-top: 180px;
   }
 }
