@@ -1,7 +1,7 @@
 .week {
   display: flex;
   flex-direction: column;
-  padding: 14px 28px 14px 28px;
+  padding: 16px 28px 16px 28px;
   background-color: var(--azure);
   border-radius: 5px;
   width: 116px;

@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
 import styles from './DaySelect.module.css';
-// import Icon from '../Icon/Icon';
 import DayOne from './DayOne';
-// import { defaultProps } from 'recompose';
 
 const stylesDay = [styles.week];
 
 const DaySelect = () => {
   const [daySelected, setDaySelected] = useState({
-    mon: true,
-    thu: false
+    mon: false,
+    tue: false,
+    wed: false,
+    thu: false,
+    fri: false,
+    sat: false,
+    sun: false
   });
 
   const handlerOnChange = day => {
@@ -18,8 +20,13 @@ const DaySelect = () => {
   };
   return (
     <div className={stylesDay}>
-      <DayOne day={{ title: 'Пн', second: 'mon' }} checked={daySelected.mon} onChange={handlerOnChange} />
-      <DayOne day={{ title: 'Вт', second: 'mon' }} checked={daySelected.thu} onChange={handlerOnChange} />
+      <DayOne daytitle="Пн" day="mon" checked={daySelected.mon} onChange={handlerOnChange} />
+      <DayOne daytitle="Вт" day="tue" checked={daySelected.tue} onChange={handlerOnChange} />
+      <DayOne daytitle="Ср" day="wed" checked={daySelected.wed} onChange={handlerOnChange} />
+      <DayOne daytitle="Чт" day="thu" checked={daySelected.thu} onChange={handlerOnChange} />
+      <DayOne daytitle="Пт" day="fri" checked={daySelected.fri} onChange={handlerOnChange} />
+      <DayOne daytitle="Сб" day="sat" checked={daySelected.sat} onChange={handlerOnChange} />
+      <DayOne daytitle="Вс" day="sun" checked={daySelected.sun} onChange={handlerOnChange} />
     </div>
   );
 };
