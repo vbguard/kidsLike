@@ -21,6 +21,7 @@ img {
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
+   margin-bottom: 20px;
 }
 
 .logoIcon {

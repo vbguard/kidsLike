@@ -1,0 +1,32 @@
+.conteiner {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+height: 54px;
+width: 160px;
+}
+
+.text {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.select {
+    height: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 1px solid #efbb43;
+}
+
+@media(min-width: 1280px) {
+    .conteiner {
+        width: 320px;
+        flex-direction: row;
+    }
+    .text {
+        font-size: 18px;
+    }
+}
+
