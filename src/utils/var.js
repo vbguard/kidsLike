@@ -1,4 +1,4 @@
-const desctopDays = {
+export const desctopDays = {
   mon: 'Понеділок',
   tues: 'Вівторок',
   wed: 'Середа',
@@ -8,7 +8,7 @@ const desctopDays = {
   sun: 'Неділя'
 };
 
-const mobileDays = {
+export const mobileDays = {
   mon: 'Пн',
   tues: 'Вт',
   wed: 'Ср',
@@ -18,7 +18,11 @@ const mobileDays = {
   sun: 'Нед'
 };
 
-export default {
-  desctopDays,
-  mobileDays
+export const screenWidth = window.innerWidth;
+
+export const prizesStyles = {
+  flexDirection: 'row',
+  width: '400px',
+  backgroundColor: 'transparent',
+  justifyContent: 'space-between'
 };

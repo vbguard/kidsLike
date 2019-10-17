@@ -1,0 +1,17 @@
+.text {
+font-size: 11px;
+color: #858598;
+}
+
+.selectedDay {
+    font-size: 12px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+}
+
+@media(min-width: 768px) {
+.selectedDay {
+    font-size: 14px;
+}
+}

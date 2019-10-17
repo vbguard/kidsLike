@@ -82,7 +82,6 @@ module.exports = {
     'react/require-default-props': 0,
     'react/require-extension': 0,
     'react/self-closing-comp': 0,
-    'react/sort-comp': 0,
-    'jsx-a11y/control-has-associated-label': 0
+    'react/sort-comp': 0
   }
 };

@@ -1,13 +1,15 @@
 import React from 'react';
-// import Sidebar from '../../components/Sidebar/Sidebar';
-// import DaysNavConteiner from '../../components/DaysNav/DaysNavConteiner';
-// import DashboardConteiner from '../../components/DashboardConteiner/DashboardConteiner';
-// import { screenWidth } from '../../utils/var';
-// import styles from '';
-// className={styles.wrapper}
+import Sidebar from '../../components/Sidebar/Sidebar';
+import DaysNavConteiner from '../../components/DaysNav/DaysNavConteiner';
+import DashboardConteiner from '../../components/DashboardConteiner/DashboardConteiner';
+import { screenWidth } from '../../utils/var';
+import styles from './DashboardPage.module.css';
+
 const DashboardPage = () => (
-  <div>{/* {screenWidth >= 1280 ? <Sidebar /> : <DaysNavConteiner />}
-    <DashboardConteiner /> */}</div>
+  <div className={styles.wrapper}>
+    {screenWidth >= 1280 ? <Sidebar /> : <DaysNavConteiner />}
+    <DashboardConteiner />
+  </div>
 );
 
 export default DashboardPage;
