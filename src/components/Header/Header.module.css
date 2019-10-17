@@ -1,0 +1,108 @@
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 320px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+   margin-bottom: 20px;
+}
+
+.logoIcon {
+    width: 35px;
+    height: 18px;
+    object-fit: contain;
+   margin-top: 18px;
+   fill: var(--macaroni-and-cheese);
+}
+
+.link {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: 0.64px;
+  text-align: left;
+  color: var(--black);
+  text-decoration: none;
+  margin-top: 18px;
+}
+
+.burger {
+    width: 50px;
+    height: 20px;
+   display: block;
+   margin-top: 36px;
+  fill: #18191d;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+        height: 80px;
+        margin: 0 auto;
+        flex-direction: row;  
+        justify-content: space-evenly;
+        box-shadow: 1px 1.7px 4px 0 rgba(29, 29, 27, 0.1);
+  background-color: var(--white); 
+ 
+    }
+    .burger {
+        display: none;
+    }
+
+.link {
+    display: flex;
+   width: 90px;
+  font-size: 16px;
+  margin-top: 0;
+  height: 80px;
+  align-items: center;
+
+}
+
+.logoIcon {
+    fill: var(--macaroni-and-cheese);
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        width: 1280px;
+      justify-content: space-around;
+    }
+
+    .link {
+        font-size: 18px;
+        width: 100px;
+    }
+
+    .logoIcon {
+       width: 18px;
+    }
+    .burger {
+        display: none;
+    }
+
+}
