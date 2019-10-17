@@ -109,17 +109,20 @@
     .container {
       justify-content: space-between;
       margin-top: 30px;
-      width: 88px;
+      width: 80px;
       align-items: center;
     }
 
     
 
-    .menuOpenContainer {
+    .menuOpenContainer
+    {
         display: none;
     }
 
-
+    .btn {
+        display: none;
+    }
     .burger {
         display: none;
     }
@@ -139,7 +142,7 @@
 @media screen and (min-width: 1280px) {
     .container {
         width: 130px;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-top: 11px;
     }
     .user {

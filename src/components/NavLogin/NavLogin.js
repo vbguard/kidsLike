@@ -30,7 +30,7 @@ export default class NavLogin extends Component {
             height="16"
           />
           Ваня
-          <button type="button" onClick={this.toggleModal}>
+          <button type="button" onClick={this.toggleModal} className={styles.btn}>
             <Icon icon="Burger" className={styles.burger} />
           </button>
         </span>
