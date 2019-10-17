@@ -20,7 +20,7 @@
   color: var(--black);
   margin: 0 auto;
   padding-bottom: 25px;
-  padding-top: 170px;
+  margin-top: 170px;
 }
 
 .btn {
@@ -41,7 +41,8 @@
   text-decoration: none;
   display: block;
   margin: 0 auto;
-  padding-top: 20px;
+  margin-top: 30px;
+  padding-top: 10px;
   transition: all 0.3s ease-out 0.1s;
 }
 
@@ -85,12 +86,13 @@
     font-size: 36px;
     letter-spacing: 1.8px;
     padding-bottom: 50px;
-    padding-top: 270px;
+    margin-top: 270px;
   }
 
   .btn {
     font-size: 20px;
     height: 40px;
+    margin-top: 50px;
   }
 
   .regText {
@@ -105,6 +107,6 @@
   }
 
   .h2 {
-    padding-top: 180px;
+    margin-top: 180px;
   }
 }
