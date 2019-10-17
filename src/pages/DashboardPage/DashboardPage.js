@@ -5,7 +5,7 @@ import DashboardConteiner from '../../components/DashboardConteiner/DashboardCon
 import Footer from '../../components/Footer/Footer';
 
 import { screenWidth } from '../../utils/var';
-import styles from './Dashboard.module.css';
+import styles from './DashboardPage.module.css';
 
 const DashboardPage = () => (
   <>

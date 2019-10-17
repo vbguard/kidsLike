@@ -1,9 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const prettierOptions = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'),
-);
+const prettierOptions = JSON.parse(fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'));
 
 module.exports = {
   parser: 'babel-eslint',
@@ -13,14 +11,14 @@ module.exports = {
     jest: true,
     browser: true,
     node: true,
-    es6: true,
+    es6: true
   },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true,
-    },
+      jsx: true
+    }
   },
   rules: {
     'prettier/prettier': ['error', prettierOptions],
@@ -45,8 +43,8 @@ module.exports = {
       2,
       2,
       {
-        SwitchCase: 1,
-      },
+        SwitchCase: 1
+      }
     ],
     'jsx-a11y/aria-props': 2,
     'jsx-a11y/heading-has-content': 0,
@@ -56,8 +54,8 @@ module.exports = {
         // NOTE: If this error triggers, either disable it or add
         // your custom components, labels and attributes via these options
         // See https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-associated-control.md
-        controlComponents: ['Input'],
-      },
+        controlComponents: ['Input']
+      }
     ],
     'jsx-a11y/label-has-for': 0,
     'jsx-a11y/mouse-events-have-key-events': 2,
@@ -84,6 +82,6 @@ module.exports = {
     'react/require-default-props': 0,
     'react/require-extension': 0,
     'react/self-closing-comp': 0,
-    'react/sort-comp': 0,
+    'react/sort-comp': 0
   }
 };
