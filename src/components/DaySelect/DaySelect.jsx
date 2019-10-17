@@ -13,10 +13,13 @@ const DaySelect = () => {
     thu: false
   });
 
+  const handlerOnChange = day => {
+    setDaySelected({ ...daySelected, ...day });
+  };
   return (
     <div className={stylesDay}>
-      <DayOne checked={daySelected.mon} onChange={setDaySelected} />
-      <DayOne day="Вт" checked={daySelected.thu} onChange={setDaySelected} />
+      <DayOne day={{ title: 'Пн', second: 'mon' }} checked={daySelected.mon} onChange={handlerOnChange} />
+      <DayOne day={{ title: 'Вт', second: 'mon' }} checked={daySelected.thu} onChange={handlerOnChange} />
     </div>
   );
 };

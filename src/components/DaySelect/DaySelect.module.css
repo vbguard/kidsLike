@@ -1,9 +1,10 @@
 .week {
-    margin: 20px;
-    padding-top: 15px;
-    background-color: blue;
-    border-radius: 5px;
-    width: 116px;
-    height: 208px;
-      
+  display: flex;
+  flex-direction: column;
+  padding: 14px 28px 14px 28px;
+  background-color: var(--azure);
+  border-radius: 5px;
+  width: 116px;
+  height: 208px;
+  box-sizing: border-box;
 }

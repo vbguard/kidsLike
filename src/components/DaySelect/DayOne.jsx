@@ -12,11 +12,15 @@ const checkboxs = [styles.checkboxs];
 const days = [styles.days];
 
 const Checkbox = styled.span`
-  &::before (
-    content: '' ; position: absolute; background-image:
-      ${props => (props.checked ? `url(${CheckedIcon})` : `url(${boxIcon})`)}; width: 24px; height: 24px; transition:
-      0.4s;
-  );
+  &::before {
+    content: '';
+    display: inline-block;
+    background-image: ${props => (props.checked ? `url(${CheckedIcon})` : `url(${boxIcon})`)};
+    width: 24px;
+    height: 24px;
+    z-index: 2;
+    transition: 0.4s;
+  }
 `;
 
 const DayOne = ({ day, checked, onChange }) => (
@@ -29,12 +33,12 @@ const DayOne = ({ day, checked, onChange }) => (
       onChange={e => {
         e.preventDefault();
 
-        onChange(state => ({ ...state, mon: e.target.checked }));
+        onChange({ mon: !checked });
       }}
     />
     <Checkbox checked={checked} />
 
-    <span className={days}>{day}</span>
+    <span className={days}>{day.title}</span>
   </label>
 );
 
@@ -44,23 +48,4 @@ DayOne.propTypes = {
   onChange: PropTypes.func
 };
 
-const DayOne = ({ day, checked, onChange }) => (
-  <label className={label}>
-    <input
-      type="checkbox"
-      className={checkboxs}
-      checked={checked}
-      id="sw1"
-      onChange={e => {
-        e.preventDefault();
-        console.log(e.target.checked);
-        onChange(state => ({ ...state, mon: e.target.checked }));
-      }}
-    />
-    <Chekbox checked={checked} />
-    <span className={days}>{day}</span>
-  </label>
-);
-DayOne.propTypes = { day: PropTypes.string, checked: PropTypes.bool, onChange: PropTypes.func };
-DayOne.defaultProps = { day: 'Пн' };
 export default DayOne;
