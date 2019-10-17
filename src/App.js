@@ -1,15 +1,22 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import AuthPage from './pages/AuthPage/AuthPage';
-import LoginPage from './pages/LoginPage/LoginPage';
+import DashboardPage from './pages/DashboardPage/DashboardPage';
+import PlanningPage from './pages/PlanningPage/PlanningPage';
+import Footer from './components/Footer/Footer';
 // import ProtectedComponent from './hoc/ProtectedComponent';
+
 
 function App() {
   return (
-    <Switch>
-      <Route exact path="/" component={AuthPage} />
-      <Route path="/login" component={LoginPage} />
-    </Switch>
+    <>
+      <Switch>
+        <Route path="/" exact component={AuthPage} />
+        <Route path="/dashboard" component={DashboardPage} />
+        <Route path="/planning" component={PlanningPage} />
+      </Switch>
+      <Footer />
+    </>
   );
 }
 
