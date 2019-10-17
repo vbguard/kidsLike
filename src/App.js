@@ -9,15 +9,13 @@ import Login from './components/Login/Login';
 
 function App() {
   return (
-    <>
-      <Switch>
-        <Route exact strict path="/" component={AuthPage} />
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <Route path="/dashboard" component={DashboardPage} />
-        <Route path="/planning" component={PlanningPage} />
-      </Switch>
-    </>
+    <Switch>
+      <Route exact path="/" component={AuthPage} />
+      <Route path="/login" component={Login} />
+      <Route path="/register" component={Register} />
+      <Route path="/dashboard" component={DashboardPage} />
+      <Route path="/planning" component={PlanningPage} />
+    </Switch>
   );
 }
 
