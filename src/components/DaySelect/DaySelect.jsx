@@ -3,12 +3,13 @@ import React, { useState } from 'react';
 import styles from './DaySelect.module.css';
 // import Icon from '../Icon/Icon';
 import DayOne from './DayOne';
+// import { defaultProps } from 'recompose';
 
 const stylesDay = [styles.week];
 
 const DaySelect = () => {
   const [daySelected, setDaySelected] = useState({
-    mon: false,
+    mon: true,
     thu: false
   });
 
@@ -16,11 +17,6 @@ const DaySelect = () => {
     <div className={stylesDay}>
       <DayOne checked={daySelected.mon} onChange={setDaySelected} />
       <DayOne day="Вт" checked={daySelected.thu} onChange={setDaySelected} />
-      <DayOne day="Ср" />
-      <DayOne day="Чт" />
-      <DayOne day="Пт" />
-      <DayOne day="Сб" />
-      <DayOne day="Нд" />
     </div>
   );
 };
