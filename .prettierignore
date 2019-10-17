@@ -4,5 +4,3 @@ scripts/*
 src/serviceWorker.js
 package.json
 package-lock.json
-src/redux/*
-src/*
