@@ -10,11 +10,11 @@ const configureStore = () => {
   const store = createStore(rootReducer, enhancer);
 
   if (process.env.NODE_ENV !== 'production') {
-    if (module.hot) {
-      module.hot.accept('./reducer', () => {
-        store.replaceReducer(rootReducer);
-      });
-    }
+      if (module.hot) {
+          module.hot.accept('./reducer', () => {
+              store.replaceReducer(rootReducer);
+          });
+      }
   }
 
   return store;
