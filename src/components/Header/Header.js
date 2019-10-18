@@ -16,25 +16,27 @@ export default class Header extends Component {
   render() {
     const { isLogged } = this.state;
     return (
-      <div className={styles.container}>
-        {isLogged ? (
-          <>
-            <a href="*" className={styles.link}>
-              KidsLike
-              <Icon icon="Logo" className={styles.logoIcon} />
-            </a>
-            <Nav />
-            <NavLogin />
-          </>
-        ) : (
-          <>
-            <a href="*" className={styles.link}>
-              KidsLike
-              <Icon icon="Logo" className={styles.logoIcon} />
-            </a>
-            <Nav />
-          </>
-        )}
+      <div className={styles.border}>
+        <div className={styles.container}>
+          {isLogged ? (
+            <>
+              <a href="*" className={styles.link}>
+                KidsLike
+                <Icon icon="Logo" className={styles.logoIcon} />
+              </a>
+              <Nav />
+              <NavLogin />
+            </>
+          ) : (
+            <>
+              <a href="*" className={styles.link}>
+                KidsLike
+                <Icon icon="Logo" className={styles.logoIcon} />
+              </a>
+              <Nav />
+            </>
+          )}
+        </div>
       </div>
     );
   }

@@ -64,7 +64,7 @@ export default class NavLogin extends Component {
             </li>
             <li>
               <NavLink
-                to="/contact"
+                to="/contacts"
                 className={styles.menuOpenNavLink}
                 onClick={this.toggleModal}
                 activeStyle={activeStyle}
