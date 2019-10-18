@@ -26,22 +26,4 @@ Card.propTypes = {
   title: PropTypes.string
 };
 
-// class Toggle extends Component {
-//     state = { on: false };
-
-//     toggle = () => {
-//         this.setState(prevState => ({ on: !prevState.on }))
-//     }
-
-//     render() {
-//         const { on } = this.state;
-
-//         return (
-//             <div>
-//                 <button onClick={this.toggle}></button>
-//             </div>
-//         )
-//     }
-// }
-
 export default Card;
