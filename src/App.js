@@ -5,6 +5,7 @@ import DashboardPage from './pages/DashboardPage/DashboardPage';
 import PlanningPage from './pages/PlanningPage/PlanningPage';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
+import DaySelect from './components/CardTogle/CardToggle';
 // import ProtectedComponent from './hoc/ProtectedComponent';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Route path="/register" component={Register} />
       <Route path="/dashboard" component={DashboardPage} />
       <Route path="/planning" component={PlanningPage} />
+      <Route path="/cardtoggle" component={DaySelect} />
     </Switch>
   );
 }
