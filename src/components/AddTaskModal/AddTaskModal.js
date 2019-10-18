@@ -12,10 +12,9 @@ const AddTaskModal = () => (
         <label htmlFor="taskName">
           <input type="text" id="taskName" className={styles.input} placeholder="Додай собі завдання" />
         </label>
-        <button type="submit" className={styles.btn}></button>
+        <button type="submit" aria-label="save" className={styles.btn}></button>
       </form>
     </div>
-    as
   </div>
 );
 
