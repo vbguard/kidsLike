@@ -20,8 +20,8 @@ img {
     height: 60px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
-   margin-bottom: 20px;
+    
+  
 }
 
 .logoIcon {
@@ -44,6 +44,7 @@ img {
   color: var(--black);
   text-decoration: none;
   margin-top: 18px;
+ margin-left: 30px;
 }
 
 .burger {
@@ -76,7 +77,7 @@ img {
   margin-top: 0;
   height: 80px;
   align-items: center;
-
+  margin-left: 0;
 }
 
 .logoIcon {
