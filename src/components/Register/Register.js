@@ -4,7 +4,7 @@ import css from './Register.module.css';
 
 const Register = () => (
   <div className={css.container}>
-    <h2 className={css.h2}>
+    <h2 className={css.title}>
       Реєстрація
       <div className={css.photoContainer}>
         <span className={css.icon}>+</span>
