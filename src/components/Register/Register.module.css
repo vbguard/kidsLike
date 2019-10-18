@@ -1,19 +1,19 @@
 .container {
-  width: 400px;
-  height: 700px;
+  width: 374px;
+  height: 630px;
   background-color: rgb(241, 237, 237);
   margin: 0 auto;
-  margin-top: 170px;
+  margin-top: 60px;
 }
 
-.h2 {
+.title {
   font-family: Montserrat;
   font-size: 26px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  margin-left: 40px;
-  padding-top: 40px;
+  margin-left: 27px;
+  padding-top: 27px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -115,9 +115,13 @@
   color: var(--macaroni-and-cheese);
 }
 
-@media (min-width: 769px) {
-  .h2 {
+@media (min-width: 768px) {
+  .container {
+    margin-top: 260px;
+  }
 
+  .title {
+    font-size: 30px;
   }
 
   .btn {
@@ -132,7 +136,11 @@
 }
 
 @media (min-width: 1280px) {
-  .h2 {
+  .container {
+    margin-top: 160px;
+  }
+
+  .title {
 
   }
 }
