@@ -40,7 +40,7 @@ export default class NavLogin extends Component {
             KidsLike
             <Icon icon="Logo" className={styles.menuOpenIcon} />
           </a>
-          <ul className>
+          <ul>
             <li>
               <NavLink to="/" exact className={styles.menuOpenNavLink} activeStyle={activeStyle}>
                 Головна
@@ -65,3 +65,5 @@ export default class NavLogin extends Component {
     );
   }
 }
+
+Modal.setAppElement('body');
