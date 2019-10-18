@@ -1,0 +1,127 @@
+.container {
+  width: 374px;
+  height: 370px;
+  background-color: rgb(241, 237, 237);
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.title {
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  margin-left: 27px;
+  padding-top: 27px;
+}
+
+.form {
+  width: 320px;
+  margin: 0 auto;
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  color: var(--blue-grey);
+  margin-bottom: 10px;
+}
+
+.input {
+  width: 320px;
+  height: 40px;
+  text-indent: 10px;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  margin-bottom: 20px;
+}
+
+.btn {
+  width: 240px;
+  height: 35px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.13;
+  letter-spacing: 1.28px;
+  text-align: center;
+  color: var(--white);
+  border-radius: 6px;
+  box-shadow: 0px 4px 6px 0 var(--black-15);
+  background-color: var(--macaroni-and-cheese);
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-top: 10px;
+  transition: all 0.3s ease-out 0.1s;
+}
+
+.btn:hover {
+  color: var(--macaroni-and-cheese);
+  background-color: var(--white);
+}
+
+.regText {
+    height: 13px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 2.04px;
+    text-align: center;
+    color: var(--blue-grey);
+    /* text-decoration: none; */
+    padding-top: 15px;
+    display: block;
+    margin: 0 auto;
+    transition: color 0.3s ease-out 0.1s;
+}
+
+.regText:hover {
+  color: var(--macaroni-and-cheese);
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin-top: 260px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .btn {
+    font-size: 20px;
+    height: 40px;
+  }
+
+  .regText {
+    font-size: 16px;
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    margin-top: 160px;
+  }
+
+  .title {
+
+  }
+}

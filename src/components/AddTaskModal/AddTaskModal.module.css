@@ -1,0 +1,69 @@
+.backdrop {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #e0e0e0;
+    z-index: 10;
+}
+
+.modal {
+    width: 280px;
+    height: 260px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.imgConteiner {
+    height: 194px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    overflow: inherit;
+}
+
+.icon {
+    height: 128px;
+    width: 126px;
+    fill: #e0e0e0;
+}
+
+.form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 66px;
+    background-color: #f5d53b;
+    overflow: inherit;
+}
+
+.input {
+    width: 164px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    line-height: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #f5d53b;
+    border: none;
+    border-bottom: 2px solid #fff;
+}
+
+.input::placeholder {
+    color: #fff;
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+}

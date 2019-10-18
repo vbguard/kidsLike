@@ -1,0 +1,18 @@
+.wrapper {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+}
+
+@media(min-width: 1280px) {
+    .wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
