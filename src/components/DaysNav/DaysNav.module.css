@@ -25,10 +25,12 @@
   font-weight: 700;
   text-align: center;
   color: #000;
+  transition: background-color 0.2s linear;
 }
 
 .link:hover {
   background-color:  #efbb43;
+  transition: background-color 0.2s linear;
 }
 
 @media (min-width: 769px) and (max-width: 1279px) {
@@ -49,6 +51,7 @@
 
   .link:hover {
     background-color: #fdf8ed;
+    transition: background-color 0.2s linear;
   }
 }
 
@@ -70,6 +73,7 @@
 
   .link:hover {
     background-color: #fdf8ed;
+    transition: background-color 0.2s linear;
   }
 }
 
