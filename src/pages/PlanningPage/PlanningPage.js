@@ -10,7 +10,7 @@ import styles from './PlanningPage.module.css';
 const PlanningPage = () => {
   const [openModal, setOpenModal] = useState(false);
   const handleOpenModal = () => {
-    console.log('onCloiee');
+    // console.log('onCloiee');
     setOpenModal(!openModal);
   };
   return (
