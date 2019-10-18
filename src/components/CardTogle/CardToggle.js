@@ -4,11 +4,10 @@ import styles from './CardToggle.module.css';
 // import CardTogleOff from './CardTogleOff/CardTogleOff';
 // import CardTogleOn from './CardTogleOn/CardTogleOn';
 const checkbox = [styles.checkbox];
-const circle = [styles.circle];
 const toggle = [styles.toggle];
 
 class CardTogle extends Component {
-  state = { isTogleOn: true };
+  state = { isTogleOn: false };
 
   toggle = () => {
     this.setState(state => ({ isTogleOn: !state.isTogleOn }));
@@ -16,11 +15,13 @@ class CardTogle extends Component {
 
   render() {
     const { isTogleOn } = this.state;
+    const circle = isTogleOn ? styles.circleOn : styles.circleOff;
     return (
       <label className={toggle}>
         <input type="checkbox" className={checkbox} checked={isTogleOn} onClick={this.toggle} />
-        {isTogleOn === true && <span className={circle} />}
-        {isTogleOn === false && <span className={circle}>!</span>}
+        {/* {isTogleOn === true && <span className={circle} />}
+        {isTogleOn === false && <span className={circle}>!</span>} */}
+        <span className={circle}>!</span>
       </label>
     );
   }
