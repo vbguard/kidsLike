@@ -68,10 +68,8 @@
 .footer {
   flex-direction: row;
   justify-content: flex-end;
-  position: fixed;
-  bottom: 0;
-  right: 30px;
-  margin-right: 30px;
+  padding-top: 10px;
+  padding-right: 30px;
 }
 
 .borders {
