@@ -19,11 +19,55 @@ import CardTogle from '../CardTogle/CardTogle';
 // );
 
 const Card = ({ title }) => (
-  <div className={styles.Card}>
-    <div className={styles.pic}>{/* <ResponsiveImage picture={small} /> */}</div>
-    <div className={styles.pic_footer_container}>
-      <h2 className={styles.title}>{title}</h2>
-      <CardTogle />
+  <div className={styles.Card_container}>
+    <div className={styles.Card_list}>
+      <div className={styles.pic}>{/* <ResponsiveImage picture={small} /> */}</div>
+      <div className={styles.pic_footer}>
+        <h2 className={styles.title}>{title}</h2>
+        <CardTogle />
+      </div>
+    </div>
+    <div className={styles.Card_list}>
+      <div className={styles.pic}>{/* <ResponsiveImage picture={small} /> */}</div>
+      <div className={styles.pic_footer}>
+        <h2 className={styles.title}>{title}</h2>
+        <CardTogle />
+      </div>
+    </div>
+    <div className={styles.Card_list}>
+      <div className={styles.pic}>{/* <ResponsiveImage picture={small} /> */}</div>
+      <div className={styles.pic_footer}>
+        <h2 className={styles.title}>{title}</h2>
+        <CardTogle />
+      </div>
+    </div>
+    <div className={styles.Card_list}>
+      <div className={styles.pic}>{/* <ResponsiveImage picture={small} /> */}</div>
+      <div className={styles.pic_footer}>
+        <h2 className={styles.title}>{title}</h2>
+        <CardTogle />
+      </div>
+    </div>
+    <div className={styles.Card_list}>
+      <div className={styles.pic}>{/* <ResponsiveImage picture={small} /> */}</div>
+      <div className={styles.pic_footer}>
+        <h2 className={styles.title}>{title}</h2>
+        <CardTogle />
+      </div>
+    </div>
+    <div className={styles.Card_list}>
+      <div className={styles.pic}>{/* <ResponsiveImage picture={small} /> */}</div>
+      <div className={styles.pic_footer}>
+        <h2 className={styles.title}>{title}</h2>
+        <CardTogle />
+      </div>
+    </div>
+    <div className={styles.Card_list}>
+      <div className={styles.pic}>{/* <ResponsiveImage picture={small} /> */}</div>
+      <div className={styles.pic_footer}>
+        <h2 className={styles.title}>{title}</h2>
+        <CardTogle />
+      </div>
     </div>
   </div>
 );
