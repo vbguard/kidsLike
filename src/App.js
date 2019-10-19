@@ -19,7 +19,6 @@ function App() {
         <Route path="/dashboard" component={DashboardPage} />
         <Route path="/planning" component={PlanningPage} />
       </Switch>
-      {screenWidth >= 768 && <Footer />}
     </>
   );
 }
