@@ -121,8 +121,8 @@ img {
     width: 100px;
     height: 100px;
   }
-}
 
+}
 @media (min-width: 1280px) {
   .container {
     width: 1250px;
