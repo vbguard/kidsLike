@@ -29,6 +29,7 @@
 
 @media(min-width: 768px) {
         .conteiner {
+            margin-bottom: 20px;
             background-color: #fff;
     }
 }
@@ -37,5 +38,6 @@
     .conteiner {
         width: 400px;
         flex-direction: row;
+        margin-bottom: 54px;
     }
 }
