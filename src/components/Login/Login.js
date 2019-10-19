@@ -4,7 +4,7 @@ import css from './Login.module.css';
 
 const Login = () => (
   <div className={css.container}>
-    <h2 className={css.h2}>Вхід</h2>
+    <h2 className={css.title}>Вхід</h2>
     <form className={css.form}>
       <label htmlFor="email" className={css.label}>
         E-mail*
