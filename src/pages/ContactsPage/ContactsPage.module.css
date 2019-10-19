@@ -10,7 +10,6 @@
   display: block;
   width: 100%;
   height: auto;
-  /* background-color: rgb(236, 232, 232); */
 }
 
 .title {
@@ -117,7 +116,7 @@
   .contact {
     width: 50%;
   }
-
+  
   .contact:nth-last-child(-n+2) {
     margin-bottom: 0;
   }
@@ -126,8 +125,8 @@
     width: 100px;
     height: 100px;
   }
-
 }
+
 @media (min-width: 1280px) {
   .container {
     width: 1250px;

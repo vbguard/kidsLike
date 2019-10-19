@@ -43,9 +43,16 @@
 @media(min-width: 768px) {
 .conteiner {
     width: 400px;
+    margin-bottom: 24px;
 }
 
     .btn{
         position: static;
+    }
+}
+
+@media(min-width: 1279px) {
+    .conteiner {
+        margin-bottom: 54px;
     }
 }
