@@ -1,6 +1,15 @@
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 34px;
+    margin-bottom: 24px;
+}
+
 .text {
-font-size: 11px;
-color: #858598;
+    font-size: 11px;
+    color: #858598;
 }
 
 .selectedDay {
@@ -11,7 +20,20 @@ color: #858598;
 }
 
 @media(min-width: 768px) {
-.selectedDay {
-    font-size: 14px;
+    .conteiner {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 250px;
+    }
+
+    .selectedDay {
+        font-size: 14px;
+    }
 }
+
+@media(min-width: 1280px) {
+    .conteiner {
+        justify-content: space-between;
+        height: 30px;
+    }
 }

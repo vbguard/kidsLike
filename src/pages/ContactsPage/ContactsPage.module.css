@@ -1,16 +1,15 @@
 .container {
-  width: 374px;
+  width: 100vw;
+  padding: 30px 10px;
   margin: 0 auto;
-  margin-top: 60px;
 }
 
 .img {
   position: absolute;
   left: 0;
   display: block;
-  width: 100px;
-  height: 100px;
-  background-color: rgb(236, 232, 232);
+  width: 100%;
+  height: auto;
 }
 
 .title {
@@ -82,6 +81,7 @@
 .contact_info {
   font-family: Montserrat;
   font-size: 12px;
+  line-height: 1.5;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -113,6 +113,10 @@
     margin-bottom: 50px;
   }
 
+  .contact {
+    width: 50%;
+  }
+  
   .contact:nth-last-child(-n+2) {
     margin-bottom: 0;
   }
@@ -134,6 +138,7 @@
 
   .contact {
     position: unset;
+    width: 25%;
     padding-left: 60px;
   }
 
