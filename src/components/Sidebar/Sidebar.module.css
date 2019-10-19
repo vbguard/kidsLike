@@ -4,7 +4,7 @@
     align-items: flex-end;
     justify-content: space-between;
     width: 240px;
-    height: 100vh;
+    height: calc(100vh - 80px);
     background-color: #efbb43;
     padding: 100px 0;
   }
