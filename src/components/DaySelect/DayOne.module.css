@@ -1,0 +1,21 @@
+
+.label {
+    display: inline-block;
+    cursor: pointer;
+}
+.checkboxs {
+    display: none;
+}
+
+.days {
+  margin-left: 12px;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 1.04px;
+  text-align: left;
+  color: var(--white);
+}
