@@ -3,7 +3,9 @@ import WeekSelected from '../../components/WeekSelected/WeekSelected';
 import Prizes from '../../components/Prizes/Prizes';
 import SelectedTasksPoints from '../../components/SelectedTasksPoints/SelectedTasksPoints';
 import AddTasks from '../../components/AddTasks/AddTasks';
-import AddTaskModal from '../../components/AddTaskModal/AddTaskModal';
+// import AddTaskModal from '../../components/AddTaskModal/AddTaskModal';
+import Footer from '../../components/Footer/Footer';
+
 import { screenWidth } from '../../utils/var';
 import styles from './PlanningPage.module.css';
 
@@ -17,12 +19,22 @@ const PlanningPage = () => (
   // return
   <div className={styles.wrapper}>
     <WeekSelected />
-    {screenWidth < 768 && <Prizes />}
+    {screenWidth < 768 && (
+      <>
+        <Prizes />
+        <Footer />
+      </>
+    )}
     <SelectedTasksPoints />
     <AddTasks />
-    <AddTaskModal />
+    {/* <AddTaskModal /> */}
     {/* <AddTaskModal openModal={handleOpenModal} /> */}
-    {screenWidth >= 768 && <Prizes />}
+    {screenWidth >= 768 && (
+      <>
+        <Prizes />
+        <Footer />
+      </>
+    )}
     {/* {openModal && <AddTaskModal onChange={handleOpenModal} />} */}
   </div>
 );

@@ -24,7 +24,7 @@ function App() {
         <Route path="/planning" component={PlanningPage} />
         <Route path="/contacts" component={ContactsPage} />
       </Switch>
-      {screenWidth > 768 && <Footer />}
+      {screenWidth >= 768 && <Footer />}
     </>
   );
 }
