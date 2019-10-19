@@ -4,7 +4,7 @@
   margin-top: 60px;
 }
 
-img {
+.img {
   position: absolute;
   left: 0;
   display: block;
@@ -117,7 +117,7 @@ img {
     margin-bottom: 0;
   }
 
-  img {
+  .img {
     width: 100px;
     height: 100px;
   }
@@ -141,7 +141,7 @@ img {
     margin-top: 20px;
   }
 
-  img {
+  .img {
     position: unset;
     width: 180px;
     height: 180px;

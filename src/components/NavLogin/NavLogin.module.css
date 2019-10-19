@@ -9,9 +9,10 @@
 
 .container {
     display: flex;
-    width: 70px;
+    width: 90px;
     justify-content: space-evenly;
     margin-top: 38px;
+    margin-left: 100px;
 }
 .burger {
     width: 20px;
@@ -40,7 +41,7 @@
 .img {
     display: none;
 }
-
+.btn { font-size: 0; }
 /* styles for open modal menu */
 
 .menuOpenContainer {
@@ -71,7 +72,7 @@
   text-align: left;
   color: var(--black);
   text-decoration: none;
-  margin-top: 18px;
+  margin-top: 10px;
   display: block;
   margin-bottom: 58px;
 
@@ -101,7 +102,11 @@
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: 38px;
+    margin-top: 34px;
+    margin-right: 10px;
+    background: transparent;
+    border: none;
+     font-size: 0; 
 }
 
 @media screen and (min-width:768px) {
@@ -111,6 +116,7 @@
       margin-top: 30px;
       width: 80px;
       align-items: center;
+      margin-left: 0;
     }
 
     

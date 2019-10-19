@@ -18,7 +18,7 @@ const Nav = () => (
       </NavLink>
     </li>
     <li>
-      <NavLink to="*" className={styles.navLink} activeStyle={activeStyle}>
+      <NavLink to="/contacts" className={styles.navLink} activeStyle={activeStyle}>
         Зворотнiй зв&apos;язок
       </NavLink>
     </li>

@@ -8,7 +8,7 @@ const ContactsPage = () => (
     <ul className={css.list}>
       {/* 1 */}
       <li className={css.contact}>
-        <img src="" alt="avatar" />
+        <img src="" alt="avatar" className={css.img} />
         <a href="*" className={css.contact_title}>
           Имя разработчика
         </a>
@@ -17,7 +17,7 @@ const ContactsPage = () => (
       </li>
       {/* 2 */}
       <li className={css.contact}>
-        <img src="" alt="avatar" />
+        <img src="" alt="avatar" className={css.img} />
         <a href="*" className={css.contact_title}>
           Имя разработчика
         </a>
@@ -26,7 +26,7 @@ const ContactsPage = () => (
       </li>
       {/* 3 */}
       <li className={css.contact}>
-        <img src="" alt="avatar" />
+        <img src="" alt="avatar" className={css.img} />
         <a href="*" className={css.contact_title}>
           Имя разработчика
         </a>
@@ -35,7 +35,7 @@ const ContactsPage = () => (
       </li>
       {/* 4 */}
       <li className={css.contact}>
-        <img src="" alt="avatar" />
+        <img src="" alt="avatar" className={css.img} />
         <a href="*" className={css.contact_title}>
           Имя разработчика
         </a>
@@ -44,7 +44,7 @@ const ContactsPage = () => (
       </li>
       {/* 5 */}
       <li className={css.contact}>
-        <img src="" alt="avatar" />
+        <img src="" alt="avatar" className={css.img} />
         <a href="*" className={css.contact_title}>
           Имя разработчика
         </a>
@@ -53,7 +53,7 @@ const ContactsPage = () => (
       </li>
       {/* 6 */}
       <li className={css.contact}>
-        <img src="" alt="avatar" />
+        <img src="" alt="avatar" className={css.img} />
         <a href="*" className={css.contact_title}>
           Имя разработчика
         </a>
@@ -62,7 +62,7 @@ const ContactsPage = () => (
       </li>
       {/* 7 */}
       <li className={css.contact}>
-        <img src="" alt="avatar" />
+        <img src="" alt="avatar" className={css.img} />
         <a href="*" className={css.contact_title}>
           Имя разработчика
         </a>
@@ -71,7 +71,7 @@ const ContactsPage = () => (
       </li>
       {/* 8 */}
       <li className={css.contact}>
-        <img src="" alt="avatar" />
+        <img src="" alt="avatar" className={css.img} />
         <a href="*" className={css.contact_title}>
           Имя разработчика
         </a>
