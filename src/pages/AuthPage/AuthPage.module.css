@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  height: calc(100vh - 130px);
   background-image: url("../../assets/images/authPageMobile.png");
   background-repeat: no-repeat;
   background-position-x: center;
@@ -78,7 +78,8 @@
 @media (min-width: 768px) {
   .container {
     background-image: url("../../assets/images/bg-auth@2x.jpg");
-    padding-top: 270px;
+    background-size: 80%;
+    padding-top: 150px;
   }
 
   .title {
@@ -105,6 +106,6 @@
   .container {
     background-image: url("../../assets/images/bg-auth@3x.jpg");
     background-size: 80%;
-    padding-top: 180px;
+    padding-top: 100px;
   }
 }

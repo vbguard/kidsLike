@@ -1,9 +1,9 @@
 .container {
-  width: 374px;
+  width: 100vw;
   height: 630px;
   background-color: rgb(241, 237, 237);
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 
 .title {
@@ -15,14 +15,14 @@
   margin-left: 27px;
   padding-top: 27px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .photoContainer {
   width: 120px;
   height: 120px;
-  margin-right: 40px;
+  margin: 0 40px;
   background-color: #ffffff;
 }
 
@@ -116,10 +116,6 @@
 }
 
 @media (min-width: 768px) {
-  .container {
-    margin-top: 260px;
-  }
-
   .title {
     font-size: 30px;
   }
@@ -136,11 +132,4 @@
 }
 
 @media (min-width: 1280px) {
-  .container {
-    margin-top: 160px;
-  }
-
-  .title {
-
-  }
 }

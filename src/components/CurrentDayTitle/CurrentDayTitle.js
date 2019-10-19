@@ -2,9 +2,10 @@ import React from 'react';
 import styles from './CurrentDayTitle.module.css';
 
 const CurrentDayTitle = () => (
-  <p className={styles.text}>
-    Мої завдання: <span className={styles.selectedDay}> Середа, 09.10.</span>
-  </p>
+  <div className={styles.conteiner}>
+    <p className={styles.text}>Мої завдання: </p>
+    <p className={styles.selectedDay}> Середа, 09.10.2019</p>
+  </div>
 );
 
 export default CurrentDayTitle;
