@@ -5,95 +5,62 @@
   right: 18px;
 }
 
-
 .container {
-<<<<<<< HEAD
-    display: flex;
-    width: 70px;
-    justify-content: space-between;
-    /* margin-top: 38px; */
-    /* margin-left: 100px; */
-=======
   display: flex;
-  width: 90px;
-  justify-content: space-evenly;
-  margin-top: 38px;
-  margin-left: 100px;
+  width: 70px;
+  justify-content: space-between;
+  /* margin-top: 38px; */
+  /* margin-left: 100px; */
+}
+
+.user {
+  text-decoration: none;
+  display: flex;
+  /* width: 20px;
+    height: 20px; */
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: 0.18px;
+  text-align: left;
+  color: var(--blue-grey);
+}
+
+.img {
+  display: none;
+  width: 0;
+}
+.btn {
+  border: none;
+  background-color: transparent;
 }
 
 .burger {
   width: 20px;
   height: 20px;
-  object-fit: contain;
-  fill: #18191d;
->>>>>>> 5aab212aca17ae0c626fd3d1623f12c2f8c16aeb
-}
-
-
-.user {
-    text-decoration: none;
-    display: flex;
-    /* width: 20px;
-    height: 20px; */
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.33;
-    letter-spacing: 0.18px;
-    text-align: left;
-    color: var(--blue-grey);
-}
-
-.img {
-    display: none;
-    width: 0;
-}  
-.btn {  
-    border: none;
-    background-color:transparent;
- }
-
-.burger {
-    width: 20px;
-    height: 20px;
   fill: #18191d;
 }
-
 
 /* styles for open modal menu */
 
 .menuOpenContainer {
   background-color: var(--macaroni-and-cheese);
   position: fixed;
-<<<<<<< HEAD
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  padding: 0 20px;
-}
-
-.menuOpenIcon {
-    width: 29px;
-    height: 18px;
-   margin-top: 18px;
-   fill: white;
-=======
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 .menuOpenIcon {
   width: 29px;
   height: 18px;
-  margin-top: 26px;
+  margin-top: 18px;
   fill: white;
->>>>>>> 5aab212aca17ae0c626fd3d1623f12c2f8c16aeb
 }
 
 .menuOpenLink {
@@ -110,7 +77,6 @@
   /* margin-top: 2px; */
   display: block;
   margin-bottom: 58px;
-
 }
 
 .menuCloseIcon {
@@ -134,93 +100,24 @@
 }
 
 .menuOpenBtn {
-<<<<<<< HEAD
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 18px;
-    margin-right: 18px;
-    background: transparent;
-    border: none;
-     font-size: 0; 
-}
-
-@media screen and (min-width:768px) {
-    
-    .container {
-      justify-content: space-between;
-      /* margin-top: 30px; */
-      width: 80px;
-      align-items: center;
-      margin-left: 0;
-    }
-
-    
-
-    .menuOpenContainer
-    {
-        display: none;
-    }
-
-    .btn {
-        display: none;
-    }
-    .burger {
-        display: none;
-    }
-
-    .user {
-        text-align: left;
-      
-    }
-    .img {
-        display: unset;
-        width: 23px;
-        height: 23px;
-    }       
-}
-
-@media screen and (min-width: 1280px) {
-    .container {
-        width: 130px;
-        justify-content: space-around;
-        /* margin-top: 11px; */
-        /* margin-left: 200px; */
-    }
-    .user {
-        font-size: 16px;
-        text-align: right;
-       /* margin-top: 8px; */
-    }   
-
-    .img {
-      
-        width: 50px;
-        height: 50px;
-    }       
-}
-=======
   position: absolute;
   top: 0;
   right: 0;
-  margin-top: 34px;
-  margin-right: 10px;
+  margin-top: 18px;
+  margin-right: 18px;
   background: transparent;
   border: none;
   font-size: 0;
 }
 
-@media screen and (min-width:768px) {
-
+@media screen and (min-width: 768px) {
   .container {
     justify-content: space-between;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     width: 80px;
     align-items: center;
     margin-left: 0;
   }
-
-
 
   .menuOpenContainer {
     display: none;
@@ -229,19 +126,15 @@
   .btn {
     display: none;
   }
-
   .burger {
     display: none;
   }
 
   .user {
     text-align: left;
-
   }
-
   .img {
     display: unset;
-    object-fit: contain;
     width: 23px;
     height: 23px;
   }
@@ -251,20 +144,17 @@
   .container {
     width: 130px;
     justify-content: space-around;
-    margin-top: 11px;
-    margin-left: 200px;
+    /* margin-top: 11px; */
+    /* margin-left: 200px; */
   }
-
   .user {
     font-size: 16px;
     text-align: right;
-    margin-top: 8px;
+    /* margin-top: 8px; */
   }
 
   .img {
-
     width: 50px;
     height: 50px;
   }
 }
->>>>>>> 5aab212aca17ae0c626fd3d1623f12c2f8c16aeb

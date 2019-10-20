@@ -1,28 +1,14 @@
 .nav {
   display: none;
-<<<<<<< HEAD
   /* padding: 0;
   margin: 0; */
   width: 0;
-    
-=======
-  padding: 0;
-  margin: 0;
-  margin: 49px 44px 181px 33px;
-
->>>>>>> 5aab212aca17ae0c626fd3d1623f12c2f8c16aeb
 }
 
 .navLink,
 .navLinkBorders {
-<<<<<<< HEAD
-    width: 100px;
-  height: 9,5px;
-=======
   width: 100px;
   height: 9, 5px;
-  object-fit: contain;
->>>>>>> 5aab212aca17ae0c626fd3d1623f12c2f8c16aeb
   font-family: Montserrat;
   font-size: 16px;
   font-weight: bold;
@@ -41,18 +27,15 @@
 }
 
 @media screen and (min-width: 768px) {
-
   .nav {
     display: flex;
     /* margin: 0; */
     width: 400px;
-    height: 80px;  
-  flex-direction: row;
-  justify-content: space-between; 
-  align-items: center;
- 
+    height: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
-
 
   .navLink,
   .navLinkBorders {
@@ -63,7 +46,6 @@
     text-align: right;
     color: var(--blue-grey);
     display: unset;
-
   }
 
   .navLinkBorders {
@@ -90,8 +72,6 @@
     height: 90%;
     bottom: 0;
     right: -10px;
-
-
   }
 
   .navLinkSpan {
@@ -100,7 +80,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-
   .nav {
     width: 500px;
     /* margin-left: 300px; */

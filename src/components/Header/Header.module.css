@@ -25,7 +25,6 @@
   text-align: left;
   color: var(--black);
   text-decoration: none;
-<<<<<<< HEAD
   /* margin-top: 18px;
  margin-left: 30px; */
 }
@@ -35,22 +34,10 @@
     height: 20px;
    display: block;
    /* margin-top: 36px; */
-=======
-  margin-top: 18px;
-  margin-left: 30px;
-}
-
-.burger {
-  width: 50px;
-  height: 20px;
-  display: block;
-  margin-top: 36px;
->>>>>>> 5aab212aca17ae0c626fd3d1623f12c2f8c16aeb
   fill: #18191d;
 }
 
 @media screen and (min-width: 768px) {
-<<<<<<< HEAD
     .container {
         width: 768px;
         height: 80px;
@@ -60,15 +47,6 @@
   background-color: var(--white); 
     }
     }
-=======
-  .container {
-    width: 768px;
-    height: 80px;
-    margin: 0 auto;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-color: var(--white);
->>>>>>> 5aab212aca17ae0c626fd3d1623f12c2f8c16aeb
 
   }
 
@@ -82,7 +60,6 @@
 
   .link {
     display: flex;
-<<<<<<< HEAD
    width: 90px;
   font-size: 16px;
   /* margin-top: 0; */
@@ -90,21 +67,11 @@
   align-items: center;
   /* margin-left: 0;
 } */
-=======
-    width: 90px;
-    font-size: 16px;
-    margin-top: 0;
-    height: 80px;
-    align-items: center;
-    margin-left: 0;
-  }
->>>>>>> 5aab212aca17ae0c626fd3d1623f12c2f8c16aeb
 
   .logoIcon {
     fill: var(--macaroni-and-cheese);
     display: flex;
     align-items: center;
-<<<<<<< HEAD
     /* margin: 0; */
 }
 }
@@ -114,17 +81,6 @@
         width: 1280px;
       justify-content: space-between;
     }
-=======
-    margin: 0;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .container {
-    width: 1280px;
-    justify-content: unset;
-  }
->>>>>>> 5aab212aca17ae0c626fd3d1623f12c2f8c16aeb
 
   .link {
     font-size: 18px;
