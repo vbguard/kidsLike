@@ -13,12 +13,12 @@ const Nav = () => (
       </NavLink>
     </li>
     <li>
-      <NavLink to="/PlanningPage" className={styles.navLinkBorders} activeStyle={activeStyle}>
+      <NavLink to="/planning" className={styles.navLinkBorders} activeStyle={activeStyle}>
         Планування
       </NavLink>
     </li>
     <li>
-      <NavLink to="*" className={styles.navLink} activeStyle={activeStyle}>
+      <NavLink to="/contacts" className={styles.navLink} activeStyle={activeStyle}>
         Зворотнiй зв&apos;язок
       </NavLink>
     </li>
