@@ -2,18 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Icons from '../../assets';
 
-// const Icon = ({ icon, ...rest }) => {
-//   const Svg = Icons[icon];
-
-//   return <Svg {...rest} />;
-// };
-
-// Icon.propTypes = {
-//   icon: PropTypes.string.isRequired
-// };
-
-// export default Icon;
-
 const Icon = ({ icon, ...rest }) => {
   const Svg = Icons[icon];
 
