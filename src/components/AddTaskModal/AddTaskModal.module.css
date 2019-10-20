@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--white);
   overflow: inherit;
 }
 
@@ -39,9 +39,8 @@
   justify-content: space-around;
   align-items: center;
   height: 66px;
-  background-color: #f5d53b;
+  background-color: var(--off-yellow);
   overflow: inherit;
-
 }
 
 .input {
@@ -49,15 +48,15 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   line-height: 18px;
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
-  background-color: #f5d53b;
+  background-color: var(--off-yellow);
   border: none;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid var(--white);
 }
 
 .input::placeholder {
-  color: #fff;
+  color: var(--white) f;
   text-align: center;
 }
 
@@ -67,7 +66,7 @@
   width: 30px;
   height: 30px;
   background-color: transparent;
-  background-image: url("../../assets/images/ckeckbox.png");
+  background-image: url('../../assets/images/ckeckbox.png');
   background-position: center;
   background-size: contain;
   transition: transform 0.3s linear;

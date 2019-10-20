@@ -3,8 +3,9 @@ import WeekSelected from '../../components/WeekSelected/WeekSelected';
 import Prizes from '../../components/Prizes/Prizes';
 import SelectedTasksPoints from '../../components/SelectedTasksPoints/SelectedTasksPoints';
 import AddTasks from '../../components/AddTasks/AddTasks';
-// import AddTaskModal from '../../components/AddTaskModal/AddTaskModal';
+import AddTaskModal from '../../components/AddTaskModal/AddTaskModal';
 import Footer from '../../components/Footer/Footer';
+// import TaskList from '../TaskList/TaskList';
 
 import { screenWidth } from '../../utils/var';
 import styles from './PlanningPage.module.css';
@@ -21,16 +22,18 @@ const PlanningPage = () => (
     <WeekSelected />
     {screenWidth < 768 && (
       <>
+        {/* <TaskList /> */}
         <Prizes />
         <Footer />
       </>
     )}
     <SelectedTasksPoints />
     <AddTasks />
-    {/* <AddTaskModal /> */}
+    <AddTaskModal />
     {/* <AddTaskModal openModal={handleOpenModal} /> */}
     {screenWidth >= 768 && (
       <>
+        {/* <TaskList /> */}
         <Prizes />
         <Footer />
       </>

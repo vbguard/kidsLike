@@ -24,20 +24,22 @@
   padding: 0 24px;
 }
 
-@media(min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1279px) {
   .conteiner {
     margin-bottom: 24px;
   }
 }
 
-@media(min-width: 1280px) {
+@media (min-width: 1280px) {
   .conteiner {
-    width: 320px;
+    width: 340px;
     flex-direction: row;
-    margin-bottom: 54px;
   }
-
   .text {
     font-size: 18px;
   }
+}
+
+.text {
+  font-size: 18px;
 }
