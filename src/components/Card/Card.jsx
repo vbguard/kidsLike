@@ -6,7 +6,9 @@ import CardToggle from '../CardTogle/CardToggle';
 const Card = ({ title, imageUrl }) => (
   <div className={styles.Card_container}>
     <div className={styles.Card_list}>
-      <div className={styles.pic}>{/* <img src={imageUrl} alt={`${title}`} /> */}</div>
+      <div className={styles.pic}>
+        <img src={imageUrl} alt={`${title}`} />
+      </div>
       <div className={styles.pic_footer}>
         <h2 className={styles.title}>{title}</h2>
         <CardToggle />
