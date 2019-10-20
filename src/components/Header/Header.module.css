@@ -1,17 +1,17 @@
 .container {
-    width: 320px;
-    height: 60px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-   justify-content: space-between;
+  width: 320px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logoIcon {
-    width: 35px;
-    height: 18px;
-   /* margin-top: 18px; */
-   fill: var(--macaroni-and-cheese);
+  width: 35px;
+  height: 18px;
+  /* margin-top: 18px; */
+  fill: var(--macaroni-and-cheese);
 }
 
 .link {
@@ -30,37 +30,35 @@
 }
 
 .burger {
-    width: 50px;
-    height: 20px;
-   display: block;
-   /* margin-top: 36px; */
+  width: 50px;
+  height: 20px;
+  display: block;
+  /* margin-top: 36px; */
   fill: #18191d;
 }
 
 @media screen and (min-width: 768px) {
-    .container {
-        width: 768px;
-        height: 80px;
-        margin: 0 auto;
-        flex-direction: row;  
-        justify-content: space-between;
-  background-color: var(--white); 
-    }
-    }
-
+  .container {
+    width: 768px;
+    height: 80px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--white);
   }
+}
 
-  .border {
-    box-shadow: 0px 15px 10px -15px rgba(29, 29, 27, 0.1);
-  }
+.border {
+  box-shadow: 0px 15px 10px -15px rgba(29, 29, 27, 0.1);
+}
 
-  .burger {
-    display: none;
-  }
+.burger {
+  display: none;
+}
 
-  .link {
-    display: flex;
-   width: 90px;
+.link {
+  display: flex;
+  width: 90px;
   font-size: 16px;
   /* margin-top: 0; */
   height: 60px;
@@ -73,14 +71,14 @@
     display: flex;
     align-items: center;
     /* margin: 0; */
-}
+  }
 }
 
 @media screen and (min-width: 1280px) {
-    .container {
-        width: 1280px;
-      justify-content: space-between;
-    }
+  .container {
+    width: 1280px;
+    justify-content: space-between;
+  }
 
   .link {
     font-size: 18px;
@@ -95,5 +93,4 @@
   .burger {
     display: none;
   }
-
 }
