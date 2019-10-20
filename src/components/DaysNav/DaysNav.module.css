@@ -29,7 +29,7 @@
 }
 
 .link:hover {
-  background-color:  var(--macaroni-and-cheese);
+  background-color: var(--macaroni-and-cheese);
   transition: background-color 0.2s linear;
 }
 
@@ -37,7 +37,7 @@
   .navConteiner {
     width: 100%;
     height: 70px;
-    background-color: var(--macaroni-and-cheese); 
+    background-color: var(--macaroni-and-cheese);
   }
 
   .nav {

@@ -65,6 +65,7 @@
     height: 18px;
   }
 
+<<<<<<< HEAD
 .footer {
   flex-direction: row;
   justify-content: flex-end;
@@ -72,13 +73,21 @@
   padding-right: 30px;
   margin-bottom: 0;
 }
+=======
+  .footer {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-right: 30px;
+  }
+>>>>>>> dev
 
-.borders {
-  height: 24px;
-  font-size: 14px;
-  border-left: 1px solid #858598;
-  border-right: 1px solid #858598;
-  margin: 0 5px;
-  padding: 0 5px;
-}
+  .borders {
+    height: 24px;
+    font-size: 14px;
+    border-left: 1px solid #858598;
+    border-right: 1px solid #858598;
+    margin: 0 5px;
+    padding: 0 5px;
+  }
 }
