@@ -1,12 +1,13 @@
 .container {
-  height: 100vh;
-  background-image: url("../../assets/images/bg-auth.jpg");
+  height: calc(100vh - 130px);
+  background-image: url("../../assets/images/authPageMobile.png");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
+  padding-top: 170px;
 }
 
-.h2 {
+.title {
   width: 244px;
   height: 47px;
   font-family: Montserrat;
@@ -20,7 +21,6 @@
   color: var(--black);
   margin: 0 auto;
   padding-bottom: 25px;
-  margin-top: 170px;
 }
 
 .btn {
@@ -52,41 +52,42 @@
 }
 
 .regText {
-    width: 91px;
-    height: 13px;
-    object-fit: contain;
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.33;
-    letter-spacing: 2.04px;
-    text-align: center;
-    color: var(--blue-grey);
-    text-decoration: none;
-    padding-top: 15px;
-    display: block;
-    margin: 0 auto;
-    transition: color 0.3s ease-out 0.1s;
+  width: 91px;
+  height: 13px;
+  object-fit: contain;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: 2.04px;
+  text-align: center;
+  color: var(--blue-grey);
+  text-decoration: none;
+  padding-top: 15px;
+  display: block;
+  margin: 0 auto;
+  transition: color 0.3s ease-out 0.1s;
 }
 
 .regText:hover {
   color: var(--macaroni-and-cheese);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .container {
     background-image: url("../../assets/images/bg-auth@2x.jpg");
+    background-size: 80%;
+    padding-top: 150px;
   }
 
-  .h2 {
+  .title {
     width: 487px;
     height: 85px;
     font-size: 36px;
     letter-spacing: 1.8px;
     padding-bottom: 50px;
-    margin-top: 270px;
   }
 
   .btn {
@@ -104,9 +105,7 @@
 @media (min-width: 1280px) {
   .container {
     background-image: url("../../assets/images/bg-auth@3x.jpg");
-  }
-
-  .h2 {
-    margin-top: 180px;
+    background-size: 80%;
+    padding-top: 100px;
   }
 }

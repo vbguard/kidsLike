@@ -1,16 +1,28 @@
-
 .nav {
   display: none;
+<<<<<<< HEAD
   /* padding: 0;
   margin: 0; */
   width: 0;
     
+=======
+  padding: 0;
+  margin: 0;
+  margin: 49px 44px 181px 33px;
+
+>>>>>>> 5aab212aca17ae0c626fd3d1623f12c2f8c16aeb
 }
 
 .navLink,
 .navLinkBorders {
+<<<<<<< HEAD
     width: 100px;
   height: 9,5px;
+=======
+  width: 100px;
+  height: 9, 5px;
+  object-fit: contain;
+>>>>>>> 5aab212aca17ae0c626fd3d1623f12c2f8c16aeb
   font-family: Montserrat;
   font-size: 16px;
   font-weight: bold;
@@ -42,7 +54,7 @@
   }
 
 
-  .navLink ,
+  .navLink,
   .navLinkBorders {
     font-weight: 500;
     font-size: 14px;
@@ -53,31 +65,32 @@
     display: unset;
 
   }
+
   .navLinkBorders {
     position: relative;
   }
 
   .navLinkBorders::before {
-    content:'';
-  position: absolute;
-  opacity: 0.2;
-  background-color: var(--blue-grey);
-  width: 1px;
-  height: 90%;
-  bottom: 0;
-  left:-10px; 
+    content: '';
+    position: absolute;
+    opacity: 0.2;
+    background-color: var(--blue-grey);
+    width: 1px;
+    height: 90%;
+    bottom: 0;
+    left: -10px;
   }
 
   .navLinkBorders::after {
-    content:'';
-  position: absolute;
-  opacity: 0.2;
-  background-color: var(--blue-grey);
-  width: 1px;
-  height: 90%;
-  bottom: 0;
-  right:-10px;
- 
+    content: '';
+    position: absolute;
+    opacity: 0.2;
+    background-color: var(--blue-grey);
+    width: 1px;
+    height: 90%;
+    bottom: 0;
+    right: -10px;
+
 
   }
 
@@ -92,6 +105,7 @@
     width: 500px;
     /* margin-left: 300px; */
   }
+
   .navLink,
   .navLinkBorders {
     font-weight: 500;
@@ -99,11 +113,11 @@
     text-align: right;
   }
 
- .navLinkBorders::before {
-  left:-20px; 
- }
+  .navLinkBorders::before {
+    left: -20px;
+  }
 
- .navLinkBorders::after  {
-  right:-20px;
- }
+  .navLinkBorders::after {
+    right: -20px;
+  }
 }

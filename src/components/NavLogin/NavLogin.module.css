@@ -1,18 +1,32 @@
-
 .icon {
-    fill: white;
-    position: absolute;
-    top: 18px;
-    right: 18px;
+  fill: white;
+  position: absolute;
+  top: 18px;
+  right: 18px;
 }
 
 
 .container {
+<<<<<<< HEAD
     display: flex;
     width: 70px;
     justify-content: space-between;
     /* margin-top: 38px; */
     /* margin-left: 100px; */
+=======
+  display: flex;
+  width: 90px;
+  justify-content: space-evenly;
+  margin-top: 38px;
+  margin-left: 100px;
+}
+
+.burger {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  fill: #18191d;
+>>>>>>> 5aab212aca17ae0c626fd3d1623f12c2f8c16aeb
 }
 
 
@@ -53,6 +67,7 @@
 .menuOpenContainer {
   background-color: var(--macaroni-and-cheese);
   position: fixed;
+<<<<<<< HEAD
     top: 0;
     left: 0;
     right: 0;
@@ -65,10 +80,24 @@
     height: 18px;
    margin-top: 18px;
    fill: white;
+=======
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 30px;
+}
+
+.menuOpenIcon {
+  width: 29px;
+  height: 18px;
+  margin-top: 26px;
+  fill: white;
+>>>>>>> 5aab212aca17ae0c626fd3d1623f12c2f8c16aeb
 }
 
 .menuOpenLink {
-    font-family: Montserrat;
+  font-family: Montserrat;
   font-size: 16px;
   font-weight: bold;
   font-style: normal;
@@ -85,11 +114,11 @@
 }
 
 .menuCloseIcon {
-    fill: white;
+  fill: white;
 }
 
 .menuOpenNavLink {
-    width: 87px;
+  width: 87px;
   height: 13px;
   font-family: Montserrat;
   font-size: 18px;
@@ -105,6 +134,7 @@
 }
 
 .menuOpenBtn {
+<<<<<<< HEAD
     position: absolute;
     top: 0;
     right: 0;
@@ -169,3 +199,72 @@
         height: 50px;
     }       
 }
+=======
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 34px;
+  margin-right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 0;
+}
+
+@media screen and (min-width:768px) {
+
+  .container {
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 80px;
+    align-items: center;
+    margin-left: 0;
+  }
+
+
+
+  .menuOpenContainer {
+    display: none;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .user {
+    text-align: left;
+
+  }
+
+  .img {
+    display: unset;
+    object-fit: contain;
+    width: 23px;
+    height: 23px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 130px;
+    justify-content: space-around;
+    margin-top: 11px;
+    margin-left: 200px;
+  }
+
+  .user {
+    font-size: 16px;
+    text-align: right;
+    margin-top: 8px;
+  }
+
+  .img {
+
+    width: 50px;
+    height: 50px;
+  }
+}
+>>>>>>> 5aab212aca17ae0c626fd3d1623f12c2f8c16aeb

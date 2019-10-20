@@ -1,80 +1,78 @@
 .backdrop {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgb(33, 33, 33, 0.1);
-    z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(33, 33, 33, 0.1);
+  z-index: 10;
 }
 
 .modal {
-    width: 280px;
-    height: 260px;
-    border-radius: 6px;
-    overflow: hidden;
+  width: 280px;
+  height: 260px;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .imgConteiner {
-    height: 194px;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    overflow: inherit;
+  height: 194px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  overflow: inherit;
 }
 
 .icon {
-    height: 128px;
-    width: 126px;
-    fill: #e0e0e0;
+  height: 128px;
+  width: 126px;
+  fill: #e0e0e0;
 }
 
 .form {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 66px;
-    background-color: #f5d53b;
-    overflow: inherit;
-
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 66px;
+  background-color: var(--off-yellow);
+  overflow: inherit;
 }
 
 .input {
-    width: 164px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
-    line-height: 18px;
-    color: #fff;
-    text-transform: uppercase;
-    background-color: #f5d53b;
-    border: none;
-    border-bottom: 2px solid #fff;
+  width: 164px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  line-height: 18px;
+  color: var(--white);
+  text-transform: uppercase;
+  background-color: var(--off-yellow);
+  border: none;
+  border-bottom: 2px solid var(--white);
 }
 
 .input::placeholder {
-    color: #fff;
-    text-align: center;
+  color: var(--white) f;
+  text-align: center;
 }
 
 .btn {
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    background-image: url("../../assets/images/ckeckbox.png");
-    background-position: center;
-    background-size: contain; 
-    transition: transform 0.3s linear;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-image: url('../../assets/images/ckeckbox.png');
+  background-position: center;
+  background-size: contain;
+  transition: transform 0.3s linear;
 }
 
 .btn:hover {
-    transition: transform 0.3s linear;
-    transform: scale(1.2);
+  transition: transform 0.3s linear;
+  transform: scale(1.2);
 }
-

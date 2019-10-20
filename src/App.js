@@ -6,6 +6,7 @@ import PlanningPage from './pages/PlanningPage/PlanningPage';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import Header from './components/Header/Header';
+import ContactsPage from './pages/ContactsPage/ContactsPage';
 // import ProtectedComponent from './hoc/ProtectedComponent';
 
 function App() {
@@ -13,11 +14,12 @@ function App() {
     <>
       <Header />
       <Switch>
-        <Route exact strict path="/" component={AuthPage} />
+        <Route exact path="/" component={AuthPage} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/dashboard" component={DashboardPage} />
         <Route path="/planning" component={PlanningPage} />
+        <Route path="/contacts" component={ContactsPage} />
       </Switch>
     </>
   );
