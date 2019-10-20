@@ -52,23 +52,23 @@
 }
 
 .regText {
-    width: 91px;
-    height: 13px;
-    object-fit: contain;
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.33;
-    letter-spacing: 2.04px;
-    text-align: center;
-    color: var(--blue-grey);
-    text-decoration: none;
-    padding-top: 15px;
-    display: block;
-    margin: 0 auto;
-    transition: color 0.3s ease-out 0.1s;
+  width: 91px;
+  height: 13px;
+  object-fit: contain;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: 2.04px;
+  text-align: center;
+  color: var(--blue-grey);
+  text-decoration: none;
+  padding-top: 15px;
+  display: block;
+  margin: 0 auto;
+  transition: color 0.3s ease-out 0.1s;
 }
 
 .regText:hover {
