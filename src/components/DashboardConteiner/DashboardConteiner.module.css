@@ -1,6 +1,6 @@
 .conteiner {
     width: 280px;
-    min-height: calc(100vh - 190px);
+    height: calc(100vh - 190px);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
