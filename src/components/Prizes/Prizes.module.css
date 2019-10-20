@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 210px;
-    background-color: #fdf8ed;
+    background-color: var(--off-white);
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 34px;
@@ -39,7 +39,7 @@
   .icon {
     width: 15px;
     height: 15px;
-    fill: #efbb43;
+    fill: var(--macaroni-and-cheese);
     }
 
   @media (min-width: 769px) and (max-width: 1279px){
@@ -58,7 +58,7 @@
   
   @media (min-width: 1280px) {
     .title {
-      color: #fff;
+      color: var(--white);
       font-size: 18px;
       font-weight: 700;
       line-height: 21px;
@@ -76,4 +76,3 @@
       border-bottom-right-radius: 0;
     }
   }
-  

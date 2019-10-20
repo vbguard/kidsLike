@@ -2,7 +2,7 @@ import React from 'react';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import DaysNavConteiner from '../../components/DaysNav/DaysNavConteiner';
 import DashboardConteiner from '../../components/DashboardConteiner/DashboardConteiner';
-import Footer from '../../components/Footer/Footer';
+// import Footer from '../../components/Footer/Footer';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
 
 import { screenWidth } from '../../utils/var';
@@ -15,7 +15,6 @@ const DashboardPage = () => (
       <DashboardConteiner />
     </div>
     {screenWidth < 768 && <ProgressBar />}
-    {screenWidth >= 768 && <Footer />}
   </>
 );
 

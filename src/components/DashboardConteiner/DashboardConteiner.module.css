@@ -1,6 +1,6 @@
 .conteiner {
     width: 280px;
-    height: calc(100vh - 190px);
+    min-height: calc(100vh - 190px);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -25,8 +25,6 @@
         align-items: flex-start;
         align-content: flex-start;
         justify-content: space-between;
-        height: calc(100vh - 80px);
-        padding-top: 46px;
-        padding-bottom: 104px;
+        min-height: calc(100vh - 80px);
     }
 }

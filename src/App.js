@@ -7,9 +7,9 @@ import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import Header from './components/Header/Header';
 import ContactsPage from './pages/ContactsPage/ContactsPage';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 
-import { screenWidth } from './utils/var';
+// import { screenWidth } from './utils/var';
 // import ProtectedComponent from './hoc/ProtectedComponent';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
         <Route path="/planning" component={PlanningPage} />
         <Route path="/contacts" component={ContactsPage} />
       </Switch>
-      {screenWidth >= 768 && <Footer />}
+      {/* {screenWidth >= 768 && <Footer />} */}
     </>
   );
 }

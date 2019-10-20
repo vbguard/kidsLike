@@ -20,7 +20,7 @@
 .text {
     width: 280px;
     font-size: 11px;
-    color: #858598;
+    color: var(--blue-grey);
 }
 
 .selectedPoints {
@@ -47,7 +47,7 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
-    background-color: #8ec63f;
+    background-color: var(--apple);
     border-radius: 3px;
 }
 
@@ -55,9 +55,7 @@ progress[value]::-webkit-progress-value {
 @media(min-width: 768px) {
     .conteiner {
         height: auto;
-        background-color: #fff;
-        padding-top: 34px;
-        padding-bottom: 80px;
+        background-color: var(--white);
     }
 
     .progressConteiner {
@@ -80,7 +78,7 @@ progress[value]::-webkit-progress-value {
     .conteiner {
         width: 330px;
         margin-right: 0;
-        margin-bottom: 20px;  
+        margin-bottom: 10px;  
     }
 
     .progressConteiner {
