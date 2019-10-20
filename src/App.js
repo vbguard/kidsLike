@@ -6,9 +6,7 @@ import PlanningPage from './pages/PlanningPage/PlanningPage';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import Header from './components/Header/Header';
-import Card from './components/Card/Card';
 import ContactsPage from './pages/ContactsPage/ContactsPage';
-// import Footer from './components/Footer/Footer';
 // import ProtectedComponent from './hoc/ProtectedComponent';
 
 function App() {
@@ -21,7 +19,6 @@ function App() {
         <Route path="/register" component={Register} />
         <Route path="/dashboard" component={DashboardPage} />
         <Route path="/planning" component={PlanningPage} />
-        <Route path="/card" component={Card} />
         <Route path="/contacts" component={ContactsPage} />
       </Switch>
     </>
