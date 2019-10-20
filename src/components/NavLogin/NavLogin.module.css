@@ -9,24 +9,18 @@
 
 .container {
     display: flex;
-    width: 90px;
-    justify-content: space-evenly;
-    margin-top: 38px;
-    margin-left: 100px;
+    width: 70px;
+    justify-content: space-between;
+    /* margin-top: 38px; */
+    /* margin-left: 100px; */
 }
-.burger {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-  fill: #18191d;
-}
+
 
 .user {
     text-decoration: none;
-    display: block;
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
+    display: flex;
+    /* width: 20px;
+    height: 20px; */
     font-family: Montserrat;
     font-size: 14px;
     font-weight: 500;
@@ -40,8 +34,20 @@
 
 .img {
     display: none;
+    width: 0;
+}  
+.btn {  
+    border: none;
+    background-color:transparent;
+ }
+
+.burger {
+    width: 20px;
+    height: 20px;
+  fill: #18191d;
 }
-.btn { font-size: 0; }
+
+
 /* styles for open modal menu */
 
 .menuOpenContainer {
@@ -51,13 +57,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 .menuOpenIcon {
     width: 29px;
     height: 18px;
-   margin-top: 26px;
+   margin-top: 18px;
    fill: white;
 }
 
@@ -72,7 +78,7 @@
   text-align: left;
   color: var(--black);
   text-decoration: none;
-  margin-top: 10px;
+  /* margin-top: 2px; */
   display: block;
   margin-bottom: 58px;
 
@@ -102,8 +108,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: 34px;
-    margin-right: 10px;
+    margin-top: 18px;
+    margin-right: 18px;
     background: transparent;
     border: none;
      font-size: 0; 
@@ -113,7 +119,7 @@
     
     .container {
       justify-content: space-between;
-      margin-top: 30px;
+      /* margin-top: 30px; */
       width: 80px;
       align-items: center;
       margin-left: 0;
@@ -139,7 +145,6 @@
     }
     .img {
         display: unset;
-        object-fit: contain;
         width: 23px;
         height: 23px;
     }       
@@ -149,13 +154,13 @@
     .container {
         width: 130px;
         justify-content: space-around;
-        margin-top: 11px;
-        margin-left: 200px;
+        /* margin-top: 11px; */
+        /* margin-left: 200px; */
     }
     .user {
         font-size: 16px;
         text-align: right;
-       margin-top: 8px;
+       /* margin-top: 8px; */
     }   
 
     .img {
