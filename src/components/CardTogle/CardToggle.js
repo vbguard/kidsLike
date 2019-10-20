@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import styles from './CardToggle.module.css';
 
-// import CardTogleOff from './CardTogleOff/CardTogleOff';
-// import CardTogleOn from './CardTogleOn/CardTogleOn';
 const checkbox = [styles.checkbox];
 const toggle = [styles.toggle];
 

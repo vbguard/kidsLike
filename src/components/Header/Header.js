@@ -4,8 +4,6 @@ import Icon from '../Icon/Icon';
 import NavLogin from '../NavLogin/NavLogin';
 import styles from './Header.module.css';
 
-// const x = window.innerWidth;
-
 export default class Header extends Component {
   state = {
     isLogged: true

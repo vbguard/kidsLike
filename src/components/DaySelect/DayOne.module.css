@@ -1,10 +1,10 @@
-
 .label {
-    display: inline-block;
-    cursor: pointer;
+  display: inline-block;
+  cursor: pointer;
 }
+
 .checkboxs {
-    display: none;
+  display: none;
 }
 
 .days {

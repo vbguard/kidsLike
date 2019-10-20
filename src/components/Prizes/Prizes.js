@@ -2,7 +2,6 @@ import React from 'react';
 import Icon from '../Icon/Icon';
 import styles from './Prizes.module.css';
 import kinder from '../../assets/images/kinder.jpg';
-// import { prizesStyles } from '../../utils/var';
 import macdonalds from '../../assets/images/macdonalds.jpg';
 
 const Prizes = () => (
