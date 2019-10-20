@@ -1,0 +1,55 @@
+.Card_container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 320px;
+}
+
+.Card_list {
+  margin: 0 auto;
+  width: 280px;
+  height: 261px;
+}
+
+.pic {
+  display: block;
+  margin: 0 auto;
+  width: 184px;
+  height: 161px;
+  margin-top: 19px;
+  margin-bottom: 14px;
+  background-image: url('../../assets/images/tasksImage/pic-6.png');
+  background-repeat: no-repeat;
+  background-color: rgb(255, 255, 255);
+}
+
+.pic_footer {
+  display: flex;
+  justify-content: space-between;
+  height: 67px;
+  padding-left: 29px;
+  padding-top: 28px;
+  background-color: #efbb43;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1.64;
+  letter-spacing: 0.88px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 2px 0px rgba(29, 29, 27, 0.15);
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+}
+
+@media (min-width: 1280px) {
+}

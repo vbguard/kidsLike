@@ -1,28 +1,28 @@
 .container {
-  width: 400px;
-  height: 700px;
+  width: 100vw;
+  height: 630px;
   background-color: rgb(241, 237, 237);
   margin: 0 auto;
-  margin-top: 170px;
+  margin-top: 10px;
 }
 
-.h2 {
+.title {
   font-family: Montserrat;
   font-size: 26px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  margin-left: 40px;
-  padding-top: 40px;
+  margin-left: 27px;
+  padding-top: 27px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .photoContainer {
   width: 120px;
   height: 120px;
-  margin-right: 40px;
+  margin: 0 40px;
   background-color: #ffffff;
 }
 
@@ -94,30 +94,30 @@
 }
 
 .regText {
-    height: 13px;
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.33;
-    letter-spacing: 2.04px;
-    text-align: center;
-    color: var(--blue-grey);
-    /* text-decoration: none; */
-    padding-top: 15px;
-    display: block;
-    margin: 0 auto;
-    transition: color 0.3s ease-out 0.1s;
+  height: 13px;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: 2.04px;
+  text-align: center;
+  color: var(--blue-grey);
+  /* text-decoration: none; */
+  padding-top: 15px;
+  display: block;
+  margin: 0 auto;
+  transition: color 0.3s ease-out 0.1s;
 }
 
 .regText:hover {
   color: var(--macaroni-and-cheese);
 }
 
-@media (min-width: 769px) {
-  .h2 {
-
+@media (min-width: 768px) {
+  .title {
+    font-size: 30px;
   }
 
   .btn {
@@ -131,8 +131,4 @@
   }
 }
 
-@media (min-width: 1280px) {
-  .h2 {
-
-  }
-}
+@media (min-width: 1280px) {}

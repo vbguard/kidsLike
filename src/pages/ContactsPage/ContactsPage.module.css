@@ -1,0 +1,154 @@
+.container {
+  width: 100vw;
+  padding: 30px 10px;
+  margin: 0 auto;
+}
+
+.img {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.text {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: var(--blue-grey);
+  text-align: center;
+}
+
+.list {
+  padding: 30px 15px;
+}
+
+.contact {
+  position: relative;
+  padding-left: 120px;
+  margin-bottom: 30px;
+}
+
+.contact_title {
+  display: block;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: black;
+  transition: color 0.2s ease-out 0.1s;
+}
+
+.contact_title:hover {
+  color: var(--macaroni-and-cheese);
+}
+
+.contact_job {
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: var(--blue-grey);
+  margin-bottom: 20px;
+}
+
+.contact_job::after {
+  display: block;
+  content: '';
+  height: 3px;
+  width: 50px;
+  margin-top: 20px;
+  background-color: var(--macaroni-and-cheese);
+}
+
+.contact_info {
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: var(--blue-grey);
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 738px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .text {
+    font-size: 22px;
+  }
+
+  .list {
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .text {
+    margin-bottom: 50px;
+  }
+
+  .contact {
+    width: 50%;
+  }
+
+  .contact:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+
+  .img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 1250px;
+  }
+
+  .list {
+    width: 1000px;
+  }
+
+  .contact {
+    position: unset;
+    width: 25%;
+    padding-left: 60px;
+  }
+
+  .contact_title {
+    margin-top: 20px;
+  }
+
+  .img {
+    position: unset;
+    width: 180px;
+    height: 180px;
+  }
+}

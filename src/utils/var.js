@@ -14,8 +14,8 @@ export const mobileDays = {
   wed: 'Ср',
   thurs: 'Чт',
   fri: 'Пт',
-  sart: 'Суб',
-  sun: 'Нед'
+  sart: 'Сб',
+  sun: 'Нд'
 };
 
 export const screenWidth = window.innerWidth;
