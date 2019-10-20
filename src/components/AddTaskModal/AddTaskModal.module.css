@@ -53,6 +53,8 @@
   background-color: var(--off-yellow);
   border: none;
   border-bottom: 2px solid var(--white);
+  outline: none;
+  padding: 0 4px;
 }
 
 .input::placeholder {

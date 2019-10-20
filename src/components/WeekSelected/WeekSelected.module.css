@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   height: 54px;
-  width: 160px;
+  width: 170px;
   margin-bottom: 30px;
 }
 
@@ -15,12 +15,12 @@
 
 .select {
   height: 30px;
-  width: 160px;
+  width: 170px;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 700;
   border-radius: 6px;
-  border: 1px solid #efbb43;
+  border: 1px solid var(--macaroni-and-cheese);
   padding: 0 24px;
 }
 
@@ -32,7 +32,7 @@
 
 @media (min-width: 1280px) {
   .conteiner {
-    width: 340px;
+    width: 350px;
     flex-direction: row;
   }
   .text {
