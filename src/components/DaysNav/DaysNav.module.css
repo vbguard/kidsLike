@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 70px;
 }
 
 .nav {
@@ -14,21 +14,23 @@
 
 .link {
   display: inline-block;
-  width: 36px;
+  width: 34px;
   height: 24px;
   background-color: #f6da98;
   text-decoration: none;
   border-radius: 5px;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 24px;
   font-weight: 700;
   text-align: center;
   color: #000;
+  transition: background-color 0.2s linear;
 }
 
 .link:hover {
   background-color:  #efbb43;
+  transition: background-color 0.2s linear;
 }
 
 @media (min-width: 769px) and (max-width: 1279px) {
@@ -49,6 +51,7 @@
 
   .link:hover {
     background-color: #fdf8ed;
+    transition: background-color 0.2s linear;
   }
 }
 
@@ -70,6 +73,7 @@
 
   .link:hover {
     background-color: #fdf8ed;
+    transition: background-color 0.2s linear;
   }
 }
 

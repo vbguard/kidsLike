@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import { withRouter } from 'react-router';
-// import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import { NavLink } from 'react-router-dom';
 import Icon from '../Icon/Icon';
@@ -56,7 +54,7 @@ export default class NavLogin extends Component {
             </li>
             <li>
               <NavLink
-                to="/PlanningPage"
+                to="/planning"
                 className={styles.menuOpenNavLink}
                 onClick={this.toggleModal}
                 activeStyle={activeStyle}
@@ -66,7 +64,7 @@ export default class NavLogin extends Component {
             </li>
             <li>
               <NavLink
-                to="contact"
+                to="/contacts"
                 className={styles.menuOpenNavLink}
                 onClick={this.toggleModal}
                 activeStyle={activeStyle}

@@ -11,6 +11,10 @@ import Card from './components/Card/Card';
 import ContactsPage from './pages/ContactsPage/ContactsPage';
 import Footer from './components/Footer/Footer';
 
+<<<<<<< HEAD
+=======
+import { screenWidth } from './utils/var';
+>>>>>>> dev
 // import ProtectedComponent from './hoc/ProtectedComponent';
 
 function App() {
@@ -27,7 +31,7 @@ function App() {
         <Route path="/card" component={Card} />
         <Route path="/contacts" component={ContactsPage} />
       </Switch>
-      <Footer />
+      {screenWidth >= 768 && <Footer />}
     </>
   );
 }
