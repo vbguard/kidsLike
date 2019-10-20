@@ -51,17 +51,12 @@ progress[value]::-webkit-progress-value {
 }
 
 @media (min-width: 768px) {
-  <<<<<<< head .conteiner {
+  .conteiner {
     height: auto;
     background-color: var(--white);
   }
-  ======= .conteiner {
-    height: auto;
-    background-color: #fff;
-    padding-top: 34px;
-    padding-bottom: 80px;
-  }
-  >>>>>>>dev .progressConteiner {
+
+  .progressConteiner {
     justify-content: space-between;
     align-items: center;
     width: 330px;
@@ -79,17 +74,13 @@ progress[value]::-webkit-progress-value {
 }
 
 @media (min-width: 1280px) {
-  <<<<<<< head .conteiner {
+  .conteiner {
     width: 330px;
     margin-right: 0;
     margin-bottom: 10px;
   }
-  ======= .conteiner {
-    width: 330px;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-  >>>>>>>dev .progressConteiner {
+
+  .progressConteiner {
     width: 320px;
     align-content: center;
   }

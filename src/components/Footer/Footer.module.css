@@ -65,22 +65,12 @@
     height: 18px;
   }
 
-<<<<<<< HEAD
-.footer {
-  flex-direction: row;
-  justify-content: flex-end;
-  padding-top: 10px;
-  padding-right: 30px;
-  margin-bottom: 0;
-}
-=======
   .footer {
     flex-direction: row;
     justify-content: flex-end;
     padding-top: 10px;
     padding-right: 30px;
   }
->>>>>>> dev
 
   .borders {
     height: 24px;
