@@ -1,5 +1,7 @@
-import React from 'react';
-import css from './ContactsPage.module.css';
+import React from "react";
+import css from "./ContactsPage.module.css";
+import Vl from "../../assets/images/contacts/Vladimir.jpg";
+import Ol from "../../assets/images/contacts/O.jpg";
 
 const ContactsPage = () => (
   <div className={css.container}>
@@ -8,15 +10,19 @@ const ContactsPage = () => (
     <ul className={css.list}>
       {/* 1 */}
       <li className={css.contact}>
-        <img src="../../assets/images/contacts/Vladimir.jpg" alt="avatar" className={css.img} />
-        <a href="https://web.telegram.org/#/im?p=@VladimirZaicev" className={css.contact_title}>
+        <img src={Vl} alt="avatar" className={css.img} />
+        <a
+          href="https://web.telegram.org/#/im?p=@VladimirZaicev"
+          className={css.contact_title}
+        >
           Зайцев Володимир
         </a>
         <p className={css.contact_job}>Full Stack Developer</p>
         <p className={css.contact_info}>
-          Професійні навички: HTML5, CSS, SCSS, Кросбраузерна верстка, Валідна верстка, Адаптивна верстка, Верстка із
-          PSD і Sketch, JQuery, JavaScript, NodeJS, SQL, MySQL, MongoDB, React, Redux, Git, Webpack, Photoshop, Zeplin,
-          JSON. Унiверсальний боєць{' '}
+          Професійні навички: HTML5, CSS, SCSS, Кросбраузерна верстка, Валідна
+          верстка, Адаптивна верстка, Верстка із PSD і Sketch, JQuery,
+          JavaScript, NodeJS, SQL, MySQL, MongoDB, React, Redux, Git, Webpack,
+          Photoshop, Zeplin, JSON. Унiверсальний боєць{" "}
           <span role="img" aria-label="smile">
             😄
           </span>
@@ -24,7 +30,7 @@ const ContactsPage = () => (
       </li>
       {/* 2 */}
       <li className={css.contact}>
-        <img src="" alt="avatar" className={css.img} />
+        <img src={Ol} alt="avatar" className={css.img} />
         <a href="*" className={css.contact_title}>
           Константин Черных
         </a>

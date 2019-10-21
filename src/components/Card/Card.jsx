@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Card.module.css';
 import CardToggle from '../CardTogle/CardToggle';
+import c from '../../assets/images/tasksImage/pic-3@2x.png';
 
 const Card = ({ title, imageUrl }) => (
   <div className={styles.Card_container}>
@@ -20,6 +21,11 @@ const Card = ({ title, imageUrl }) => (
 Card.propTypes = {
   title: PropTypes.string,
   imageUrl: PropTypes.string
+};
+
+Card.defaultProps = {
+  title: 'Поприбирати у шафі',
+  imageUrl: { c }
 };
 
 export default Card;
