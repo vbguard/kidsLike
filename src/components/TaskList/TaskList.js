@@ -18,7 +18,7 @@ const TaskList = ({ tasks }) => (
 TaskList.propTypes = {
   tasks: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
       image: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired
     }).isRequired
