@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Nav from '../Nav/Nav';
 import Icon from '../Icon/Icon';
 import NavLogin from '../NavLogin/NavLogin';
@@ -18,10 +19,10 @@ export default class Header extends Component {
         <div className={styles.container}>
           {isLogged ? (
             <>
-              <a href="*" className={styles.link}>
+              <Link to="/" className={styles.link}>
                 KidsLike
                 <Icon icon="Logo" className={styles.logoIcon} />
-              </a>
+              </Link>
               <Nav />
               <NavLogin />
             </>
