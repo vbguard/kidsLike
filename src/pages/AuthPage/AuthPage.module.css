@@ -1,6 +1,6 @@
 .container {
   height: calc(100vh - 130px);
-  background-image: url("../../assets/images/authPageMobile.png");
+  /* background-image: url("../../assets/images/authPageMobile.png"); */
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
@@ -77,7 +77,7 @@
 
 @media (min-width: 768px) {
   .container {
-    background-image: url("../../assets/images/bg-auth@2x.jpg");
+    background-image: url('../../assets/images/bg-auth@2x.jpg');
     background-size: 80%;
     padding-top: 150px;
   }
@@ -104,7 +104,7 @@
 
 @media (min-width: 1280px) {
   .container {
-    background-image: url("../../assets/images/bg-auth@3x.jpg");
+    background-image: url('../../assets/images/bg-auth@3x.jpg');
     background-size: 80%;
     padding-top: 100px;
   }
