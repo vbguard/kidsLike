@@ -21,3 +21,4 @@ const configureStore = () => {
 };
 
 export const store = configureStore();
+export const stor = configureStore();

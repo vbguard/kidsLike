@@ -117,7 +117,7 @@
     width: 50%;
   }
 
-  .contact:nth-last-child(-n+2) {
+  .contact:nth-last-child(-n + 2) {
     margin-bottom: 0;
   }
 
