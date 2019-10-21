@@ -68,7 +68,7 @@
   width: 30px;
   height: 30px;
   background-color: transparent;
-  background-image: url('../../assets/images/ckeckbox.png');
+  /* background-image: url('../../assets/images/ckeckbox.png'); */
   background-position: center;
   background-size: contain;
   transition: transform 0.3s linear;
