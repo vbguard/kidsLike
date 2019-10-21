@@ -20,6 +20,7 @@ function App() {
         <Route path="/register" component={Register} />
         <Route path="/dashboard" component={DashboardPage} />
         <Route path="/planning" component={PlanningPage} />
+        <Route path="/contacts" component={ContactsPage} />
       </Switch>
     </>
   );
