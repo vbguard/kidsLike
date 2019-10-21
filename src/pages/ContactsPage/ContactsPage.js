@@ -1,7 +1,7 @@
-import React from 'react';
-import css from './ContactsPage.module.css';
-import Vl from '../../assets/images/contacts/Vladimir.jpg';
-import Ol from '../../assets/images/contacts/O.jpg';
+import React from "react";
+import css from "./ContactsPage.module.css";
+import Vl from "../../assets/images/contacts/Vladimir.jpg";
+import Ol from "../../assets/images/contacts/O.jpg";
 
 const ContactsPage = () => (
   <div className={css.container}>
@@ -11,14 +11,18 @@ const ContactsPage = () => (
       {/* 1 */}
       <li className={css.contact}>
         <img src={Vl} alt="avatar" className={css.img} />
-        <a href="https://web.telegram.org/#/im?p=@VladimirZaicev" className={css.contact_title}>
+        <a
+          href="https://web.telegram.org/#/im?p=@VladimirZaicev"
+          className={css.contact_title}
+        >
           Зайцев Володимир
         </a>
         <p className={css.contact_job}>Full Stack Developer</p>
         <p className={css.contact_info}>
-          Професійні навички: HTML5, CSS, SCSS, Кросбраузерна верстка, Валідна верстка, Адаптивна верстка, Верстка із
-          PSD і Sketch, JQuery, JavaScript, NodeJS, SQL, MySQL, MongoDB, React, Redux, Git, Webpack, Photoshop, Zeplin,
-          JSON. Унiверсальний боєць{' '}
+          Професійні навички: HTML5, CSS, SCSS, Кросбраузерна верстка, Валідна
+          верстка, Адаптивна верстка, Верстка із PSD і Sketch, JQuery,
+          JavaScript, NodeJS, SQL, MySQL, MongoDB, React, Redux, Git, Webpack,
+          Photoshop, Zeplin, JSON. Унiверсальний боєць{" "}
           <span role="img" aria-label="smile">
             😄
           </span>
@@ -28,10 +32,10 @@ const ContactsPage = () => (
       <li className={css.contact}>
         <img src={Ol} alt="avatar" className={css.img} />
         <a href="*" className={css.contact_title}>
-          Матяш Олег
+          Константин Черных
         </a>
         <p className={css.contact_job}>Full Stack Developer</p>
-        <p className={css.contact_info}>matiasholeh@gmail.com</p>
+        <p className={css.contact_info}>Разработчик.</p>
       </li>
       {/* 3 */}
       <li className={css.contact}>
@@ -90,5 +94,4 @@ const ContactsPage = () => (
     </ul>
   </div>
 );
-
 export default ContactsPage;

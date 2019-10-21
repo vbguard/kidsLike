@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../../components/Footer/Footer';
+
 import css from './AuthPage.module.css';
 
 const AuthPage = () => (
@@ -13,6 +15,7 @@ const AuthPage = () => (
         Реєстрація
       </Link>
     </div>
+    <Footer />
   </>
 );
 

@@ -4,6 +4,8 @@ import CurrentDayTitle from '../CurrentDayTitle/CurrentDayTitle';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import Prizes from '../Prizes/Prizes';
 import Footer from '../Footer/Footer';
+// import TaskList from '../TaskList/TaskList';
+
 import { screenWidth } from '../../utils/var';
 import styles from './DashboardConteiner.module.css';
 
@@ -12,13 +14,14 @@ const DashboardConteiner = () => (
     <WeekRange />
     <CurrentDayTitle />
     {screenWidth >= 768 && <ProgressBar />}
-    {screenWidth < 768 && (
+    {/* <TaskList /> */}
+    {screenWidth < 1280 && (
       <>
         <Prizes />
         <Footer />
       </>
     )}
-    {screenWidth < 1280 && screenWidth >= 768 && <Prizes />}
+    {screenWidth >= 1280 && <Footer />}
   </div>
 );
 

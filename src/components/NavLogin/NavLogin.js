@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import Icon from '../Icon/Icon';
 import styles from './NavLogin.module.css';
 import image from '../../assets/images/avatar/avatart.jpg';
@@ -36,10 +36,10 @@ export default class NavLogin extends Component {
         </span>
 
         <Modal isOpen={isOpen} className={styles.menuOpenContainer}>
-          <a href="*" className={styles.menuOpenLink}>
+          <Link to="/" className={styles.menuOpenLink} onClick={this.toggleModal}>
             KidsLike
             <Icon icon="Logo" className={styles.menuOpenIcon} />
-          </a>
+          </Link>
           <ul>
             <li>
               <NavLink
