@@ -88,5 +88,4 @@ const ContactsPage = () => (
     </ul>
   </div>
 );
-
 export default ContactsPage;

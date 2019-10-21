@@ -4,22 +4,22 @@
   justify-content: space-between;
   align-items: center;
   height: 34px;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
 }
 
 .text {
   font-size: 11px;
-  color: #858598;
+  color: var(--blue-grey);
 }
 
 .selectedDay {
   font-size: 12px;
   font-weight: 700;
-  color: #000;
+  color: var(--black);
   text-transform: uppercase;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .conteiner {
     flex-direction: row;
     justify-content: space-around;
@@ -31,7 +31,7 @@
   }
 }
 
-@media(min-width: 1280px) {
+@media (min-width: 1280px) {
   .conteiner {
     justify-content: space-between;
     height: 30px;

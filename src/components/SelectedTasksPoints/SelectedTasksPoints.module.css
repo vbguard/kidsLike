@@ -5,11 +5,12 @@
   height: 60px;
   width: 100%;
   background-color: #e8e8e8;
+  margin-top: 30px;
 }
 
 .text {
   font-size: 11px;
-  color: #858598;
+  color: var(--blue-grey);
   line-height: 30px;
 }
 
@@ -18,26 +19,26 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #8ec63f;
+  background-color: var(--apple);
   font-size: 14px;
-  color: #fff;
+  color: var(--white);
   font-weight: 700;
   line-height: 30px;
   text-align: center;
   margin: 0 6px;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .conteiner {
     margin-bottom: 20px;
-    background-color: #fff;
+    margin-top: 0;
+    background-color: var(--white);
   }
 }
 
-@media(min-width: 1280px) {
+@media (min-width: 1280px) {
   .conteiner {
     width: 400px;
     flex-direction: row;
-    margin-bottom: 54px;
   }
 }

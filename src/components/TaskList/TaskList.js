@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './TaskList.module.css';
 
-const TaskList = ({ images }) => (
+const TaskList = ({ tasks }) => (
   <div className={styles.container}>
     <ul className={styles.list}>
-      {images.map(({ id, image, title }) => (
+      {tasks.map(({ id, image, title }) => (
         <li key={id} className={styles.listItem}>
           <img src={image} alt={title} />
           <p>{title}</p>
@@ -16,7 +16,7 @@ const TaskList = ({ images }) => (
 );
 
 TaskList.propTypes = {
-  images: PropTypes.arrayOf(
+  tasks: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,

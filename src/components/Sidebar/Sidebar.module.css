@@ -5,6 +5,6 @@
   justify-content: space-between;
   width: 240px;
   height: calc(100vh - 80px);
-  background-color: #efbb43;
+  background-color: var(--macaroni-and-cheese);
   padding: 100px 0;
 }
