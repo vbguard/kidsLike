@@ -20,16 +20,16 @@
 .text {
   width: 280px;
   font-size: 11px;
-  color: #858598;
+  color: var(--blue-grey);
 }
 
 .selectedPoints {
   font-weight: 700;
-  font-size: 12px
+  font-size: 12px;
 }
 
 .allPoints {
-  font-size: 12px
+  font-size: 12px;
 }
 
 progress[value] {
@@ -41,22 +41,19 @@ progress[value] {
 }
 
 progress[value]::-webkit-progress-bar {
-  background-color: #e0e0e0;
+  background-color: #c4c3c3;
   border-radius: 3px;
 }
 
 progress[value]::-webkit-progress-value {
-  background-color: #8ec63f;
+  background-color: var(--apple);
   border-radius: 3px;
 }
 
-
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .conteiner {
     height: auto;
-    background-color: #fff;
-    padding-top: 34px;
-    padding-bottom: 80px;
+    background-color: var(--white);
   }
 
   .progressConteiner {
@@ -76,11 +73,11 @@ progress[value]::-webkit-progress-value {
   }
 }
 
-@media(min-width: 1280px) {
+@media (min-width: 1280px) {
   .conteiner {
     width: 330px;
     margin-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .progressConteiner {
