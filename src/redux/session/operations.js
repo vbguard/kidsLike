@@ -20,6 +20,7 @@ export const login = credentials => dispatch => {
 
       localStorage.setItem('token', token);
       notyf(response.status);
+      window.history.pushState('/dashboard', response.data.user);
       dispatch(loginSuccess(response.data.user));
     })
     .catch(error => {
@@ -38,6 +39,7 @@ export const register = credentials => dispatch => {
 
       localStorage.setItem('token', token);
       notyf(response.status);
+      window.history.pushState('/planning', response.data.user);
       dispatch(registerSuccess(response.data));
     })
     .catch(error => {

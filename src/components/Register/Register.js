@@ -23,12 +23,12 @@ class Register extends Component {
   state = { name: '', email: '', password: '', passwordConfirmation: '' };
 
   submitHandler = e => {
-    const { onRegister, history } = this.props;
+    const { onRegister } = this.props;
     e.preventDefault();
 
     if (this.state.password === this.state.passwordConfirmation && this.state.password.length > 5) {
       onRegister({ ...this.state });
-      setTimeout(() => history.push('/planning'), 1000);
+      // setTimeout(() => history.push('/planning'), 1000);
       this.setState({ name: '', email: '', password: '' });
     } else {
       notyf.error();
@@ -123,8 +123,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 Register.propTypes = {
-  onRegister: PropTypes.func,
-  history: PropTypes.shape()
+  onRegister: PropTypes.func
+  // history: PropTypes.shape()
 };
 
 export default connect(
