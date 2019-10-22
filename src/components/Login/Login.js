@@ -2,9 +2,22 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Notyf } from 'notyf';
 import session from '../../redux/session';
 import css from './Login.module.css';
+import 'notyf/notyf.min.css';
 import Footer from '../Footer/Footer';
+
+const notyf = new Notyf({
+  duration: 5000,
+  types: [
+    {
+      type: 'error',
+      backgroundColor: 'grey',
+      message: 'Неправильно введенi даннi. Спробуйте ще раз!'
+    }
+  ]
+});
 
 class Login extends Component {
   state = { email: '', password: '' };
@@ -14,6 +27,7 @@ class Login extends Component {
     this.props.onLogin({ ...this.state });
     this.props.history.push('/dashboard');
     this.setState({ email: '', password: '' });
+    notyf.success('Ласкаво просимо, насолоджуйтесь додатком!');
   };
 
   changeHandler = e => {

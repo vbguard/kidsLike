@@ -14,12 +14,7 @@ const notyf = new Notyf({
     {
       type: 'error',
       backgroundColor: 'grey',
-      message: 'Неправильно введенi даннi. Спробуйте ще раз!',
-      icon: {
-        className: 'material-icons',
-        tagName: 'i',
-        text: 'error'
-      }
+      message: 'Неправильно введенi даннi. Спробуйте ще раз!'
     }
   ]
 });
@@ -33,6 +28,7 @@ class Register extends Component {
       this.props.onRegister({ ...this.state });
       this.props.history.push('/planning');
       this.setState({ name: '', email: '', password: '' });
+      notyf.success(`${this.state.name}, ласкаво просимо, насолоджуйтесь додатком!`);
     } else {
       notyf.error();
     }
