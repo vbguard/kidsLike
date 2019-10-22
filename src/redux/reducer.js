@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import sessionReducer from './session/sessionReducer';
+import sessionReducer from './session';
 import dashboard from './dashboard';
 import planningReducer from './planning/planningReducers';
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import * as sessionOperations from '../../redux/session';
+import sessionOperations from '../../redux/session';
 import css from './Register.module.css';
 import Footer from '../Footer/Footer';
 
@@ -92,7 +92,7 @@ class Register extends Component {
 }
 
 const mapDispatchToProps = {
-  onRegister: sessionOperations.signup
+  onRegister: sessionOperations.register
 };
 
 Register.propTypes = {

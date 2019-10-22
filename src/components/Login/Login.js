@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import * as sessionOperations from '../../redux/session';
+import sessionOperations from '../../redux/session';
 import css from './Login.module.css';
 import Footer from '../Footer/Footer';
 
