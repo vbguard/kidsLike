@@ -1,54 +1,41 @@
 import axios from 'axios';
 
-axios.defaults.headers.common.Authentication = 'some token';
-axios.defaults.headers.get.Accepts = 'application/json';
-
 const baseUrl = 'https://kids-like.goit.co.ua/api/v1';
-const config1 = {
-  email: 'email@email.com',
-  password: 'password'
-};
 
-const config2 = {
-  email: 'email@email.com',
-  password: 'password',
-  nickname: 'Testovoy'
-};
-
-const config3 = {
-  title: 'string',
-  description: 'string',
-  dates: ['2019-10-21T21:53:25.841Z']
-};
-
-const config4 = {
-  title: 'string',
-  description: 'string',
-  id: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
-  points: 0
-};
+axios.defaults.baseURL = baseUrl;
+axios.defaults.headers.common.Authorization =
+  'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYWNkYWNlODc5Zjc3MjI2N2I0OWRmZCIsImlhdCI6MTU3MTc2NjEyMn0.iXzwHeFNSD1FdIM3xXcLn7H5eFYc2tqOnEozH2XFCjw';
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+axios.defaults.headers.delete['Content-Type'] = 'application/json';
+axios.defaults.headers.put['Content-Type'] = 'application/json';
 
 const endpoints = {
-  login: `${baseUrl}/auth/login`,
-  register: `${baseUrl}/auth/register`,
-  logout: `${baseUrl}/auth/logout`,
-  gettasks: `${baseUrl}/tasks`,
-  posttasks: `${baseUrl}/tasks`,
-  deletetasks: `${baseUrl}/tasks`
+  login: () => `/auth/login`,
+  register: () => `/auth/register`,
+  logout: () => `/auth/logout`,
+  getTasks: () => `/tasks`,
+  getPlanningTasks: () => `/planning`,
+  createTask: () => `/tasks`,
+  updateTask: taskId => `/tasks/${taskId}`,
+  deleteTask: taskId => `/tasks/${taskId}`
 };
 
-const login = data => axios.post(endpoints.login, data, config1);
-const register = data => axios.post(endpoints.register, data, config2);
-const logout = data => axios.post(endpoints.logout, data);
-const gettasks = data => axios.get(endpoints.gettasks, data);
-const posttasks = data => axios.post(endpoints.posttasks, data, config3);
-const deletetasks = data => axios.post(endpoints.deletetasks, data, config4);
+const fetchLogin = data => axios.post(endpoints.login(), data);
+const fetchRegister = data => axios.post(endpoints.register(), data);
+const fetchLogout = () => axios.post(endpoints.logout());
+const fetchTasks = () => axios.get(endpoints.getTasks());
+const fetchPlaningTasks = () => axios.get(endpoints.getPlanningTasks());
+const fetchCreateTask = data => axios.post(endpoints.createTask(), data);
+const fetchDeleteTask = taskId => axios.delete(endpoints.deleteTask(taskId));
+const fetchUpdateTask = (taskId, data) => axios.put(endpoints.updateTask(taskId), data);
 
 export default {
-  login,
-  register,
-  logout,
-  gettasks,
-  posttasks,
-  deletetasks
+  fetchLogin,
+  fetchRegister,
+  fetchLogout,
+  fetchTasks,
+  fetchPlaningTasks,
+  fetchCreateTask,
+  fetchDeleteTask,
+  fetchUpdateTask
 };

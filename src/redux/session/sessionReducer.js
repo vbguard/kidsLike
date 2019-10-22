@@ -7,7 +7,7 @@ const initState = {
 
 const sessionReducer = (state = initState, payload) => {
   switch (payload.type) {
-    case types.USER_LOGIN:
+    case types.AUTH_FETCH_LOGIN_START:
       return { ...state, user: payload.user, token: payload.token };
 
     default:

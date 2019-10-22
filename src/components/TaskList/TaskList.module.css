@@ -22,10 +22,9 @@
 .listItem {
   display: flex;
   width: 280px;
-  height: 260px;
+  height: 261px;
   margin: 0 auto;
-  margin: 10px;
-  border: 2px solid brown;
+  margin-bottom: 22px;
 }
 
 @media screen and (min-width: 768px) {
@@ -52,7 +51,7 @@
   }
 
   .list {
-    width: 920px;
+    width: 1275px;
     justify-content: unset;
     max-height: 80vh;
   }

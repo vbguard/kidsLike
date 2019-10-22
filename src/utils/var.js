@@ -1,12 +1,12 @@
-export const desctopDays = {
-  mon: 'Понеділок',
-  tues: 'Вівторок',
-  wed: 'Середа',
-  thurs: 'Четвер',
-  fri: 'Пятниця',
-  sart: 'Субота',
-  sun: 'Неділя'
-};
+export const desctopDays = [
+  { id: 1, largeName: 'Понеділок', shortName: 'Пн', pathname: 'monday' },
+  { tues: 'Вівторок' },
+  { wed: 'Середа' },
+  { thurs: 'Четвер' },
+  { fri: 'Пятниця' },
+  { sart: 'Субота' },
+  { sun: 'Неділя' }
+];
 
 export const mobileDays = {
   mon: 'Пн',
