@@ -41,7 +41,7 @@ class Login extends Component {
               onChange={this.changeHandler}
               required
             />
-            <label htmlFor="pass" className={css.label}>
+            <label htmlFor="password" className={css.label}>
               Пароль*
             </label>
             <input
