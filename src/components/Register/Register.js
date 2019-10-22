@@ -66,13 +66,13 @@ class Register extends Component {
             />
 
             <label htmlFor="name" className={css.label}>
-              Login*
+              Nickname*
             </label>
             <input
               className={css.input}
               id="name"
               type="text"
-              placeholder="yourlogin"
+              placeholder="yournickname"
               value={name}
               onChange={this.changeHandler}
               required
