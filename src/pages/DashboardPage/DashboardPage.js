@@ -4,7 +4,6 @@ import DaysNavConteiner from '../../components/DaysNav/DaysNavConteiner';
 import DashboardConteiner from '../../components/DashboardConteiner/DashboardConteiner';
 // import Footer from '../../components/Footer/Footer';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
-
 import { screenWidth } from '../../utils/var';
 import styles from './DashboardPage.module.css';
 
