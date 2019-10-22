@@ -53,7 +53,7 @@ class Register extends Component {
           </h2>
           <form className={css.form} onSubmit={this.submitHandler}>
             <label htmlFor="email" className={css.label}>
-              E-mail*
+              E-mail (електронна пошта)*
             </label>
             <input
               className={css.input}
@@ -66,39 +66,39 @@ class Register extends Component {
             />
 
             <label htmlFor="name" className={css.label}>
-              Nickname*
+              Нікнейм*
             </label>
             <input
               className={css.input}
               id="name"
               type="text"
-              placeholder="yournickname"
+              placeholder="Ваш нікнейм"
               value={name}
               onChange={this.changeHandler}
               required
             />
 
             <label htmlFor="password" className={css.label}>
-              Password (6+ characters)*
+              Пароль (6+ символів)*
             </label>
             <input
               className={css.input}
               id="password"
               type="password"
-              placeholder="yourpassword"
+              placeholder="Ваш пароль"
               value={password}
               onChange={this.changeHandler}
               required
             />
 
             <label htmlFor="passwordConfirmation" className={css.label}>
-              Password Confirmation*
+              Підтвердження пароля*
             </label>
             <input
               className={css.input}
               id="passwordConfirmation"
               type="password"
-              placeholder="confirmation"
+              placeholder="Ваш пароль"
               value={passwordConfirmation}
               onChange={this.changeHandler}
               required
