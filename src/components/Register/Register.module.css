@@ -1,6 +1,6 @@
 .container {
   width: 100vw;
-  height: calc(100vh - 140px);
+  min-height: calc(100vh - 140px);
   background-color: rgb(241, 237, 237);
   margin: 0 auto;
   margin-top: 10px;

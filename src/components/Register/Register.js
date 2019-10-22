@@ -2,19 +2,39 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { Notyf } from 'notyf';
 import session from '../../redux/session';
 import css from './Register.module.css';
+import 'notyf/notyf.min.css';
 import Footer from '../Footer/Footer';
+
+const notyf = new Notyf({
+  duration: 5000,
+  types: [
+    {
+      type: 'error',
+      backgroundColor: 'grey',
+      message: 'Неправильно введенi даннi. Спробуйте ще раз!',
+      icon: {
+        className: 'material-icons',
+        tagName: 'i',
+        text: 'error'
+      }
+    }
+  ]
+});
 
 class Register extends Component {
   state = { name: '', email: '', password: '', passwordConfirmation: '' };
 
   submitHandler = e => {
     e.preventDefault();
-    if (this.state.password === this.state.passwordConfirmation) {
+    if (this.state.password === this.state.passwordConfirmation && this.state.password.length > 5) {
       this.props.onRegister({ ...this.state });
       this.props.history.push('/planning');
       this.setState({ name: '', email: '', password: '' });
+    } else {
+      notyf.error();
     }
   };
 
