@@ -26,7 +26,7 @@ class Register extends Component {
     e.preventDefault();
     if (this.state.password === this.state.passwordConfirmation && this.state.password.length > 5) {
       this.props.onRegister({ ...this.state });
-      this.props.history.push('/planning');
+      setTimeout(() => this.props.history.push('/planning'), 1000);
       this.setState({ name: '', email: '', password: '' });
       notyf.success(`${this.state.name}, ласкаво просимо, насолоджуйтесь додатком!`);
     } else {

@@ -25,7 +25,7 @@ class Login extends Component {
   submitHandler = e => {
     e.preventDefault();
     this.props.onLogin({ ...this.state });
-    setTimeout(this.props.history.push('/dashboard'), 1000);
+    setTimeout(() => this.props.history.push('/dashboard'), 1000);
     this.setState({ email: '', password: '' });
     notyf.success('Ласкаво просимо, насолоджуйтесь додатком!');
   };
