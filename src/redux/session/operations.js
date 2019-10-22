@@ -40,7 +40,7 @@ export const register = credentials => dispatch => {
       localStorage.setItem('token', token);
       notyf(response.status);
       window.history.pushState('/planning', response.data.user);
-      dispatch(registerSuccess(response.data));
+      dispatch(registerSuccess(response.data.user));
     })
     .catch(error => {
       notyf(error.response.status);
