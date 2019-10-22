@@ -1,5 +1,6 @@
-export const getIsAuthenticated = state => state.session.authenticated;
+const getToken = state => {
+  console.log(state);
+  return state.token;
+};
 
-export const getToken = state => state.session.token;
-
-export const getUser = state => state.session.user;
+export default getToken();
