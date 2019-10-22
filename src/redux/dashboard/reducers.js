@@ -1,7 +1,7 @@
 import { TASKS_FETCH_START, TASKS_FETCH_SUCCESS, TASKS_FETCH_ERROR, TASKS_UPDATE_TASK } from '../types';
 
 const initialState = {
-  tasks: null,
+  data: null,
   showingTasks: null,
   loading: false,
   error: null
