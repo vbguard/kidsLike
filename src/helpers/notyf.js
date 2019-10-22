@@ -16,6 +16,8 @@ const errorNotyf = status => {
   switch (status) {
     case 200:
       return notyf.success('Ласкаво просимо, насолоджуйтесь додатком!');
+    case 201:
+      return notyf.success('Реєстрація успішна, насолоджуйтесь додатком!');
     case 400:
       return notyf.error();
     case 401:
