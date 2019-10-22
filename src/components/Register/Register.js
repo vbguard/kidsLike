@@ -14,7 +14,7 @@ const notyf = new Notyf({
     {
       type: 'error',
       backgroundColor: 'grey',
-      message: 'Неправильно введенi даннi. Спробуйте ще раз!'
+      message: 'Неправильно введений пароль. Спробуйте ще раз!'
     }
   ]
 });
@@ -28,7 +28,6 @@ class Register extends Component {
 
     if (this.state.password === this.state.passwordConfirmation && this.state.password.length > 5) {
       onRegister({ ...this.state });
-      // setTimeout(() => history.push('/planning'), 1000);
       this.setState({ name: '', email: '', password: '' });
     } else {
       notyf.error();
@@ -124,7 +123,6 @@ const mapDispatchToProps = dispatch => ({
 
 Register.propTypes = {
   onRegister: PropTypes.func
-  // history: PropTypes.shape()
 };
 
 export default connect(

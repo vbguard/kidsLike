@@ -10,11 +10,10 @@ class Login extends Component {
   state = { email: '', password: '' };
 
   submitHandler = e => {
-    const { onLogin, history } = this.props;
+    const { onLogin } = this.props;
     e.preventDefault();
 
     onLogin({ ...this.state });
-    setTimeout(() => history.push('/dashboard'), 1000);
     this.setState({ email: '', password: '' });
   };
 
@@ -74,8 +73,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 Login.propTypes = {
-  onLogin: PropTypes.func,
-  history: PropTypes.shape()
+  onLogin: PropTypes.func
 };
 
 export default connect(
