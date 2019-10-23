@@ -27,11 +27,13 @@ class DashboardPage extends Component {
   }
 
   render() {
+    const { tasks } = this.props;
+
     return (
       <>
         <div className={styles.wrapper}>
           {screenWidth >= 1280 ? <Sidebar /> : <DaysNavConteiner />}
-          <DashboardConteiner />
+          <DashboardConteiner tasks={tasks} />
         </div>
         {screenWidth < 768 && <ProgressBar />}
       </>
@@ -40,16 +42,19 @@ class DashboardPage extends Component {
 }
 
 DashboardPage.propTypes = {
-  tasksFetch: PropTypes.func.isRequired
+  tasksFetch: PropTypes.func.isRequired,
+  tasks: PropTypes.array(PropTypes.shape({ id: PropTypes.string.isRequired }).isRequired).isRequired
 };
 
-// const mapStateToProps = {};
+const mapStateToProps = state => ({
+  tasks: state.dashboard.tasks
+});
 
 const mapDispatchToProps = {
   tasksFetch
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(DashboardPage);
