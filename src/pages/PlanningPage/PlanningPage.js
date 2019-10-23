@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import WeekSelected from '../../components/WeekSelected/WeekSelected';
 import Prizes from '../../components/Prizes/Prizes';
@@ -6,88 +7,67 @@ import SelectedTasksPoints from '../../components/SelectedTasksPoints/SelectedTa
 import AddTasks from '../../components/AddTasks/AddTasks';
 import AddTaskModal from '../../components/AddTaskModal/AddTaskModal';
 import Footer from '../../components/Footer/Footer';
-// import TaskListContainer from '../../components/TaskList/TaskListContainer';
-// import TaskList from '../TaskList/TaskList';
+import TaskList from '../../components/TaskList/TaskList';
 import * as planningOperations from '../../redux/planning/planningOperations';
 import { screenWidth } from '../../utils/var';
 import styles from './PlanningPage.module.css';
 
-/* eslint-disable */
-
-// const PlanningPage = () => (
-//   // {
-//   // const [openModal, setOpenModal] = useState(false);
-//   // const handleOpenModal = () => {
-//   //   console.log('onCloiee');
-//   //   setOpenModal(!openModal);
-//   // };
-//   // return
-//   <div className={styles.wrapper}>
-//     <WeekSelected />
-//     {screenWidth < 768 && (
-//       <>
-//         {/* <TaskList /> */}
-//         <Prizes />
-//         <Footer />
-//       </>
-//     )}
-//     <SelectedTasksPoints />
-//     <AddTasks />
-//     <AddTaskModal />
-//     {/* <AddTaskModal openModal={handleOpenModal} /> */}
-//     {screenWidth >= 768 && (
-//       <>
-//         {/* <TaskList /> */}
-//         <Prizes />
-//         <Footer />
-//       </>
-//     )}
-//     {/* {openModal && <AddTaskModal onChange={handleOpenModal} />} */}
-//   </div>
-// );
-
-// export default PlanningPage;
-
 class PlanningPage extends Component {
+  state = {
+    openModal: false
+  };
+
   componentDidMount() {
-    this.props.fetchTasks();
+    const { fetchTasks } = this.props;
+    fetchTasks();
   }
 
+  handleOpenModal = () => {
+    this.setState(state => ({ openModal: !state.openModal }));
+  };
+
   render() {
+    const { openModal } = this.state;
+    const { tasks } = this.props;
     return (
       <div className={styles.wrapper}>
         <WeekSelected />
         {screenWidth < 768 && (
           <>
-            {/* <TaskList /> */}
-            {/* <TaskListContainer /> */}
+            <TaskList tasks={tasks} isPlanning />
             <Prizes />
             <Footer />
           </>
         )}
         <SelectedTasksPoints />
         <AddTasks />
-        <AddTaskModal />
-        {/* <AddTaskModal openModal={handleOpenModal} /> */}
         {screenWidth >= 768 && (
           <>
-            {/* <TaskList /> */}
-            {/* <TaskListContainer /> */}
+            <TaskList tasks={tasks} isPlanning />
             <Prizes />
             <Footer />
           </>
         )}
-        {/* {openModal && <AddTaskModal onChange={handleOpenModal} />} */}
+        {openModal && <AddTaskModal open={openModal} onChange={this.handleOpenModal} />}
       </div>
     );
   }
 }
+
+PlanningPage.propTypes = {
+  tasks: PropTypes.array,
+  fetchTasks: PropTypes.func
+};
+
+const mapStateToProps = state => ({
+  tasks: state.planning.tasks
+});
 
 const mapDispatchToProps = {
   fetchTasks: planningOperations.fetchTasks
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(PlanningPage);
