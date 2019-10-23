@@ -10,9 +10,9 @@ const AddTaskModal = () => (
     //   e.preventDefault();
     //   onChange();
     // }}
-    // onKeyDown={() => {}}
-    // role="button"
-    // tabIndex="0"
+    onKeyDown={() => {}}
+    role="button"
+    tabIndex="0"
   >
     <div className={styles.modal}>
       <div className={styles.imgConteiner}>
@@ -20,10 +20,10 @@ const AddTaskModal = () => (
       </div>
       <form
         className={styles.form}
-        // onSubmit={e => {
-        //   e.preventDefault();
-        //   onChange();
-        // }}
+        onSubmit={e => {
+          e.preventDefault();
+          // onChange();
+        }}
       >
         <label htmlFor="taskName">
           <input type="text" id="taskName" className={styles.input} placeholder="Додай собі завдання" />

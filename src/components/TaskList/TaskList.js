@@ -1,29 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Card from '../Card/Card';
+import Card from '../Card/Card';
 import styles from './TaskList.module.css';
 
-const TaskList = ({ tasks }) => (
-  <div className={styles.container}>
-    <ul className={styles.list}>
-      {tasks.map(({ id, image, title }) => (
-        <li key={id} className={styles.listItem}>
-          <img src={image} alt={title} />
-          <p>{title}</p>
-        </li>
-      ))}
-    </ul>
-  </div>
-);
+const TaskList = ({ tasks, isPlanning }) => {
+  console.log('tasks', tasks);
+  return (
+    <div className={styles.container}>
+      <ul className={styles.list}>
+        {tasks.map(task => (
+          <li key={task._id} className={styles.listItem}>
+            <Card task={task} isPlanning={isPlanning} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 TaskList.propTypes = {
+  isPlanning: PropTypes.bool,
   tasks: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      image: PropTypes.string.isRequired,
+      _id: PropTypes.number.isRequired,
+      imageUrl: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired
     }).isRequired
   ).isRequired
+};
+
+TaskList.defaultProps = {
+  isPlanning: false
 };
 
 export default TaskList;

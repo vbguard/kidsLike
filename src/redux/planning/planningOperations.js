@@ -1,16 +1,12 @@
-import axios from 'axios';
 import { fetchPlanningTasksStart, fetchPlanningTasksSuccess, fetchPlanningTasksError } from './planningActions';
-// import * as api from '../../utils/api';
+import api from '../../utils/api';
 
 export const fetchTasks = () => dispatch => {
   dispatch(fetchPlanningTasksStart());
-
-  //   api
-  //     .fetchPlaningTasks()
-  axios
-    .get('https://kids-like.goit.co.ua/api/v1/planning')
+  api
+    .fetchPlaningTasks()
     .then(response => {
-      dispatch(fetchPlanningTasksSuccess(response.data));
+      dispatch(fetchPlanningTasksSuccess(response.data.planningTasks));
     })
     .catch(error => {
       dispatch(fetchPlanningTasksError(error));

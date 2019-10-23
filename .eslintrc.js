@@ -23,6 +23,7 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error', prettierOptions],
     // 'import/no-default-export': 1,
+    "no-underscore-dangle": 0,
     'no-plusplus': 0,
     'global-require': 0,
     'react/no-render-return-value': 0,

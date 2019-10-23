@@ -1,7 +1,7 @@
 import { PLANNING_FETCH_START, PLANNING_FETCH_SUCCESS, PLANNING_FETCH_ERROR } from '../types';
 
 const initialState = {
-  data: null,
+  tasks: null,
   loading: false,
   error: null
 };
