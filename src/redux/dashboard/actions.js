@@ -4,8 +4,16 @@ import {
   TASKS_FETCH_ERROR,
   TASKS_UPDATE_START,
   TASKS_UPDATE_SUCCESS,
-  TASKS_UPDATE_ERROR
+  TASKS_UPDATE_ERROR,
+  TASKS_SET_SHOWING_TASKS
 } from '../types';
+
+export const setShowingTasks = tasks => ({
+  type: TASKS_SET_SHOWING_TASKS,
+  payload: {
+    tasks
+  }
+});
 
 export const taskFetchStart = () => ({
   type: TASKS_FETCH_START
@@ -49,5 +57,6 @@ export default {
   taskFetchError,
   taskUpdateStart,
   taskUpdateSuccess,
-  taskUpdateError
+  taskUpdateError,
+  setShowingTasks
 };

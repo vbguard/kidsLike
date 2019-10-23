@@ -9,7 +9,12 @@ const DaysNav = () => (
   <ul className={styles.nav}>
     {daysOfWeek.map(navDay => (
       <li className={styles.item} key={navDay.id}>
-        <NavLink className={styles.link} to={`/dashboard/${navDay.pathname}`} onClick={() => {}}>
+        <NavLink
+          className={styles.link}
+          activeClassName={styles.activeLink}
+          to={`/dashboard/${navDay.pathname}`}
+          onClick={() => {}}
+        >
           {isDesktop ? navDay.largeName : navDay.shortName}
         </NavLink>
       </li>

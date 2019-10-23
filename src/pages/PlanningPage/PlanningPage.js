@@ -34,7 +34,7 @@ class PlanningPage extends Component {
         <WeekSelected />
         {screenWidth < 768 && (
           <>
-            {tasks && <TaskList tasks={tasks} isPlanning />}
+            <TaskList tasks={tasks} isPlanning />
             <Prizes />
             <Footer />
           </>
@@ -43,7 +43,7 @@ class PlanningPage extends Component {
         <AddTasks />
         {screenWidth >= 768 && (
           <>
-            {tasks && <TaskList tasks={tasks} isPlanning />}
+            <TaskList tasks={tasks} isPlanning />
             <Prizes />
             <Footer />
           </>

@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import DaysNavConteiner from '../../components/DaysNav/DaysNavConteiner';
 import DashboardConteiner from '../../components/DashboardConteiner/DashboardConteiner';
-import tasksFetch from '../../redux/dashboard/operations';
+import dashboard from '../../redux/dashboard';
 // import Footer from '../../components/Footer/Footer';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import { screenWidth } from '../../utils/var';
 import styles from './DashboardPage.module.css';
-// import api from '../../utils/api';
-
-// const getTasks = async () => {
-//   const res = await api.fetchTasks();
-//   console.log('res', res.data.result);
-// };
 
 class DashboardPage extends Component {
   // useEffect(async () => {
@@ -23,17 +17,15 @@ class DashboardPage extends Component {
   // цей самий екшн буде робити перевірку чи юзер авторизований, якщо буде 401 статус код - має робитись редірект на логін
   // }, []);
   componentDidMount() {
-    this.props.tasksFetch();
+    this.props.fetchTasks();
   }
 
   render() {
-    const { tasks } = this.props;
-
     return (
       <>
         <div className={styles.wrapper}>
           {screenWidth >= 1280 ? <Sidebar /> : <DaysNavConteiner />}
-          <DashboardConteiner tasks={tasks} />
+          <DashboardConteiner />
         </div>
         {screenWidth < 768 && <ProgressBar />}
       </>
@@ -42,19 +34,14 @@ class DashboardPage extends Component {
 }
 
 DashboardPage.propTypes = {
-  tasksFetch: PropTypes.func.isRequired,
-  tasks: PropTypes.array(PropTypes.shape({ id: PropTypes.string.isRequired }).isRequired).isRequired
+  fetchTasks: PropTypes.func
 };
 
-const mapStateToProps = state => ({
-  tasks: state.dashboard.tasks
-});
-
 const mapDispatchToProps = {
-  tasksFetch
+  fetchTasks: () => dashboard.tasksFetch()
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(DashboardPage);

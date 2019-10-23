@@ -8,11 +8,12 @@ const TaskList = ({ tasks, isPlanning }) => {
   return (
     <div className={styles.container}>
       <ul className={styles.list}>
-        {tasks.map(task => (
-          <li key={task._id} className={styles.listItem}>
-            <Card task={task} isPlanning={isPlanning} />
-          </li>
-        ))}
+        {tasks &&
+          tasks.map(task => (
+            <li key={task._id} className={styles.listItem}>
+              <Card {...task.task} isPlanning={isPlanning} taskId={task._id} />
+            </li>
+          ))}
       </ul>
     </div>
   );
@@ -20,13 +21,7 @@ const TaskList = ({ tasks, isPlanning }) => {
 
 TaskList.propTypes = {
   isPlanning: PropTypes.bool,
-  tasks: PropTypes.arrayOf(
-    PropTypes.shape({
-      _id: PropTypes.number.isRequired,
-      imageUrl: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired
-    }).isRequired
-  ).isRequired
+  tasks: PropTypes.shape().isRequired
 };
 
 TaskList.defaultProps = {
