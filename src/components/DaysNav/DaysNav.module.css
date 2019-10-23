@@ -28,6 +28,10 @@
   transition: background-color 0.2s linear;
 }
 
+.activeLink {
+  background-color: var(--off-white);
+}
+
 .link:hover {
   background-color: var(--macaroni-and-cheese);
   transition: background-color 0.2s linear;

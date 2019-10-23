@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Card.module.css';
-import CardTogle from '../CardTogle/CardToggle';
+import CardToggle from '../CardTogle/CardToggle';
 import DaySelect from '../DaySelect/DaySelect';
 import c from '../../assets/images/tasksImage/pic-3@2x.png';
 
@@ -13,7 +13,7 @@ const Card = ({ cardTitle, imageUrl, isPlanning, taskId }) => (
       </div>
       <div className={styles.pic_footer}>
         <h2 className={styles.title}>{cardTitle}</h2>
-        {isPlanning ? <CardTogle taskId={taskId} /> : <DaySelect />}
+        {isPlanning ? <DaySelect /> : <CardToggle taskId={taskId} />}
       </div>
     </div>
   </div>
