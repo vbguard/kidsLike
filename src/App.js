@@ -7,7 +7,7 @@ import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import Header from './components/Header/Header';
 import ContactsPage from './pages/ContactsPage/ContactsPage';
-import CardToggle from './components/Card/Card';
+import CardToggle from './components/CardTogle/CardToggle';
 // import ProtectedComponent from './hoc/ProtectedComponent';
 
 function App() {
