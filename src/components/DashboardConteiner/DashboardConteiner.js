@@ -8,8 +8,7 @@ import Prizes from '../Prizes/Prizes';
 import Footer from '../Footer/Footer';
 import TaskList from '../TaskList/TaskList';
 import { screenWidth } from '../../utils/var';
-
-import dashboard from '../../redux/dashboard';
+import getDayTasks from '../../redux/dashboard/selectors';
 
 import styles from './DashboardConteiner.module.css';
 
@@ -30,11 +29,11 @@ const DashboardConteiner = ({ tasks }) => (
 );
 
 DashboardConteiner.propTypes = {
-  tasks: PropTypes.shape().isRequired
+  tasks: PropTypes.arrayOf().isRequired
 };
 
 const mapStateToProps = state => ({
-  tasks: dashboard.dashboardSelectors.getDay(state)
+  tasks: getDayTasks(state)
 });
 
 export default connect(

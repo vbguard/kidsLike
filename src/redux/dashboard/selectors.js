@@ -1,5 +1,6 @@
-export const getDay = state => getDayTasks(state);
-export const tasks = state => state.dashboard.data;
+const getAllTasks = state => state.dashboard.data;
+
+const getShowingTasks = day => getAllTasks.filter(item => item.day === day);
 
 const getDayTasks = state => {
   if (state.dashboard.data) {
@@ -17,6 +18,7 @@ const getDayTasks = state => {
 };
 
 export default {
-  getDay,
-  tasks
+  getAllTasks,
+  getDayTasks,
+  getShowingTasks
 };

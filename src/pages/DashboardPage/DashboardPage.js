@@ -4,28 +4,38 @@ import { connect } from 'react-redux';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import DaysNavConteiner from '../../components/DaysNav/DaysNavConteiner';
 import DashboardConteiner from '../../components/DashboardConteiner/DashboardConteiner';
-import dashboard from '../../redux/dashboard';
-// import Footer from '../../components/Footer/Footer';
+import getShowingTasks from '../../redux/dashboard/selectors';
+import tasksFetch from '../../redux/dashboard/operations';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import { screenWidth } from '../../utils/var';
 import styles from './DashboardPage.module.css';
+// import { dispatch } from '../../../../AppData/Local/Microsoft/TypeScript/3.3/node_modules/rxjs/internal/observable/pairs';
 
 class DashboardPage extends Component {
-  // useEffect(async () => {
-  // getTasks();
-  // action - який буде робити запит на бекенд на отримання завдань - потім їх пасати в стор
-  // цей самий екшн буде робити перевірку чи юзер авторизований, якщо буде 401 статус код - має робитись редірект на логін
-  // }, []);
   componentDidMount() {
-    this.props.fetchTasks();
+    this.props.tasksFetch();
   }
 
+  state = {
+    showingTasks: null
+  };
+
+  handleClick = day => {
+    const findedTasks = getShowingTasks(day);
+    this.setState({ showingTasks: findedTasks });
+  };
+
   render() {
+    const { showingTasks } = this.state;
     return (
       <>
         <div className={styles.wrapper}>
-          {screenWidth >= 1280 ? <Sidebar /> : <DaysNavConteiner />}
-          <DashboardConteiner />
+          {screenWidth >= 1280 ? (
+            <Sidebar onClick={this.handleClick} />
+          ) : (
+            <DaysNavConteiner onClick={this.handleClick} />
+          )}
+          <DashboardConteiner tasks={showingTasks} />
         </div>
         {screenWidth < 768 && <ProgressBar />}
       </>
@@ -34,14 +44,17 @@ class DashboardPage extends Component {
 }
 
 DashboardPage.propTypes = {
-  fetchTasks: PropTypes.func
+  tasksFetch: PropTypes.func
+  // showingTasks: PropTypes.arrayOf()
 };
 
 const mapDispatchToProps = {
-  fetchTasks: () => dashboard.tasksFetch()
+  tasksFetch
+  // onClick: day => dispatch(day)
 };
 
 export default connect(
+  // mapStateToProps,
   null,
   mapDispatchToProps
 )(DashboardPage);
