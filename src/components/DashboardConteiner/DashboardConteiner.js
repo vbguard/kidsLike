@@ -30,13 +30,13 @@ const DashboardConteiner = ({ tasks }) => (
 
 DashboardConteiner.propTypes = {
   // showingTasks: PropTypes.arrayOf().isRequired,
-  tasks: PropTypes.arrayOf().isRequired
+  tasks: PropTypes.oneOfType([PropTypes.shape(), null])
 };
 
 const mapStateToProps = state => ({
   showingTasks: state.dashboard.showingTasks,
-  tasks: state.dashboard.data.filter(item => state.dashboard.activeDay === item.day)
-  // .map(item => item.dayTasks)
+  tasks: state.dashboard.showingTasks,
+  activeDay: state.dashboard.activeDay
 });
 
 export default connect(

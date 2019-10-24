@@ -12,7 +12,7 @@ import {
 const activeDay = moment().isoWeekday();
 
 const initialState = {
-  data: null,
+  data: [],
   showingTasks: null,
   loading: false,
   error: null,

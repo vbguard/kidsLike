@@ -8,13 +8,13 @@ import styles from './DaysNav.module.css';
 
 const isDesktop = screenWidth >= 1280;
 
-const DaysNav = ({ onClick, currentDay }) => (
+const DaysNav = ({ onClick }) => (
   <ul className={styles.nav}>
     {daysOfWeek.map(navDay => (
       <li className={styles.item} key={navDay.id}>
         <NavLink
           className={styles.link}
-          activeClassName={currentDay === navDay.id && styles.activeLink}
+          activeClassName={styles.activeLink}
           to={`/dashboard/${navDay.pathname}`}
           onClick={() => onClick(navDay.id)}
         >
@@ -26,8 +26,7 @@ const DaysNav = ({ onClick, currentDay }) => (
 );
 
 DaysNav.propTypes = {
-  onClick: PropTypes.func,
-  currentDay: PropTypes.number
+  onClick: PropTypes.func
 };
 
 const mapStateToProps = state => ({

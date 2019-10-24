@@ -4,22 +4,17 @@ import { connect } from 'react-redux';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import DaysNavConteiner from '../../components/DaysNav/DaysNavConteiner';
 import DashboardConteiner from '../../components/DashboardConteiner/DashboardConteiner';
-// import getShowingTasks from '../../redux/dashboard/selectors';
 import operations from '../../redux/dashboard/operations';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
-import { screenWidth } from '../../utils/var';
+import { screenWidth, daysOfWeek } from '../../utils/var';
 import styles from './DashboardPage.module.css';
 
 class DashboardPage extends Component {
   componentDidMount() {
-    const { tasksFetch } = this.props;
+    const { tasksFetch, activeDay } = this.props;
     tasksFetch();
+    this.props.history.push(`/dashboard/${daysOfWeek[activeDay - 1].pathname}`);
   }
-
-  // handleClick = day => {
-  //   const findedTasks = getShowingTasks(day);
-  //   this.setState({ showingTasks: findedTasks });
-  // };
 
   render() {
     return (
@@ -35,20 +30,19 @@ class DashboardPage extends Component {
 }
 
 DashboardPage.propTypes = {
-  tasksFetch: PropTypes.func
-  // showingTasks: PropTypes.arrayOf()
+  tasksFetch: PropTypes.func,
+  activeDay: PropTypes.number,
+  history: PropTypes.shape()
 };
+const mapStateToProps = state => ({
+  activeDay: state.dashboard.activeDay
+});
 
 const mapDispatchToProps = {
   tasksFetch: operations.tasksFetch
-  // onClick: day => dispatch(day)
 };
 
-// const mapDispatchToProps = {
-//   fetchTasks: planningOperations.fetchTasks
-// };
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(DashboardPage);
-// mapStateToProps,

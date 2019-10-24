@@ -21,7 +21,6 @@ export const login = credentials => dispatch => {
       dispatch(loginSuccess(response.data.user));
     })
     .catch(error => {
-      console.log(`4 - error`);
       dispatch(loginError(error));
     });
 };

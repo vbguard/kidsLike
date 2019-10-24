@@ -8,7 +8,7 @@ const activeStyle = {
 const Nav = () => (
   <ul className={styles.nav}>
     <li>
-      <NavLink to="/" exact className={styles.navLink} activeStyle={activeStyle}>
+      <NavLink to="/dashboard" exact className={styles.navLink} activeStyle={activeStyle}>
         Головна <span className={styles.navLinkSpan}>сторiнка</span>
       </NavLink>
     </li>

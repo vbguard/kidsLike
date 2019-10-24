@@ -4,21 +4,21 @@ import {
   taskFetchError,
   taskUpdateStart,
   taskUpdateSuccess,
-  taskUpdateError
-  // setShowingTasks
+  taskUpdateError,
+  setShowingTasks
 } from './actions';
-// import { getDay } from './selectors';
+// import selectors from './selectors';
 import api from '../../utils/api';
 
-const tasksFetch = () => dispatch => {
-  // const state = getState();
+const tasksFetch = () => (dispatch, getState) => {
   dispatch(taskFetchStart());
 
   api
     .fetchTasks()
     .then(response => {
       dispatch(taskFetchSuccess(response.data.result));
-      // dispatch(setShowingTasks(getDay(state)));
+      const state = getState();
+      dispatch(setShowingTasks(state.dashboard.activeDay));
     })
     .catch(error => {
       dispatch(taskFetchError(error));
