@@ -13,7 +13,7 @@ const Card = ({ cardTitle, imageUrl, isPlanning, taskId }) => (
       </div>
       <div className={styles.pic_footer}>
         <h2 className={styles.title}>{cardTitle}</h2>
-        {isPlanning ? <DaySelect /> : <CardToggle taskId={taskId} />}
+        {isPlanning ? <DaySelect taskId={taskId} /> : <CardToggle taskId={taskId} />}
       </div>
     </div>
   </div>
