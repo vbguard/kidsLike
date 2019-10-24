@@ -92,4 +92,5 @@ const ContactsPage = () => (
     <Footer />
   </>
 );
+
 export default ContactsPage;
