@@ -15,9 +15,9 @@ export const loginStart = () => ({
   type: AUTH_FETCH_LOGIN_START
 });
 
-export const loginSuccess = response => ({
+export const loginSuccess = data => ({
   type: AUTH_FETCH_LOGIN_SUCCESS,
-  payload: { response }
+  payload: { data }
 });
 
 export const loginError = error => ({

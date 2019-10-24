@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import sessionReducer from './session';
+import session from './session';
 import dashboard from './dashboard';
 import planningReducer from './planning/planningReducers';
 
 export default combineReducers({
-  session: sessionReducer,
+  session: session.sessionReducer,
   dashboard: dashboard.dashboardReducer,
   planning: planningReducer
 });

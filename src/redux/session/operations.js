@@ -15,9 +15,13 @@ export const login = credentials => dispatch => {
   api
     .fetchLogin(credentials)
     .then(response => {
-      dispatch(loginSuccess(response.data));
+      const token = JSON.stringify(response.data.user.token);
+
+      localStorage.setItem('token', token);
+      dispatch(loginSuccess(response.data.user));
     })
     .catch(error => {
+      console.log(`4 - error`);
       dispatch(loginError(error));
     });
 };
@@ -40,3 +44,5 @@ export const logOut = () => dispatch => {
 
   dispatch(logOutSuccess());
 };
+
+export default { login, logOut, register };

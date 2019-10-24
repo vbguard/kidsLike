@@ -2,9 +2,13 @@ const getToken = () => {
   const token = localStorage.getItem('token');
 
   if (token) {
-    return Json.parse(token);
+    return true;
   }
   return false;
 };
 
-export default getToken
+const removeToken = () => {};
+
+const setToken = () => {};
+
+export default { getToken, removeToken, setToken };

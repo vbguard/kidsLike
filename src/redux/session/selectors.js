@@ -1,6 +1,6 @@
-const getToken = state => {
-  console.log(state);
-  return state.token;
-};
+// const getToken = state => {
+//   console.log(state);
+//   return state.token;
+// };
 
-export default getToken();
+// export default getToken();

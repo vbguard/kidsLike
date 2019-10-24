@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import sessionOperations from '../../redux/session';
+import session from '../../redux/session';
 import css from './Login.module.css';
 import Footer from '../Footer/Footer';
 
@@ -11,14 +11,14 @@ class Login extends Component {
 
   submitHandler = e => {
     e.preventDefault();
-
     this.props.onLogin({ ...this.state });
+    this.props.history.push('/dashboard');
     this.setState({ email: '', password: '' });
   };
 
   changeHandler = e => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.id]: e.target.value
     });
   };
 
@@ -46,17 +46,17 @@ class Login extends Component {
             </label>
             <input
               className={css.input}
-              id="pass"
+              id="password"
               type="password"
-              placeholder="yourpassword"
+              placeholder="your password"
               value={password}
               onChange={this.changeHandler}
               required
             />
+            <button type="submit" className={css.btn}>
+              Вхід
+            </button>
           </form>
-          <Link to="/login" className={css.btn}>
-            Вхід
-          </Link>
           <Link to="/register" className={css.regText}>
             Не маєш акаунту? Зареєструйся
           </Link>
@@ -67,12 +67,13 @@ class Login extends Component {
   }
 }
 
-const mapDispatchToProps = {
-  onLogin: sessionOperations.login
-};
+const mapDispatchToProps = dispatch => ({
+  onLogin: data => dispatch(session.login(data))
+});
 
 Login.propTypes = {
-  onLogin: PropTypes.func
+  onLogin: PropTypes.func,
+  history: PropTypes.shape()
 };
 
 export default connect(

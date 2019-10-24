@@ -1,27 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import sessionSelectors from '../../redux/session';
 import css from './AuthPage.module.css';
 import Footer from '../../components/Footer/Footer';
 
 class AuthPage extends Component {
-  componentDidMount() {
-    if (!this.props.token) {
-      return;
-    }
-
-    this.props.history.replace('/dashboard');
-  }
-
-  componentDidUpdate() {
-    if (!this.props.token) {
-      return;
-    }
-
-    this.props.history.replace('/dashboard');
-  }
+  componentDidMount() {}
 
   render() {
     return (
@@ -41,13 +24,4 @@ class AuthPage extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  token: sessionSelectors.getToken(state)
-});
-
-AuthPage.propTypes = {
-  token: PropTypes.string,
-  history: PropTypes.shape
-};
-
-export default connect(mapStateToProps)(AuthPage);
+export default AuthPage;
