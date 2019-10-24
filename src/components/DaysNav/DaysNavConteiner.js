@@ -1,16 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import DaysNav from './DaysNav';
 import styles from './DaysNav.module.css';
 
-const DaysNavConteiner = ({ handleClick }) => (
+const DaysNavConteiner = () => (
   <div className={styles.navConteiner}>
-    <DaysNav onClick={handleClick} />
+    <DaysNav />
   </div>
 );
-
-DaysNavConteiner.propTypes = {
-  handleClick: PropTypes.func
-};
 
 export default DaysNavConteiner;

@@ -8,7 +8,7 @@ import Prizes from '../Prizes/Prizes';
 import Footer from '../Footer/Footer';
 import TaskList from '../TaskList/TaskList';
 import { screenWidth } from '../../utils/var';
-import getDayTasks from '../../redux/dashboard/selectors';
+// import getDayTasks from '../../redux/dashboard/selectors';
 
 import styles from './DashboardConteiner.module.css';
 
@@ -17,7 +17,7 @@ const DashboardConteiner = ({ tasks }) => (
     <WeekRange />
     <CurrentDayTitle />
     {screenWidth >= 768 && <ProgressBar />}
-    <TaskList tasks={tasks} />
+    {tasks && <TaskList tasks={tasks} />}
     {screenWidth < 1280 && (
       <>
         <Prizes />
@@ -29,11 +29,14 @@ const DashboardConteiner = ({ tasks }) => (
 );
 
 DashboardConteiner.propTypes = {
+  // showingTasks: PropTypes.arrayOf().isRequired,
   tasks: PropTypes.arrayOf().isRequired
 };
 
 const mapStateToProps = state => ({
-  tasks: getDayTasks(state)
+  showingTasks: state.dashboard.showingTasks,
+  tasks: state.dashboard.data.filter(item => state.dashboard.activeDay === item.day)
+  // .map(item => item.dayTasks)
 });
 
 export default connect(
