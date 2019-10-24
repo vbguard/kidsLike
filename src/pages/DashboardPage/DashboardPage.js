@@ -4,20 +4,16 @@ import { connect } from 'react-redux';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import DaysNavConteiner from '../../components/DaysNav/DaysNavConteiner';
 import DashboardConteiner from '../../components/DashboardConteiner/DashboardConteiner';
-import dashboard from '../../redux/dashboard';
-// import Footer from '../../components/Footer/Footer';
+import operations from '../../redux/dashboard/operations';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
-import { screenWidth } from '../../utils/var';
+import { screenWidth, daysOfWeek } from '../../utils/var';
 import styles from './DashboardPage.module.css';
 
 class DashboardPage extends Component {
-  // useEffect(async () => {
-  // getTasks();
-  // action - який буде робити запит на бекенд на отримання завдань - потім їх пасати в стор
-  // цей самий екшн буде робити перевірку чи юзер авторизований, якщо буде 401 статус код - має робитись редірект на логін
-  // }, []);
   componentDidMount() {
-    this.props.fetchTasks();
+    const { tasksFetch, activeDay } = this.props;
+    tasksFetch();
+    this.props.history.push(`/dashboard/${daysOfWeek[activeDay - 1].pathname}`);
   }
 
   render() {
@@ -34,14 +30,19 @@ class DashboardPage extends Component {
 }
 
 DashboardPage.propTypes = {
-  fetchTasks: PropTypes.func
+  tasksFetch: PropTypes.func,
+  activeDay: PropTypes.number,
+  history: PropTypes.shape()
 };
+const mapStateToProps = state => ({
+  activeDay: state.dashboard.activeDay
+});
 
 const mapDispatchToProps = {
-  fetchTasks: () => dashboard.tasksFetch()
+  tasksFetch: operations.tasksFetch
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(DashboardPage);

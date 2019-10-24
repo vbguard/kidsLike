@@ -29,7 +29,7 @@
 }
 
 .activeLink {
-  background-color: var(--off-white);
+  background-color: var(--macaroni-and-cheese);
 }
 
 .link:hover {
@@ -53,6 +53,10 @@
     font-size: 11px;
   }
 
+  .activeLink {
+    background-color: var(--off-white);
+  }
+
   .link:hover {
     background-color: var(--off-white);
     transition: background-color 0.2s linear;
@@ -73,6 +77,10 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     text-align: left;
+  }
+
+  .activeLink {
+    background-color: var(--off-white);
   }
 
   .link:hover {

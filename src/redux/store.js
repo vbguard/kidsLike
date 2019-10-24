@@ -20,5 +20,4 @@ const configureStore = () => {
   return store;
 };
 
-export const store = configureStore();
-export const fn = () => null;
+export default configureStore;

@@ -7,9 +7,11 @@ import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import Header from './components/Header/Header';
 import ContactsPage from './pages/ContactsPage/ContactsPage';
-// import ProtectedComponent from './hoc/ProtectedComponent';
+// import storage from './utils/storage';
+import ProtectedComponent from './hoc/ProtectedComponent';
 
 function App() {
+  // const token = storage.getToken();
   return (
     <>
       <Header />
@@ -17,9 +19,10 @@ function App() {
         <Route exact path="/" component={AuthPage} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-        <Route path="/dashboard" component={DashboardPage} />
-        <Route path="/planning" component={PlanningPage} />
-        <Route path="/contacts" component={ContactsPage} />
+        <ProtectedComponent path="/dashboard" component={DashboardPage} />
+        <ProtectedComponent path="/planning" component={PlanningPage} />
+        <ProtectedComponent path="/contacts" component={ContactsPage} />
+        {/* <ProtectedComponent path="*" /> */}
       </Switch>
     </>
   );

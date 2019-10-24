@@ -1,2 +1,14 @@
-// Тут написати функцію яка буде перевіряти на наявність токену у локал стореджі
-//! І обов'язково повина щось вертати або сам токен або null
+const getToken = () => {
+  const token = localStorage.getItem('token');
+
+  if (token) {
+    return true;
+  }
+  return false;
+};
+
+const removeToken = () => {};
+
+const setToken = () => {};
+
+export default { getToken, removeToken, setToken };

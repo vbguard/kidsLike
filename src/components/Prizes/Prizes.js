@@ -1,11 +1,34 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Icon from '../Icon/Icon';
 import styles from './Prizes.module.css';
 import kinder from '../../assets/images/kinder.jpg';
 import macdonalds from '../../assets/images/macdonalds.jpg';
 
-const Prizes = () => (
-  <div className={styles.prizeConteiner}>
+// const wrapStyles = isPlanning =>
+//   isPlanning
+//     ? {
+//         flexDirection: 'row',
+//         width: '400px',
+//         backgroundColor: 'transparent',
+//         justifyContent: 'space-between'
+//       }
+//     : {};
+
+const Prizes = ({ isPlanning }) => (
+  <div
+    style={
+      isPlanning
+        ? {
+            flexDirection: 'row',
+            width: '400px',
+            backgroundColor: 'transparent',
+            justifyContent: 'space-between'
+          }
+        : {}
+    }
+    className={styles.prizeConteiner}
+  >
     <div className={styles.prize}>
       <Icon icon="GiftBox" className={styles.icon} />
       <p className={styles.text}>15 балів</p>
@@ -18,5 +41,13 @@ const Prizes = () => (
     </div>
   </div>
 );
+
+Prizes.propTypes = {
+  isPlanning: PropTypes.bool
+};
+
+Prizes.defaultProps = {
+  isPlanning: false
+};
 
 export default Prizes;

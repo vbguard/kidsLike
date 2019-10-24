@@ -8,10 +8,10 @@ import {
   TASKS_SET_SHOWING_TASKS
 } from '../types';
 
-export const setShowingTasks = tasks => ({
+export const setShowingTasks = day => ({
   type: TASKS_SET_SHOWING_TASKS,
   payload: {
-    tasks
+    day
   }
 });
 

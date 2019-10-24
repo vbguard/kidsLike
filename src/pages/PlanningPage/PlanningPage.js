@@ -44,7 +44,7 @@ class PlanningPage extends Component {
         {screenWidth >= 768 && (
           <>
             <TaskList tasks={tasks} isPlanning />
-            <Prizes />
+            <Prizes isPlanning />
             <Footer />
           </>
         )}
