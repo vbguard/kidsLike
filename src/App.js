@@ -7,7 +7,6 @@ import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import Header from './components/Header/Header';
 import ContactsPage from './pages/ContactsPage/ContactsPage';
-// import CardToggle from './components/Card/Card';
 // import ProtectedComponent from './hoc/ProtectedComponent';
 
 function App() {
@@ -21,7 +20,6 @@ function App() {
         <Route path="/dashboard" component={DashboardPage} />
         <Route path="/planning" component={PlanningPage} />
         <Route path="/contacts" component={ContactsPage} />
-        {/* <Route path="/card" component={CardToggle} /> */}
       </Switch>
     </>
   );

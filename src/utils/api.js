@@ -4,7 +4,7 @@ const baseUrl = 'https://kids-like.goit.co.ua/api/v1';
 
 axios.defaults.baseURL = baseUrl;
 axios.defaults.headers.common.Authorization =
-  'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYWNkYWNlODc5Zjc3MjI2N2I0OWRmZCIsImlhdCI6MTU3MTc2NjEyMn0.iXzwHeFNSD1FdIM3xXcLn7H5eFYc2tqOnEozH2XFCjw';
+  'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYjBiMjg2Y2QyNGM4NGYyMzUwNWRkNyIsImlhdCI6MTU3MTg2MTQzNn0.0C2sqbGA6XB_Rd_S2U4PZUELO9oqtYVLReL7t8U6qcA';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 axios.defaults.headers.delete['Content-Type'] = 'application/json';
 axios.defaults.headers.put['Content-Type'] = 'application/json';
@@ -14,7 +14,7 @@ const endpoints = {
   register: () => `/auth/register`,
   logout: () => `/auth/logout`,
   getTasks: () => `/tasks`,
-  getPlanningTasks: () => `/planning`,
+  getPlanningTasks: () => `/tasks/planning`,
   createTask: () => `/tasks`,
   updateTask: taskId => `/tasks/${taskId}`,
   deleteTask: taskId => `/tasks/${taskId}`
