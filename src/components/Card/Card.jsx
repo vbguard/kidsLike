@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Card.module.css';
 import CardToggle from '../CardTogle/CardToggle';
 import DaySelect from '../DaySelect/DaySelect';
-import c from '../../assets/images/tasksImage/pic-3@2x.png';
+import defaultImage from '../../assets/images/tasksImage/pic-3@2x.png';
 
 const Card = ({ cardTitle, imageUrl, isPlanning, taskId }) => (
   <div className={styles.Card_container}>
@@ -21,14 +21,14 @@ const Card = ({ cardTitle, imageUrl, isPlanning, taskId }) => (
 
 Card.propTypes = {
   cardTitle: PropTypes.string,
-  imageUrl: PropTypes.string,
+  imageUrl: PropTypes.object,
   isPlanning: PropTypes.bool,
   taskId: PropTypes.string.isRequired
 };
 
 Card.defaultProps = {
   cardTitle: 'Прибрати у шафі',
-  imageUrl: { c },
+  imageUrl: { defaultImage },
   isPlanning: 'false'
 };
 

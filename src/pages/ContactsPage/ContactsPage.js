@@ -26,7 +26,7 @@ const ContactsPage = () => (
       </li>
       {/* 2 */}
       <li className={css.contact}>
-        <img src={Ol} alt="avatar" className={css.img} />
+        <img src="" alt="avatar" className={css.img} />
         <a href="*" className={css.contact_title}>
           Константин Черных
         </a>
@@ -35,12 +35,12 @@ const ContactsPage = () => (
       </li>
       {/* 3 */}
       <li className={css.contact}>
-        <img src="" alt="avatar" className={css.img} />
+        <img src={Ol} alt="avatar" className={css.img} />
         <a href="*" className={css.contact_title}>
-          Имя разработчика
+          Олег Матяш
         </a>
         <p className={css.contact_job}>Full Stack Developer</p>
-        <p className={css.contact_info}>Информация разработчика</p>
+        <p className={css.contact_info}>WEB розробник</p>
       </li>
       {/* 4 */}
       <li className={css.contact}>
