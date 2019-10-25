@@ -23,7 +23,7 @@
   .conteiner {
     flex-direction: row;
     justify-content: space-around;
-    width: 250px;
+    width: 270px;
   }
 
   .selectedDay {
@@ -35,5 +35,6 @@
   .conteiner {
     justify-content: space-between;
     height: 30px;
+    width: 270px;
   }
 }

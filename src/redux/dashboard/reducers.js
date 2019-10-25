@@ -22,7 +22,7 @@ const initialState = {
 export const dashboardReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case TASKS_SET_SHOWING_TASKS:
-      return { ...state, showingTasks: state.data.filter(item => item.day === payload.day) };
+      return { ...state, showingTasks: state.data.tasks.filter(item => item.day === payload.day) };
     case TASKS_FETCH_START:
     case TASKS_UPDATE_START:
       return { ...state, loading: true };

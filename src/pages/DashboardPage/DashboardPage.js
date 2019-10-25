@@ -34,6 +34,7 @@ DashboardPage.propTypes = {
   activeDay: PropTypes.number,
   history: PropTypes.shape()
 };
+
 const mapStateToProps = state => ({
   activeDay: state.dashboard.activeDay
 });
