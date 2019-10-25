@@ -2,28 +2,46 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import sessionOperations from '../../redux/session';
+import { Notyf } from 'notyf';
+import session from '../../redux/session';
 import css from './Register.module.css';
+import 'notyf/notyf.min.css';
 import Footer from '../Footer/Footer';
 
+const notyf = new Notyf({
+  duration: 5000,
+  types: [
+    {
+      type: 'error',
+      backgroundColor: 'grey',
+      message: 'Неправильно введенi даннi. Спробуйте ще раз!'
+    }
+  ]
+});
+
 class Register extends Component {
-  state = { name: '', email: '', password: '' };
+  state = { name: '', email: '', password: '', passwordConfirmation: '' };
 
   submitHandler = e => {
     e.preventDefault();
-
-    this.props.onRegister({ ...this.state });
-    this.setState({ name: '', email: '', password: '' });
+    if (this.state.password === this.state.passwordConfirmation && this.state.password.length > 5) {
+      this.props.onRegister({ ...this.state });
+      setTimeout(() => this.props.history.push('/planning'), 1000);
+      this.setState({ name: '', email: '', password: '' });
+      notyf.success(`${this.state.name}, ласкаво просимо, насолоджуйтесь додатком!`);
+    } else {
+      notyf.error();
+    }
   };
 
   changeHandler = e => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.id]: e.target.value
     });
   };
 
   render() {
-    const { name, email, password } = this.state;
+    const { name, email, password, passwordConfirmation } = this.state;
     return (
       <>
         <div className={css.container}>
@@ -47,12 +65,12 @@ class Register extends Component {
               required
             />
 
-            <label htmlFor="login" className={css.label}>
+            <label htmlFor="name" className={css.label}>
               Login*
             </label>
             <input
               className={css.input}
-              id="login"
+              id="name"
               type="text"
               placeholder="yourlogin"
               value={name}
@@ -60,12 +78,12 @@ class Register extends Component {
               required
             />
 
-            <label htmlFor="pass" className={css.label}>
+            <label htmlFor="password" className={css.label}>
               Password (6+ characters)*
             </label>
             <input
               className={css.input}
-              id="pass"
+              id="password"
               type="password"
               placeholder="yourpassword"
               value={password}
@@ -73,14 +91,22 @@ class Register extends Component {
               required
             />
 
-            <label htmlFor="pass2" className={css.label}>
+            <label htmlFor="passwordConfirmation" className={css.label}>
               Password Confirmation*
             </label>
-            <input className={css.input} id="pass2" type="password" placeholder="confirmation" required />
+            <input
+              className={css.input}
+              id="passwordConfirmation"
+              type="password"
+              placeholder="confirmation"
+              value={passwordConfirmation}
+              onChange={this.changeHandler}
+              required
+            />
+            <button type="submit" className={css.btn}>
+              Зареєструватися
+            </button>
           </form>
-          <Link to="/register" className={css.btn}>
-            Зареєструватися
-          </Link>
           <Link to="/login" className={css.regText}>
             Вже з нами? Увійти
           </Link>
@@ -91,12 +117,13 @@ class Register extends Component {
   }
 }
 
-const mapDispatchToProps = {
-  onRegister: sessionOperations.register
-};
+const mapDispatchToProps = dispatch => ({
+  onRegister: data => dispatch(session.register(data))
+});
 
 Register.propTypes = {
-  onRegister: PropTypes.func
+  onRegister: PropTypes.func,
+  history: PropTypes.shape()
 };
 
 export default connect(

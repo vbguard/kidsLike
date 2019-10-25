@@ -36,6 +36,20 @@
   /* margin-top: 36px; */
   fill: #18191d;
 }
+.logOutLink {
+  text-decoration: none;
+  display: flex;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: 0.18px;
+  color: var(--blue-grey);
+  /* margin-bottom: 10px; */
+  align-self: center;
+}
 
 @media screen and (min-width: 768px) {
   .container {
@@ -46,31 +60,33 @@
     justify-content: space-between;
     background-color: var(--white);
   }
-}
 
-.border {
-  box-shadow: 0px 15px 10px -15px rgba(29, 29, 27, 0.1);
-}
+  .border {
+    box-shadow: 0px 15px 10px -15px rgba(29, 29, 27, 0.1);
+  }
 
-.burger {
-  display: none;
-}
+  .burger {
+    display: none;
+  }
 
-.link {
-  display: flex;
-  width: 90px;
-  font-size: 16px;
-  /* margin-top: 0; */
-  height: 60px;
-  align-items: center;
-  /* margin-left: 0;
-} */
+  .link {
+    display: flex;
+    width: 90px;
+    font-size: 16px;
+    /* margin-top: 0; */
+    height: 60px;
+    align-items: center;
+    /* margin-left: 0; */
+  }
 
   .logoIcon {
     fill: var(--macaroni-and-cheese);
     display: flex;
     align-items: center;
-    /* margin: 0; */
+    margin: 0;
+  }
+  .logOutBtn {
+    margin-bottom: 0;
   }
 }
 
@@ -92,5 +108,8 @@
 
   .burger {
     display: none;
+  }
+  .logOutBtn {
+    font-size: 16px;
   }
 }
