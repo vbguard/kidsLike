@@ -8,7 +8,7 @@ import Prizes from '../Prizes/Prizes';
 import Footer from '../Footer/Footer';
 import TaskList from '../TaskList/TaskList';
 import { screenWidth } from '../../utils/var';
-// import getDayTasks from '../../redux/dashboard/selectors';
+import dashboard from '../../redux/dashboard';
 
 import styles from './DashboardConteiner.module.css';
 
@@ -50,11 +50,10 @@ DashboardConteiner.propTypes = {
   weekRange: PropTypes.string,
   currentPoints: PropTypes.number,
   allPoints: PropTypes.number
-  // activeDay: PropTypes.number
 };
 
 const mapStateToProps = state => ({
-  tasks: state.dashboard.showingTasks,
+  tasks: dashboard.dashboardSelectors.getDayTasks(state),
   currentDayTitle: formatDate(state.dashboard.data.today, options1),
   currentDate: formatDate(state.dashboard.data.today).substring(0, 10),
   weekRange: week(state.dashboard.data.weekRange, options2),

@@ -17,13 +17,14 @@ class DashboardPage extends Component {
   }
 
   render() {
+    const { currentPoints, allPoints } = this.props;
     return (
       <>
         <div className={styles.wrapper}>
           {screenWidth >= 1280 ? <Sidebar /> : <DaysNavConteiner />}
           <DashboardConteiner />
         </div>
-        {screenWidth < 768 && <ProgressBar />}
+        {screenWidth < 768 && <ProgressBar currentPoints={currentPoints} allPoints={allPoints} />}
       </>
     );
   }
@@ -32,11 +33,15 @@ class DashboardPage extends Component {
 DashboardPage.propTypes = {
   tasksFetch: PropTypes.func,
   activeDay: PropTypes.number,
-  history: PropTypes.shape()
+  history: PropTypes.shape(),
+  currentPoints: PropTypes.number,
+  allPoints: PropTypes.number
 };
 
 const mapStateToProps = state => ({
-  activeDay: state.dashboard.activeDay
+  activeDay: state.dashboard.activeDay,
+  currentPoints: state.dashboard.data.totalDone,
+  allPoints: state.dashboard.data.totalAmount
 });
 
 const mapDispatchToProps = {

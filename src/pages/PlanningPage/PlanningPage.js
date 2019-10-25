@@ -12,16 +12,18 @@ import * as planningOperations from '../../redux/planning/planningOperations';
 import { screenWidth } from '../../utils/var';
 import styles from './PlanningPage.module.css';
 
-const formatDate = (data) => {
+const formatDate = data => {
   const date = new Date(data);
   return date.toLocaleString('uk-Ua');
 };
 
-const week = (obj) => {
-  if (obj)
+const week = obj => {
+  if (obj) {
     return Object.values(obj)
       .map(date => formatDate(date))
       .join(' - ');
+  }
+};
 
 class PlanningPage extends Component {
   state = {

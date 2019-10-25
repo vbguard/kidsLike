@@ -22,12 +22,12 @@ const initialState = {
 export const dashboardReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case TASKS_SET_SHOWING_TASKS:
-      return { ...state, showingTasks: state.data.tasks.filter(item => item.day === payload.day) };
+      return { ...state, activeDay: payload.day };
     case TASKS_FETCH_START:
     case TASKS_UPDATE_START:
       return { ...state, loading: true };
     case TASKS_FETCH_SUCCESS:
-      return { ...state, data: payload.tasks, loading: false };
+      return { ...state, data: payload.data, loading: false };
     case TASKS_UPDATE_SUCCESS:
       return { ...state, loading: false };
     case TASKS_FETCH_ERROR:
