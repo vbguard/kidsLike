@@ -1,7 +1,7 @@
 .week {
   position: absolute;
-  top: 0px;
-  right: 10px;
+  top: -18px;
+  right: -6px;
   display: flex;
   flex-direction: column;
   padding: 16px 28px 16px 28px;
@@ -14,11 +14,11 @@
 .stylesButton {
   position: absolute;
   bottom: 24px;
-  right: 52px;
+  right: 24px;
   border-radius: 15px;
-  border: 1px solid var(--azure);
-  background-color: var(--azure);
-  color: aliceblue;
+  border: 1px solid var(--white-two);
+  background-color: var(--white-two);
+  color: var(--apple);
   font-size: 20px;
   font-weight: bold;
 }
