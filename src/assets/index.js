@@ -5,6 +5,7 @@ import { ReactComponent as GiftBox } from './icons/gift-box.svg';
 import { ReactComponent as Checkbox } from './icons/check_box-24px.svg';
 import { ReactComponent as Close } from './icons/close.svg';
 import { ReactComponent as Burger } from './icons/burger.svg';
+import { ReactComponent as Exit } from './icons/exit.svg';
 
 export default {
   Logo,
@@ -13,5 +14,6 @@ export default {
   GiftBox,
   Checkbox,
   Close,
-  Burger
+  Burger,
+  Exit
 };

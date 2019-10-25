@@ -19,10 +19,10 @@ export const taskFetchStart = () => ({
   type: TASKS_FETCH_START
 });
 
-export const taskFetchSuccess = tasks => ({
+export const taskFetchSuccess = data => ({
   type: TASKS_FETCH_SUCCESS,
   payload: {
-    tasks
+    data
   }
 });
 
