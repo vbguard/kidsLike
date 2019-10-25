@@ -22,6 +22,7 @@
   line-height: 1.33;
   letter-spacing: 0.18px;
   text-align: left;
+  margin-top: 10px;
   color: var(--blue-grey);
 }
 
@@ -111,7 +112,7 @@
 @media screen and (min-width: 768px) {
   .container {
     justify-content: space-between;
-    width: 80px;
+    width: 90px;
     align-items: center;
     margin-left: 0;
   }
@@ -129,6 +130,7 @@
 
   .user {
     text-align: left;
+    margin-top: 0;
   }
   .img {
     display: unset;

@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Nav from '../Nav/Nav';
+// import PropTypes from 'prop-types';
+// import { connect } from 'react-redux';
 import Icon from '../Icon/Icon';
+import Nav from '../Nav/Nav';
 import NavLogin from '../NavLogin/NavLogin';
 import styles from './Header.module.css';
 
 export default class Header extends Component {
   state = {
     isLogged: true
+    // userData: this.props.userData
   };
 
   toggleModal = () => this.setState(prevState => ({ isOpen: !prevState.isOpen }));
 
+  handleLogOut = () => this.setState({ isLogged: false });
+  // handleLogOut = () => this.setState({ userData: null });
+
   render() {
     const { isLogged } = this.state;
+    // const { userData } = this.state;
     return (
       <div className={styles.border}>
         <div className={styles.container}>
@@ -25,6 +32,9 @@ export default class Header extends Component {
               </Link>
               <Nav />
               <NavLogin />
+              <Link to="/" className={styles.logOutLink} onClick={this.handleLogOut}>
+                Вихiд
+              </Link>
             </>
           ) : (
             <>
@@ -40,3 +50,16 @@ export default class Header extends Component {
     );
   }
 }
+
+// Header.propTypes = {
+//   userData: PropTypes.string
+// };
+
+// const mapStateToProps = state => ({
+//   userData: state.session.userData
+// });
+
+// export default connect(
+//   mapStateToProps,
+//   null
+// )(Header);
