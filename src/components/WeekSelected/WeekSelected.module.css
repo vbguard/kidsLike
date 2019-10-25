@@ -21,6 +21,7 @@
   font-weight: 700;
   border-radius: 6px;
   border: 1px solid var(--macaroni-and-cheese);
+  outline: none;
   padding: 0 24px;
 }
 

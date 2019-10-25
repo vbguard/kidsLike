@@ -16,7 +16,7 @@ const tasksFetch = () => (dispatch, getState) => {
   api
     .fetchTasks()
     .then(response => {
-      dispatch(taskFetchSuccess(response.data.result));
+      dispatch(taskFetchSuccess(response.data));
       const state = getState();
       dispatch(setShowingTasks(state.dashboard.activeDay));
     })

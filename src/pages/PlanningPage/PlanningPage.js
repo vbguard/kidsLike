@@ -12,6 +12,17 @@ import * as planningOperations from '../../redux/planning/planningOperations';
 import { screenWidth } from '../../utils/var';
 import styles from './PlanningPage.module.css';
 
+const formatDate = (data) => {
+  const date = new Date(data);
+  return date.toLocaleString('uk-Ua');
+};
+
+const week = (obj) => {
+  if (obj)
+    return Object.values(obj)
+      .map(date => formatDate(date))
+      .join(' - ');
+
 class PlanningPage extends Component {
   state = {
     openModal: false
@@ -28,10 +39,10 @@ class PlanningPage extends Component {
 
   render() {
     const { openModal } = this.state;
-    const { tasks } = this.props;
+    const { tasks, allPoints, weekRange } = this.props;
     return (
       <div className={styles.wrapper}>
-        <WeekSelected />
+        <WeekSelected weekRange={weekRange} />
         {screenWidth < 768 && (
           <>
             <TaskList tasks={tasks} isPlanning />
@@ -39,7 +50,7 @@ class PlanningPage extends Component {
             <Footer />
           </>
         )}
-        <SelectedTasksPoints />
+        <SelectedTasksPoints allPoints={allPoints} />
         <AddTasks />
         {screenWidth >= 768 && (
           <>
@@ -56,11 +67,15 @@ class PlanningPage extends Component {
 
 PlanningPage.propTypes = {
   tasks: PropTypes.array,
-  fetchTasks: PropTypes.func
+  fetchTasks: PropTypes.func,
+  allPoints: PropTypes.number,
+  weekRange: PropTypes.number
 };
 
 const mapStateToProps = state => ({
-  tasks: state.planning.tasks
+  tasks: state.planning.tasks,
+  allPoints: state.dashboard.data.totalAmount,
+  weekRange: week(state.dashboard.data.weekRange)
 });
 
 const mapDispatchToProps = {

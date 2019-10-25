@@ -4,31 +4,10 @@ import Icon from '../Icon/Icon';
 import styles from './Prizes.module.css';
 import kinder from '../../assets/images/kinder.jpg';
 import macdonalds from '../../assets/images/macdonalds.jpg';
-
-// const wrapStyles = isPlanning =>
-//   isPlanning
-//     ? {
-//         flexDirection: 'row',
-//         width: '400px',
-//         backgroundColor: 'transparent',
-//         justifyContent: 'space-between'
-//       }
-//     : {};
+import { prizesStyles } from '../../utils/var';
 
 const Prizes = ({ isPlanning }) => (
-  <div
-    style={
-      isPlanning
-        ? {
-            flexDirection: 'row',
-            width: '400px',
-            backgroundColor: 'transparent',
-            justifyContent: 'space-between'
-          }
-        : {}
-    }
-    className={styles.prizeConteiner}
-  >
+  <div style={isPlanning ? prizesStyles : {}} className={styles.prizeConteiner}>
     <div className={styles.prize}>
       <Icon icon="GiftBox" className={styles.icon} />
       <p className={styles.text}>15 балів</p>

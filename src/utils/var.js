@@ -14,5 +14,6 @@ export const prizesStyles = {
   flexDirection: 'row',
   width: '400px',
   backgroundColor: 'transparent',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
+  margin: '0 auto'
 };

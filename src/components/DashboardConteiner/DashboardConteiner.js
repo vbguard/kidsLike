@@ -12,11 +12,26 @@ import { screenWidth } from '../../utils/var';
 
 import styles from './DashboardConteiner.module.css';
 
-const DashboardConteiner = ({ tasks }) => (
+const options1 = { weekday: 'long' };
+const options2 = { year: 'numeric', month: 'long', day: 'numeric' };
+
+const formatDate = (data, options) => {
+  const date = new Date(data);
+  return date.toLocaleString('uk-Ua', options);
+};
+
+const week = (obj, options) => {
+  if (obj)
+    return Object.values(obj)
+      .map(date => formatDate(date, options))
+      .join(' - ');
+};
+
+const DashboardConteiner = ({ tasks, currentDayTitle, currentDate, weekRange, allPoints, currentPoints }) => (
   <div className={styles.conteiner}>
-    <WeekRange />
-    <CurrentDayTitle />
-    {screenWidth >= 768 && <ProgressBar />}
+    <WeekRange weekRange={weekRange} />
+    <CurrentDayTitle date={currentDate} dayTitle={currentDayTitle} />
+    {screenWidth >= 768 && <ProgressBar currentPoints={currentPoints} allPoints={allPoints} />}
     {tasks && <TaskList tasks={tasks} />}
     {screenWidth < 1280 && (
       <>
@@ -29,13 +44,22 @@ const DashboardConteiner = ({ tasks }) => (
 );
 
 DashboardConteiner.propTypes = {
-  // showingTasks: PropTypes.arrayOf().isRequired,
-  tasks: PropTypes.oneOfType([PropTypes.shape(), null])
+  tasks: PropTypes.oneOfType([PropTypes.shape(), null]),
+  currentDayTitle: PropTypes.string,
+  currentDate: PropTypes.string,
+  weekRange: PropTypes.string,
+  currentPoints: PropTypes.number,
+  allPoints: PropTypes.number
+  // activeDay: PropTypes.number
 };
 
 const mapStateToProps = state => ({
-  showingTasks: state.dashboard.showingTasks,
   tasks: state.dashboard.showingTasks,
+  currentDayTitle: formatDate(state.dashboard.data.today, options1),
+  currentDate: formatDate(state.dashboard.data.today).substring(0, 10),
+  weekRange: week(state.dashboard.data.weekRange, options2),
+  currentPoints: state.dashboard.data.totalDone,
+  allPoints: state.dashboard.data.totalAmount,
   activeDay: state.dashboard.activeDay
 });
 
