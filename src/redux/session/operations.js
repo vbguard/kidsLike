@@ -31,6 +31,9 @@ export const register = credentials => dispatch => {
   api
     .fetchRegister(credentials)
     .then(response => {
+      const token = JSON.stringify(response.data.user.token);
+
+      localStorage.setItem('token', token);
       dispatch(registerSuccess(response.data));
     })
     .catch(error => {

@@ -32,9 +32,9 @@ export const registerStart = () => ({
   type: AUTH_FETCH_REGISTER_START
 });
 
-export const registerSuccess = response => ({
+export const registerSuccess = data => ({
   type: AUTH_FETCH_REGISTER_SUCCESS,
-  payload: { response }
+  payload: { data }
 });
 
 export const registerError = error => ({
