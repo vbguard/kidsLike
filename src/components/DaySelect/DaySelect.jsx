@@ -16,14 +16,14 @@ const DaySelect = () => {
     sun: false
   });
 
-  const [isPlaningDay, setIsPlaningDay] = useState([{ planing: true }]);
+  const [isPlaningDay, setIsPlaningDay] = useState({ planing: true });
 
   const handlerOnChange = day => {
     setDaySelected({ ...daySelected, ...day });
   };
 
-  const handlerOnClick = planing => {
-    setIsPlaningDay({ planing: !planing });
+  const handlerOnClick = () => {
+    setIsPlaningDay({ planing: !isPlaningDay.planing });
   };
 
   return (
