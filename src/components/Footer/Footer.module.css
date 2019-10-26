@@ -9,11 +9,11 @@
 .KidsLike {
   font-family: Montserrat;
   font-size: 9px;
-  font-weight: normal;
+  font-weight: 600;
   font-style: normal;
   font-stretch: normal;
   line-height: 2.33;
-  letter-spacing: 0.77px;
+  letter-spacing: 1.53px;
   color: var(--black);
   text-decoration: none;
   transition: color 0.2s ease-out 0.1s;

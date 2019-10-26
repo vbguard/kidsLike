@@ -2,11 +2,12 @@
   width: 320px;
   height: 64px;
   margin: 0 auto;
-  padding-top: 36px;
-  padding-left: 22px;
+  padding-left: 21px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 2px 3.5px 8px 0 rgba(29, 29, 27, 0.1);
+  background-color: var(--white);
 }
 
 .logoIcon {

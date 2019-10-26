@@ -1,9 +1,9 @@
 .container {
-  /* width: 320px; */
   background-color: var(--white);
   margin: 0 auto;
   height: auto;
   display: flex;
+  margin-bottom: 34px;
   /* overflow: hidden;
   overflow-y: auto;
   max-height: 90vh;
@@ -36,8 +36,6 @@
   }
 }
 .list {
-  /* width: 620px; */
-  padding: 50px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
