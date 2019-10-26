@@ -25,8 +25,6 @@
   text-align: left;
   color: var(--black);
   text-decoration: none;
-  /* margin-top: 18px;
- margin-left: 30px; */
 }
 
 .burger {
@@ -37,18 +35,8 @@
   fill: #18191d;
 }
 .logOutLink {
-  text-decoration: none;
-  display: flex;
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.33;
-  letter-spacing: 0.18px;
-  color: var(--blue-grey);
-  /* margin-bottom: 10px; */
-  align-self: center;
+  display: none;
+  width: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -85,8 +73,27 @@
     align-items: center;
     margin: 0;
   }
-  .logOutBtn {
-    margin-bottom: 0;
+  .logOutLink {
+    text-decoration: none;
+    display: flex;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 0.18px;
+    color: var(--blue-grey);
+    align-self: center;
+    display: unset;
+    width: 18px;
+  }
+  .logOutLinkIcon {
+    fill: var(--blue-grey);
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-self: center;
   }
 }
 
@@ -99,7 +106,6 @@
   .link {
     font-size: 18px;
     width: 100px;
-    margin-left: 10px;
   }
 
   .logoIcon {
@@ -108,8 +114,5 @@
 
   .burger {
     display: none;
-  }
-  .logOutBtn {
-    font-size: 16px;
   }
 }

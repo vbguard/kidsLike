@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import Card from '../Card/Card';
-import Card from '../Card/Card';
+import Card from '../card/Card';
 import styles from './TaskList.module.css';
 
 const TaskList = ({ tasks, isPlanning }) => (
@@ -19,7 +19,7 @@ const TaskList = ({ tasks, isPlanning }) => (
 
 TaskList.propTypes = {
   isPlanning: PropTypes.bool,
-  tasks: PropTypes.shape().isRequired
+  tasks: PropTypes.shape()
 };
 
 TaskList.defaultProps = {
