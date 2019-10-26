@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import { NavLink, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Icon from '../Icon/Icon';
 import styles from './NavLogin.module.css';
 import image from '../../assets/images/avatar/avatart.jpg';
@@ -11,13 +13,14 @@ const activeStyle = {
   color: 'black'
 };
 
-export default class NavLogin extends Component {
+export class NavLogin extends Component {
   state = { isOpen: false };
 
   toggleModal = () => this.setState(prevState => ({ isOpen: !prevState.isOpen }));
 
   render() {
     const { isOpen } = this.state;
+    const { nickName } = this.props;
     return (
       <div className={styles.user}>
         <span className={styles.container}>
@@ -29,14 +32,14 @@ export default class NavLogin extends Component {
             alt="avatar"
             height="16"
           />
-          Ваня
+          {nickName}
           <button type="button" onClick={this.toggleModal} className={styles.btn}>
             <Icon icon="Burger" className={styles.burger} />
           </button>
         </span>
 
         <Modal isOpen={isOpen} className={styles.menuOpenContainer}>
-          <Link to="/" className={styles.menuOpenLink} onClick={this.toggleModal}>
+          <Link to="/dashboard" className={styles.menuOpenLink} onClick={this.toggleModal}>
             KidsLike
             <Icon icon="Logo" className={styles.menuOpenIcon} />
           </Link>
@@ -44,7 +47,7 @@ export default class NavLogin extends Component {
             <li>
               <NavLink
                 exact
-                to="/"
+                to="/dashboard"
                 className={styles.menuOpenNavLink}
                 onClick={this.toggleModal}
                 activeStyle={activeStyle}
@@ -72,6 +75,11 @@ export default class NavLogin extends Component {
                 Зворотнiй зв&apos;язок
               </NavLink>
             </li>
+            <li>
+              <Link to="/" className={styles.MenuLogOutLink} onClick={this.toggleModal}>
+                Вихiд
+              </Link>
+            </li>
           </ul>
           <button type="button" onClick={this.toggleModal} className={styles.menuOpenBtn}>
             <Icon icon="Close" className={styles.menuCloseIcon} />
@@ -81,5 +89,18 @@ export default class NavLogin extends Component {
     );
   }
 }
+
+NavLogin.propTypes = {
+  nickName: PropTypes.string
+};
+
+const mapStateToProps = state => ({
+  nickName: state.session.userData.nickName
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(NavLogin);
 
 Modal.setAppElement('body');
