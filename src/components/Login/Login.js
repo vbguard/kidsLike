@@ -44,7 +44,7 @@ class Login extends Component {
           <h2 className={css.title}>Вхід</h2>
           <form className={css.form} onSubmit={this.submitHandler}>
             <label htmlFor="email" className={css.label}>
-              E-mail*
+              E-mail (електронна пошта)*
             </label>
             <input
               className={css.input}
@@ -62,7 +62,7 @@ class Login extends Component {
               className={css.input}
               id="password"
               type="password"
-              placeholder="your password"
+              placeholder="Ваш пароль"
               value={password}
               onChange={this.changeHandler}
               required
