@@ -6,21 +6,19 @@ import Icon from '../Icon/Icon';
 import Nav from '../Nav/Nav';
 import NavLogin from '../NavLogin/NavLogin';
 import styles from './Header.module.css';
+import { logOut } from '../../redux/session/operations';
 
 export class Header extends Component {
-  state = {
-    // isLogged: true
-    userData: this.props.userData
-  };
-
   toggleModal = () => this.setState(prevState => ({ isOpen: !prevState.isOpen }));
 
-  // handleLogOut = () => this.setState({ isLogged: false });
-  handleLogOut = () => this.setState({ userData: null });
+  handleLogOut = () => {
+    const { logout } = this.props;
+    logout();
+  };
 
   render() {
     // const { isLogged } = this.state;
-    const { userData } = this.state;
+    const { userData } = this.props;
     return (
       <div className={styles.border}>
         <div className={styles.container}>
@@ -52,14 +50,19 @@ export class Header extends Component {
 }
 
 Header.propTypes = {
-  userData: PropTypes.object
+  userData: PropTypes.object,
+  logout: PropTypes.func
 };
 
 const mapStateToProps = state => ({
   userData: state.session.userData
 });
 
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(logOut())
+});
+
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(Header);

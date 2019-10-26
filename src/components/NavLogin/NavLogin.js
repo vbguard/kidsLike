@@ -8,6 +8,7 @@ import styles from './NavLogin.module.css';
 import image from '../../assets/images/avatar/avatart.jpg';
 import imageSec from '../../assets/images/avatar/avatart@2x.jpg';
 import imageThird from '../../assets/images/avatar/avatart@3x.jpg';
+import { logOut } from '../../redux/session/operations';
 
 const activeStyle = {
   color: 'black'
@@ -20,7 +21,7 @@ export class NavLogin extends Component {
 
   render() {
     const { isOpen } = this.state;
-    const { nickName } = this.props;
+    const { nickname, logout } = this.props;
     return (
       <div className={styles.user}>
         <span className={styles.container}>
@@ -32,7 +33,7 @@ export class NavLogin extends Component {
             alt="avatar"
             height="16"
           />
-          {nickName}
+          {nickname}
           <button type="button" onClick={this.toggleModal} className={styles.btn}>
             <Icon icon="Burger" className={styles.burger} />
           </button>
@@ -76,7 +77,7 @@ export class NavLogin extends Component {
               </NavLink>
             </li>
             <li>
-              <Link to="/" className={styles.MenuLogOutLink} onClick={this.toggleModal}>
+              <Link to="/" className={styles.MenuLogOutLink} onClick={logout}>
                 Вихiд
               </Link>
             </li>
@@ -91,16 +92,21 @@ export class NavLogin extends Component {
 }
 
 NavLogin.propTypes = {
-  nickName: PropTypes.string
+  nickname: PropTypes.string,
+  logout: PropTypes.func
 };
 
 const mapStateToProps = state => ({
-  nickName: state.session.userData.user.nickName
+  nickname: state.session.userData.nickname
+});
+
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(logOut())
 });
 
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(NavLogin);
 
 Modal.setAppElement('body');

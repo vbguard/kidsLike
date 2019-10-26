@@ -5,10 +5,7 @@ import {
   taskUpdateStart,
   taskUpdateSuccess,
   taskUpdateError,
-  setShowingTasks,
-  addTasksStart,
-  addTasksSuccess,
-  addTasksError
+  setShowingTasks
 } from './actions';
 // import selectors from './selectors';
 import api from '../../utils/api';
@@ -19,25 +16,13 @@ const tasksFetch = () => (dispatch, getState) => {
   api
     .fetchTasks()
     .then(response => {
+      console.log('response', response);
       dispatch(taskFetchSuccess(response.data));
       const state = getState();
       dispatch(setShowingTasks(state.dashboard.activeDay));
     })
     .catch(error => {
       dispatch(taskFetchError(error));
-    });
-};
-
-const taskAdd = task => dispatch => {
-  dispatch(addTasksStart());
-
-  api
-    .fetchCreateTask(task)
-    .then(response => {
-      dispatch(addTasksSuccess(response.data));
-    })
-    .catch(error => {
-      dispatch(addTasksError(error));
     });
 };
 
@@ -56,6 +41,5 @@ const tasksUpdate = id => dispatch => {
 
 export default {
   tasksFetch,
-  taskAdd,
   tasksUpdate
 };

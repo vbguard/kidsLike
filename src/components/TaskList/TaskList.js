@@ -9,7 +9,7 @@ const TaskList = ({ tasks, isPlanning }) => (
       {tasks &&
         tasks.map(task => (
           <li key={task._id} className={styles.listItem}>
-            <Card {...task.task} isPlanning={isPlanning} taskId={task._id} />
+            <Card {...task} isPlanning={isPlanning} taskId={task._id} />
           </li>
         ))}
     </ul>

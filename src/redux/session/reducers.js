@@ -21,9 +21,10 @@ const sessionReducer = (state = initialState, { type, payload }) => {
       return { ...state, error: payload.error, loading: false };
     case types.AUTH_FETCH_REGISTER_ERROR:
       return { ...state, error: payload.error, loading: false };
-
+    case types.AUTH_INIT_USER:
+      return { ...state, ...payload };
     case types.AUTH_FETCH_LOGOUT:
-      return { state: initialState };
+      return { ...initialState };
 
     default:
       return state;

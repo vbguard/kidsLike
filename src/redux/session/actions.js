@@ -5,7 +5,8 @@ import {
   AUTH_FETCH_REGISTER_START,
   AUTH_FETCH_REGISTER_SUCCESS,
   AUTH_FETCH_REGISTER_ERROR,
-  AUTH_FETCH_LOGOUT
+  AUTH_FETCH_LOGOUT,
+  AUTH_INIT_USER
 } from '../types';
 
 /*
@@ -40,6 +41,10 @@ export const registerSuccess = data => ({
 export const registerError = error => ({
   type: AUTH_FETCH_REGISTER_ERROR,
   payload: { error }
+});
+
+export const initApp = () => ({
+  type: AUTH_INIT_USER
 });
 
 /*

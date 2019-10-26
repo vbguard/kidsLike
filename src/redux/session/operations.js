@@ -9,18 +9,18 @@ import {
 } from './actions';
 import api from '../../utils/api';
 import notyf from '../../helpers/notyf';
+import { setToken, getToken, removeToken } from '../../utils/storage';
 
-export const login = credentials => dispatch => {
+export const login = (credentials, history) => dispatch => {
   dispatch(loginStart());
 
   api
     .fetchLogin(credentials)
     .then(response => {
       const token = JSON.stringify(response.data.user.token);
-
-      localStorage.setItem('token', token);
+      setToken(token);
       notyf(response.status);
-      window.history.pushState('/dashboard', response.data.user);
+      history.push('/dashboard');
       dispatch(loginSuccess(response.data.user));
     })
     .catch(error => {
@@ -29,18 +29,18 @@ export const login = credentials => dispatch => {
     });
 };
 
-export const register = credentials => dispatch => {
+export const register = (credentials, history) => dispatch => {
   dispatch(registerStart());
-
+  console.log('credentials', credentials);
   api
     .fetchRegister(credentials)
     .then(response => {
       const token = JSON.stringify(response.data.user.token);
 
-      localStorage.setItem('token', token);
+      setToken(token);
       notyf(response.status);
-      window.history.pushState('/planning', response.data.user);
-      dispatch(registerSuccess(response.data));
+      history.push('/planning');
+      dispatch(registerSuccess({ ...response.data.user }));
     })
     .catch(error => {
       notyf(error.response.status);
@@ -49,9 +49,40 @@ export const register = credentials => dispatch => {
 };
 
 export const logOut = () => dispatch => {
-  api.fetchLogout();
+  api
+    .fetchLogout()
+    .then(res => {
+      if (res.status === 200) {
+        removeToken();
+        dispatch(logOutSuccess());
+      }
+    })
+    .catch(error => {
+      console.log('error', error);
+      notyf(error.response.status);
+      dispatch(registerError(error));
+    });
+};
 
-  dispatch(logOutSuccess());
+export const initUser = history => dispatch => {
+  dispatch(loginStart());
+  if (getToken()) {
+    api
+      .fetchUser(getToken())
+      .then(response => {
+        const token = JSON.stringify(response.data.token);
+
+        setToken(token);
+        notyf(response.status);
+        history.push('/dashboard');
+        dispatch(loginSuccess(response.data));
+      })
+      .catch(error => {
+        console.log('error', error);
+        notyf(error.response.status);
+        dispatch(loginError(error));
+      });
+  }
 };
 
 export default { login, logOut, register };
