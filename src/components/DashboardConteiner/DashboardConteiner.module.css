@@ -20,7 +20,7 @@
 
 @media (min-width: 1280px) {
   .conteiner {
-    width: 900px;
+    width: 880px;
     flex-direction: row;
     align-items: flex-start;
     align-content: flex-start;

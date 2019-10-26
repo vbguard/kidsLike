@@ -47,7 +47,7 @@ class PlanningPage extends Component {
           </>
         )}
         <SelectedTasksPoints allPoints={allPoints} />
-        <AddTasks openModal={this.handleOpenModal} closeModal={this.handleCloseModal} onSubmit={onSubmit} />
+        <AddTasks openModal={this.handleOpenModal} />
         {screenWidth >= 768 && (
           <>
             <TaskList tasks={tasks} isPlanning />
@@ -55,7 +55,7 @@ class PlanningPage extends Component {
             <Footer />
           </>
         )}
-        {openModal && <AddTaskModal />}
+        {openModal && <AddTaskModal closeModal={this.handleCloseModal} onSubmit={onSubmit} />}
       </div>
     );
   }
