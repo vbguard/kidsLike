@@ -12,12 +12,12 @@ import TaskList from '../../components/TaskList/TaskList';
 import * as planningOperations from '../../redux/planning/planningOperations';
 import { screenWidth, currentWeekRange, nextWeekRange } from '../../utils/var';
 import styles from './PlanningPage.module.css';
-import { addTasksSuccess } from '../../redux/dashboard/actions';
 moment.locale('uk');
 
 class PlanningPage extends Component {
   state = {
     openModal: false
+    // planning: [{ taskId: 'dsgdsgdsf32', selectedDays: [{ date: '24-10-2019', thu: true }, '26-10-2019'] }]
   };
 
   componentDidMount() {
@@ -33,9 +33,17 @@ class PlanningPage extends Component {
     this.setState({ openModal: false });
   };
 
+  handleAddTaskSubmit = data => {
+    const { onSubmit } = this.props;
+    const newTask = { cardTitle: data.value, imageUrl: 'https://kids-like.goit.co.ua/images/default.jpg' };
+    console.log('newTask', newTask);
+    onSubmit(newTask);
+    this.setState({ openModal: false });
+  };
+
   render() {
     const { openModal } = this.state;
-    const { tasks, allPoints, activeDay, onSubmit } = this.props;
+    const { tasks, allPoints, activeDay } = this.props;
     return (
       <div className={styles.wrapper}>
         <WeekSelected activeDay={activeDay} currentWeekRange={currentWeekRange} nextWeekRange={nextWeekRange} />
@@ -55,7 +63,7 @@ class PlanningPage extends Component {
             <Footer />
           </>
         )}
-        {openModal && <AddTaskModal closeModal={this.handleCloseModal} onSubmit={onSubmit} />}
+        {openModal && <AddTaskModal closeModal={this.handleCloseModal} onSubmit={this.handleAddTaskSubmit} />}
       </div>
     );
   }
@@ -76,8 +84,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchTasks: planningOperations.fetchTasks,
-  onSubmit: task => dispatch(addTasksSuccess(task))
+  fetchTasks: () => dispatch(planningOperations.fetchTasks()),
+  onSubmit: task => dispatch(planningOperations.addCustomTask(task))
 });
 
 export default connect(

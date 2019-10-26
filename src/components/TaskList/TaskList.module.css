@@ -1,9 +1,9 @@
 .container {
-  /* width: 320px; */
   background-color: var(--white);
   margin: 0 auto;
   height: auto;
   display: flex;
+  margin-bottom: 34px;
   /* overflow: hidden;
   overflow-y: auto;
   max-height: 90vh;
@@ -13,8 +13,6 @@
 
 .list {
   display: flex;
-  /* width: 300px;
-  flex-direction: column; */
   margin: 0 auto;
   align-items: center;
 }
@@ -24,8 +22,7 @@
   display: flex;
   padding: 10px 0;
   align-self: flex-start;
-  /* width: 280px;
-  height: 261px;
+  /*height: 261px;
   margin: 0 auto; */
   /* margin-bottom: 22px; */
 }
@@ -37,7 +34,6 @@
 }
 .list {
   width: 100%;
-  /* padding: 50px; */
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -49,12 +45,7 @@
 }
 
 @media screen and (min-width: 1280px) {
-  /* .container {
-    width: 1280px;
-  } */
-
   .list {
-    /* width: 1275px; */
     justify-content: space-between;
     overflow: hidden;
     overflow-y: auto;

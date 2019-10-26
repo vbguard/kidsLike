@@ -14,21 +14,21 @@ const notyf = new Notyf({
     {
       type: 'error',
       backgroundColor: 'grey',
-      message: 'Неправильно введенi даннi. Спробуйте ще раз!'
+      message: 'Неправильно введений пароль. Спробуйте ще раз!'
     }
   ]
 });
 
 class Register extends Component {
-  state = { name: '', email: '', password: '', passwordConfirmation: '' };
+  state = { nickname: '', email: '', password: '', passwordConfirmation: '' };
 
   submitHandler = e => {
+    const { onRegister, history } = this.props;
     e.preventDefault();
+
     if (this.state.password === this.state.passwordConfirmation && this.state.password.length > 5) {
-      this.props.onRegister({ ...this.state });
-      setTimeout(() => this.props.history.push('/planning'), 1000);
-      this.setState({ name: '', email: '', password: '' });
-      notyf.success(`${this.state.name}, ласкаво просимо, насолоджуйтесь додатком!`);
+      onRegister({ ...this.state }, history);
+      this.setState({ nickname: '', email: '', password: '' });
     } else {
       notyf.error();
     }
@@ -41,7 +41,7 @@ class Register extends Component {
   };
 
   render() {
-    const { name, email, password, passwordConfirmation } = this.state;
+    const { nickname, email, password, passwordConfirmation } = this.state;
     return (
       <>
         <div className={css.container}>
@@ -53,7 +53,7 @@ class Register extends Component {
           </h2>
           <form className={css.form} onSubmit={this.submitHandler}>
             <label htmlFor="email" className={css.label}>
-              E-mail*
+              E-mail (електронна пошта) *
             </label>
             <input
               className={css.input}
@@ -65,40 +65,39 @@ class Register extends Component {
               required
             />
 
-            <label htmlFor="name" className={css.label}>
-              Nickname*
+            <label htmlFor="nickname" className={css.label}>
+              Нікнейм *
             </label>
             <input
               className={css.input}
-              id="name"
+              id="nickname"
               type="text"
-              placeholder="yournickname"
-              value={name}
+              placeholder="Ваш нікнейм"
+              value={nickname}
               onChange={this.changeHandler}
               required
             />
 
             <label htmlFor="password" className={css.label}>
-              Password (6+ characters)*
+              Пароль (6+ символів) *
             </label>
             <input
               className={css.input}
               id="password"
               type="password"
-              placeholder="yourpassword"
+              placeholder="Ваш пароль"
               value={password}
               onChange={this.changeHandler}
               required
             />
-
             <label htmlFor="passwordConfirmation" className={css.label}>
-              Password Confirmation*
+              Підтвердження пароля *
             </label>
             <input
               className={css.input}
               id="passwordConfirmation"
               type="password"
-              placeholder="confirmation"
+              placeholder="Ваш пароль"
               value={passwordConfirmation}
               onChange={this.changeHandler}
               required
@@ -118,7 +117,7 @@ class Register extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  onRegister: data => dispatch(session.register(data))
+  onRegister: (data, history) => dispatch(session.register(data, history))
 });
 
 Register.propTypes = {

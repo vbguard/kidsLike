@@ -5,10 +5,7 @@ import {
   TASKS_UPDATE_START,
   TASKS_UPDATE_SUCCESS,
   TASKS_UPDATE_ERROR,
-  TASKS_SET_SHOWING_TASKS,
-  ADD_TASKS_START,
-  ADD_TASKS_SUCCESS,
-  ADD_TASKS_ERROR
+  TASKS_SET_SHOWING_TASKS
 } from '../types';
 
 export const setShowingTasks = day => ({
@@ -49,24 +46,6 @@ export const taskUpdateSuccess = id => ({
 
 export const taskUpdateError = error => ({
   type: TASKS_UPDATE_ERROR,
-  payload: {
-    error
-  }
-});
-
-export const addTasksSuccess = newTask => ({
-  type: ADD_TASKS_START,
-  payload: {
-    newTask
-  }
-});
-
-export const addTasksStart = () => ({
-  type: ADD_TASKS_SUCCESS
-});
-
-export const addTasksError = error => ({
-  type: ADD_TASKS_ERROR,
   payload: {
     error
   }

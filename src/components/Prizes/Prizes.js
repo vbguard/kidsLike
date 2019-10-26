@@ -8,15 +8,15 @@ import { prizesStyles } from '../../utils/var';
 
 const Prizes = ({ isPlanning }) => (
   <div style={isPlanning ? prizesStyles : {}} className={styles.prizeConteiner}>
-    <div className={styles.prize}>
+    <div className={styles.prize_1}>
       <Icon icon="GiftBox" className={styles.icon} />
       <p className={styles.text}>15 балів</p>
-      <img src={kinder} width="14" height="16" alt="kinder" className={styles.image} />
+      <img src={kinder} width="24" height="33" alt="kinder" className={styles.image} />
     </div>
-    <div className={styles.prize}>
+    <div className={styles.prize_2}>
       <Icon icon="GiftBox" className={styles.icon} />
       <p className={styles.text}>25 балів</p>
-      <img src={macdonalds} width="16" height="16" alt="macdonalds" className={styles.image} />
+      <img src={macdonalds} width="31" height="24" alt="macdonalds" className={styles.image} />
     </div>
   </div>
 );

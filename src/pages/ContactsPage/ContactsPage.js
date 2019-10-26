@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer';
 import Vl from '../../assets/images/contacts/Vladimir.jpg';
 import Ol from '../../assets/images/contacts/O.jpg';
 import El from '../../assets/images/contacts/Elena.jpg';
+import Lar from '../../assets/images/contacts/IMG_5858.JPG';
 
 const ContactsPage = () => (
   <>
@@ -29,10 +30,10 @@ const ContactsPage = () => (
         <li className={css.contact}>
           <img src={Ol} alt="avatar" className={css.img} />
           <a href="*" className={css.contact_title}>
-            Константин Черных
+            Олег
           </a>
           <p className={css.contact_job}>Full Stack Developer</p>
-          <p className={css.contact_info}>Разработчик.</p>
+          <p className={css.contact_info}>Розробник</p>
         </li>
         {/* 3 */}
         <li className={css.contact}>
@@ -41,16 +42,16 @@ const ContactsPage = () => (
             Олена Фролова
           </a>
           <p className={css.contact_job}>Full Stack Developer</p>
-          <p className={css.contact_info}>Информация разработчика</p>
+          <p className={css.contact_info}>Kреативність завжди заохочуеться</p>
         </li>
         {/* 4 */}
         <li className={css.contact}>
-          <img src="" alt="avatar" className={css.img} />
+          <img src={Lar} alt="avatar" className={css.img} />
           <a href="*" className={css.contact_title}>
-            Имя разработчика
+            Скрипкiна Лариса
           </a>
-          <p className={css.contact_job}>Full Stack Developer</p>
-          <p className={css.contact_info}>Информация разработчика</p>
+          <p className={css.contact_job}>Front-end Developer</p>
+          <p className={css.contact_info}>Простота - запорука вдалого коду</p>
         </li>
         {/* 5 */}
         <li className={css.contact}>

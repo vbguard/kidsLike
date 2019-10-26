@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Card from '../Card/Card';
 import Card from '../Card/Card';
 import styles from './TaskList.module.css';
 
@@ -10,7 +9,7 @@ const TaskList = ({ tasks, isPlanning }) => (
       {tasks &&
         tasks.map(task => (
           <li key={task._id} className={styles.listItem}>
-            <Card {...task.task} isPlanning={isPlanning} taskId={task._id} />
+            <Card {...task} isPlanning={isPlanning} taskId={task._id} />
           </li>
         ))}
     </ul>
@@ -19,7 +18,7 @@ const TaskList = ({ tasks, isPlanning }) => (
 
 TaskList.propTypes = {
   isPlanning: PropTypes.bool,
-  tasks: PropTypes.shape().isRequired
+  tasks: PropTypes.shape()
 };
 
 TaskList.defaultProps = {

@@ -6,11 +6,16 @@
 }
 
 .img {
-  position: absolute;
+  /* position: absolute;
   left: 0;
   display: block;
   width: 100%;
-  height: auto;
+  height: auto; */
+  /* object-fit: contain; */
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .title {
@@ -31,16 +36,30 @@
   font-stretch: normal;
   color: var(--blue-grey);
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .list {
-  padding: 30px 15px;
+  width: 300px;
+  /* padding: 30px 15px; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact {
-  position: relative;
+  /* position: relative;
   padding-left: 120px;
-  margin-bottom: 30px;
+  margin-bottom: 30px; */
+
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: auto;
+  align-items: center;
+}
+.contact:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .contact_title {
@@ -106,6 +125,7 @@
     width: 700px;
     margin: 0 auto;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -120,11 +140,6 @@
 
   .contact:nth-last-child(-n + 2) {
     margin-bottom: 0;
-  }
-
-  .img {
-    width: 100px;
-    height: 100px;
   }
 }
 
@@ -147,9 +162,11 @@
     margin-top: 20px;
   }
 
-  .img {
-    position: unset;
-    width: 180px;
-    height: 180px;
+  .contact:not(:last-child) {
+    margin-bottom: unset;
+  }
+
+  .contact:nth-child(-n + 4) {
+    margin-bottom: 20px;
   }
 }

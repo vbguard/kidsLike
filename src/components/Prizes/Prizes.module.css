@@ -1,23 +1,36 @@
 .prizeConteiner {
   display: flex;
   flex-direction: column;
-  width: 210px;
-  background-color: #fdf8ed;
+  justify-content: center;
+  width: 208px;
+  height: 94px;
+  background-color: #f9e4b4;
   border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 34px;
+  margin-bottom: 29px;
+  padding-left: 12px;
 }
 
-.prize {
+.prize_1 {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 152px;
+  height: 33px;
+  margin-bottom: 11px;
+}
+
+.prize_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+  height: 24px;
 }
 
 .text {
-  margin: 0;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.7px;
 }
 
 .text::after {
@@ -31,16 +44,12 @@
 }
 
 .icon {
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   fill: var(--macaroni-and-cheese);
 }
 
 .image {
-  vertical-align: middle;
-  width: 14px;
-  height: 16px;
-  position: static;
 }
 
 @media (min-width: 769px) and (max-width: 1279px) {

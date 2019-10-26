@@ -28,7 +28,7 @@ Card.propTypes = {
 
 Card.defaultProps = {
   cardTitle: 'Прибрати у шафі',
-  imageUrl: { defaultImage },
+  imageUrl: defaultImage,
   isPlanning: 'false'
 };
 
