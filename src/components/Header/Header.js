@@ -1,47 +1,47 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import PropTypes from 'prop-types';
-// import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Icon from '../Icon/Icon';
 import Nav from '../Nav/Nav';
 import NavLogin from '../NavLogin/NavLogin';
 import styles from './Header.module.css';
 
-export default class Header extends Component {
+export class Header extends Component {
   state = {
-    isLogged: true
-    // userData: this.props.userData
+    // isLogged: true
+    userData: this.props.userData
   };
 
   toggleModal = () => this.setState(prevState => ({ isOpen: !prevState.isOpen }));
 
-  handleLogOut = () => this.setState({ isLogged: false });
-  // handleLogOut = () => this.setState({ userData: null });
+  // handleLogOut = () => this.setState({ isLogged: false });
+  handleLogOut = () => this.setState({ userData: null });
 
   render() {
-    const { isLogged } = this.state;
-    // const { userData } = this.state;
+    // const { isLogged } = this.state;
+    const { userData } = this.state;
     return (
       <div className={styles.border}>
         <div className={styles.container}>
-          {isLogged ? (
+          {userData !== null ? (
             <>
-              <Link to="/" className={styles.link}>
+              <Link to="/dashboard" className={styles.link}>
                 KidsLike
                 <Icon icon="Logo" className={styles.logoIcon} />
               </Link>
               <Nav />
               <NavLogin />
               <Link to="/" className={styles.logOutLink} onClick={this.handleLogOut}>
-                Вихiд
+                <Icon icon="Exit" className={styles.logOutLinkIcon} />
               </Link>
             </>
           ) : (
             <>
-              <a href="*" className={styles.link}>
+              <Link to="/" className={styles.link}>
                 KidsLike
                 <Icon icon="Logo" className={styles.logoIcon} />
-              </a>
+              </Link>
               <Nav />
             </>
           )}
@@ -51,15 +51,15 @@ export default class Header extends Component {
   }
 }
 
-// Header.propTypes = {
-//   userData: PropTypes.string
-// };
+Header.propTypes = {
+  userData: PropTypes.object
+};
 
-// const mapStateToProps = state => ({
-//   userData: state.session.userData
-// });
+const mapStateToProps = state => ({
+  userData: state.session.userData
+});
 
-// export default connect(
-//   mapStateToProps,
-//   null
-// )(Header);
+export default connect(
+  mapStateToProps,
+  null
+)(Header);
