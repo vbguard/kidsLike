@@ -5,7 +5,7 @@ import styles from './TaskList.module.css';
 
 const TaskList = ({ tasks, isPlanning }) => (
   <div className={styles.container}>
-    <ul className={styles.list}>
+    <ul style={isPlanning ? { height: 'auto' } : { height: '290px', marginBottom: '50px' }} className={styles.list}>
       {tasks &&
         tasks.map(task => (
           <li key={task._id} className={styles.listItem}>

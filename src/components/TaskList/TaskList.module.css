@@ -37,19 +37,21 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  overflow: hidden;
+  /* overflow: hidden;
   overflow-y: auto;
   max-height: 78vh;
   scrollbar-color: dark;
-  scrollbar-width: thin;
+  scrollbar-width: thin; */
 }
 
 @media screen and (min-width: 1280px) {
   .list {
     justify-content: space-between;
     overflow: hidden;
-    overflow-y: auto;
-    max-height: 86vh;
+    overflow: inherit;
+    overflow: scroll;
+    overflow-x: auto;
+    height: 400px;
     scrollbar-color: dark;
     scrollbar-width: thin;
     scroll-behavior: auto;

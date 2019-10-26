@@ -36,7 +36,7 @@ class PlanningPage extends Component {
   handleAddTaskSubmit = data => {
     const { onSubmit } = this.props;
     const newTask = { cardTitle: data.value, imageUrl: 'https://kids-like.goit.co.ua/images/default.jpg' };
-    console.log('newTask', newTask);
+    // console.log('newTask', newTask);
     onSubmit(newTask);
     this.setState({ openModal: false });
   };
