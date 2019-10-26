@@ -95,7 +95,7 @@ NavLogin.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  nickName: state.session.userData.nickName
+  nickName: state.session.userData.user.nickName
 });
 
 export default connect(
