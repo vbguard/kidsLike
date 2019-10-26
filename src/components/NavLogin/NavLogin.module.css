@@ -8,6 +8,7 @@
 .container {
   display: flex;
   width: 70px;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -22,7 +23,6 @@
   line-height: 1.33;
   letter-spacing: 0.18px;
   text-align: left;
-  margin-top: 10px;
   color: var(--blue-grey);
 }
 
@@ -37,9 +37,6 @@
 }
 
 .burger {
-  margin-top: 2px;
-  width: 20px;
-  height: 20px;
   fill: #18191d;
 }
 
@@ -73,7 +70,6 @@
   text-align: left;
   color: var(--black);
   text-decoration: none;
-  /* margin-top: 2px; */
   display: block;
   margin-bottom: 58px;
 }
@@ -107,6 +103,33 @@
   background: transparent;
   border: none;
   font-size: 0;
+}
+
+.MenuLogOutLink {
+  /* text-decoration: none;
+  display: flex;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: 0.18px;
+  color: var(--blue-grey);
+  align-self: center; */
+  width: 87px;
+  height: 13px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.11;
+  letter-spacing: 1.8px;
+  text-align: center;
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 30px;
 }
 
 @media screen and (min-width: 768px) {

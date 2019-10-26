@@ -20,14 +20,40 @@ const notyf = new Notyf({
 });
 
 class Login extends Component {
-  state = { email: '', password: '' };
+  state = { email: '', password: '', error: '' };
+
+  errorNotyf = error => {
+    switch (error.message) {
+      case 'Request failed with status code 400':
+        return notyf.error();
+      case 'Request failed with status code 401':
+        return notyf.error('Необхідно авторизуватись.');
+      case 'Request failed with status code 403':
+        return notyf.error('Необхідно авторизуватись.');
+      case 'Request failed with status code 404':
+        return notyf.error('Сторінка не знайдена, будьласка спробуйте ще раз.');
+      case 'Request failed with status code 500':
+        return notyf.error('Проблеми із сервером, будьласка спробуйте пізніше.');
+      case 'Request failed with status code 501':
+        return notyf.error();
+      case 'Request failed with status code 503':
+        return notyf.error('Проблеми із сервером, будьласка спробуйте пізніше.');
+      default:
+        break;
+    }
+  };
 
   submitHandler = e => {
+    const { onLogin, history, error } = this.props;
     e.preventDefault();
-    this.props.onLogin({ ...this.state });
-    setTimeout(() => this.props.history.push('/dashboard'), 1000);
-    this.setState({ email: '', password: '' });
-    notyf.success('Ласкаво просимо, насолоджуйтесь додатком!');
+    onLogin({ ...this.state });
+    if (error) {
+      this.setState({ error });
+    } else {
+      setTimeout(() => history.push('/dashboard'), 1000);
+      this.setState({ email: '', password: '', error: '' });
+      notyf.success('Ласкаво просимо, насолоджуйтесь додатком!');
+    }
   };
 
   changeHandler = e => {
@@ -37,14 +63,14 @@ class Login extends Component {
   };
 
   render() {
-    const { email, password } = this.state;
+    const { email, password, error } = this.state;
     return (
       <>
         <div className={css.container}>
           <h2 className={css.title}>Вхід</h2>
           <form className={css.form} onSubmit={this.submitHandler}>
             <label htmlFor="email" className={css.label}>
-              E-mail*
+              E-mail (електронна пошта)*
             </label>
             <input
               className={css.input}
@@ -62,7 +88,7 @@ class Login extends Component {
               className={css.input}
               id="password"
               type="password"
-              placeholder="your password"
+              placeholder="Ваш пароль"
               value={password}
               onChange={this.changeHandler}
               required
@@ -71,6 +97,7 @@ class Login extends Component {
               Вхід
             </button>
           </form>
+          {error && this.errorNotyf(error)}
           <Link to="/register" className={css.regText}>
             Не маєш акаунту? Зареєструйся
           </Link>
@@ -81,16 +108,21 @@ class Login extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  error: state.session.error
+});
+
 const mapDispatchToProps = dispatch => ({
   onLogin: data => dispatch(session.login(data))
 });
 
 Login.propTypes = {
   onLogin: PropTypes.func,
-  history: PropTypes.shape()
+  history: PropTypes.shape(),
+  error: PropTypes.shape()
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Login);
