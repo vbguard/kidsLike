@@ -39,7 +39,7 @@
   justify-content: space-around;
   align-items: center;
   height: 66px;
-  background-color: var(--off-yellow);
+  background-color: var(--macaroni-and-cheese);
   overflow: inherit;
 }
 
@@ -50,7 +50,7 @@
   line-height: 18px;
   color: var(--white);
   text-transform: uppercase;
-  background-color: var(--off-yellow);
+  background-color: var(--macaroni-and-cheese);
   border: none;
   border-bottom: 2px solid var(--white);
   outline: none;

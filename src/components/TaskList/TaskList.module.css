@@ -13,8 +13,6 @@
 
 .list {
   display: flex;
-  /* width: 300px;
-  flex-direction: column; */
   margin: 0 auto;
   align-items: center;
 }
@@ -22,41 +20,38 @@
 .listItem {
   position: relative;
   display: flex;
-  padding: 10px;
+  padding: 10px 0;
   align-self: flex-start;
-  /* width: 280px;
-  height: 261px;
+  /*height: 261px;
   margin: 0 auto; */
   /* margin-bottom: 22px; */
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    /* width: 768px; */
+    width: 100%;
   }
 }
 .list {
+  width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   /* overflow: hidden;
   overflow-y: auto;
-  max-height: 78vh; */
-  /* scrollbar-color: dark;
+  max-height: 78vh;
+  scrollbar-color: dark;
   scrollbar-width: thin; */
 }
 
 @media screen and (min-width: 1280px) {
-  /* .container {
-    width: 1280px;
-  } */
-
   .list {
-    /* width: 1275px; */
-    justify-content: unset;
+    justify-content: space-between;
     overflow: hidden;
-    overflow-y: auto;
-    max-height: 86vh;
+    overflow: inherit;
+    overflow: scroll;
+    overflow-x: auto;
+    height: 400px;
     scrollbar-color: dark;
     scrollbar-width: thin;
     scroll-behavior: auto;

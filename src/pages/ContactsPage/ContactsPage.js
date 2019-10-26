@@ -3,6 +3,7 @@ import css from './ContactsPage.module.css';
 import Footer from '../../components/Footer/Footer';
 import Vl from '../../assets/images/contacts/Vladimir.jpg';
 import Ol from '../../assets/images/contacts/O.jpg';
+import El from '../../assets/images/contacts/Elena.jpg';
 import Lar from '../../assets/images/contacts/IMG_5858.JPG';
 
 const ContactsPage = () => (
@@ -19,7 +20,7 @@ const ContactsPage = () => (
           </a>
           <p className={css.contact_job}>Full Stack Developer</p>
           <p className={css.contact_info}>
-            Професійні навички: Унiверсальний боєць{' '}
+            Професійні навички: Унiверсальний боєць
             <span role="img" aria-label="smile">
               😄
             </span>
@@ -36,12 +37,12 @@ const ContactsPage = () => (
         </li>
         {/* 3 */}
         <li className={css.contact}>
-          <img src="" alt="avatar" className={css.img} />
+          <img src={El} alt="avatar" className={css.img} />
           <a href="*" className={css.contact_title}>
-            Имя разработчика
+            Олена Фролова
           </a>
           <p className={css.contact_job}>Full Stack Developer</p>
-          <p className={css.contact_info}>Информация разработчика</p>
+          <p className={css.contact_info}>Kреативність завжди заохочуеться</p>
         </li>
         {/* 4 */}
         <li className={css.contact}>

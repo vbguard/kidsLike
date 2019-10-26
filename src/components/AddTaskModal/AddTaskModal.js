@@ -38,7 +38,6 @@ class AddTaskModal extends Component {
     }
     const { closeModal } = this.props;
 
-    console.log('close');
     closeModal();
   };
 
@@ -48,7 +47,6 @@ class AddTaskModal extends Component {
     }
     const { closeModal } = this.props;
 
-    console.log('close');
     closeModal();
   };
 

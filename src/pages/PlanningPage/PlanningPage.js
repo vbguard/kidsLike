@@ -36,7 +36,7 @@ class PlanningPage extends Component {
   handleAddTaskSubmit = data => {
     const { onSubmit } = this.props;
     const newTask = { cardTitle: data.value, imageUrl: 'https://kids-like.goit.co.ua/images/default.jpg' };
-    console.log('newTask', newTask);
+    // console.log('newTask', newTask);
     onSubmit(newTask);
     this.setState({ openModal: false });
   };
@@ -55,7 +55,7 @@ class PlanningPage extends Component {
           </>
         )}
         <SelectedTasksPoints allPoints={allPoints} />
-        <AddTasks openModal={this.handleOpenModal} closeModal={this.handleCloseModal} />
+        <AddTasks openModal={this.handleOpenModal} />
         {screenWidth >= 768 && (
           <>
             <TaskList tasks={tasks} isPlanning />
@@ -63,7 +63,7 @@ class PlanningPage extends Component {
             <Footer />
           </>
         )}
-        {openModal && <AddTaskModal onSubmit={this.handleAddTaskSubmit} />}
+        {openModal && <AddTaskModal closeModal={this.handleCloseModal} onSubmit={this.handleAddTaskSubmit} />}
       </div>
     );
   }
