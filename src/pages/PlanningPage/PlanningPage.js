@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import { connect } from 'react-redux';
 import WeekSelected from '../../components/WeekSelected/WeekSelected';
 import Prizes from '../../components/Prizes/Prizes';
@@ -9,21 +10,9 @@ import AddTaskModal from '../../components/AddTaskModal/AddTaskModal';
 import Footer from '../../components/Footer/Footer';
 import TaskList from '../../components/TaskList/TaskList';
 import * as planningOperations from '../../redux/planning/planningOperations';
-import { screenWidth } from '../../utils/var';
+import { screenWidth, currentWeekRange, nextWeekRange } from '../../utils/var';
 import styles from './PlanningPage.module.css';
-
-const formatDate = data => {
-  const date = new Date(data);
-  return date.toLocaleString('uk-Ua');
-};
-
-const week = obj => {
-  if (obj) {
-    return Object.values(obj)
-      .map(date => formatDate(date))
-      .join(' - ');
-  }
-};
+moment.locale('uk');
 
 class PlanningPage extends Component {
   state = {
@@ -36,15 +25,19 @@ class PlanningPage extends Component {
   }
 
   handleOpenModal = () => {
-    this.setState(state => ({ openModal: !state.openModal }));
+    this.setState({ openModal: true });
+  };
+
+  handleCloseModal = () => {
+    this.setState({ openModal: false });
   };
 
   render() {
     const { openModal } = this.state;
-    const { tasks, allPoints, weekRange } = this.props;
+    const { tasks, allPoints, activeDay } = this.props;
     return (
       <div className={styles.wrapper}>
-        <WeekSelected weekRange={weekRange} />
+        <WeekSelected activeDay={activeDay} currentWeekRange={currentWeekRange} nextWeekRange={nextWeekRange} />
         {screenWidth < 768 && (
           <>
             <TaskList tasks={tasks} isPlanning />
@@ -53,7 +46,7 @@ class PlanningPage extends Component {
           </>
         )}
         <SelectedTasksPoints allPoints={allPoints} />
-        <AddTasks />
+        <AddTasks openModal={this.handleOpenModal} closeModal={this.handleCloseModal} />
         {screenWidth >= 768 && (
           <>
             <TaskList tasks={tasks} isPlanning />
@@ -61,7 +54,7 @@ class PlanningPage extends Component {
             <Footer />
           </>
         )}
-        {openModal && <AddTaskModal open={openModal} onChange={this.handleOpenModal} />}
+        {openModal && <AddTaskModal />}
       </div>
     );
   }
@@ -71,13 +64,13 @@ PlanningPage.propTypes = {
   tasks: PropTypes.array,
   fetchTasks: PropTypes.func,
   allPoints: PropTypes.number,
-  weekRange: PropTypes.number
+  activeDay: PropTypes.number
 };
 
 const mapStateToProps = state => ({
   tasks: state.planning.tasks,
   allPoints: state.dashboard.data.totalAmount,
-  weekRange: week(state.dashboard.data.weekRange)
+  activeDay: state.dashboard.activeDay
 });
 
 const mapDispatchToProps = {

@@ -13,7 +13,6 @@ const activeDay = moment().isoWeekday();
 
 const initialState = {
   data: [],
-  showingTasks: null,
   loading: false,
   error: null,
   activeDay
