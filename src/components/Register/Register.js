@@ -22,15 +22,38 @@ const notyf = new Notyf({
 class Register extends Component {
   state = { name: '', email: '', password: '', passwordConfirmation: '' };
 
+  errorNotyf = error => {
+    switch (error) {
+      case 'Request failed with status code 400':
+        return notyf.error('Щось пішло не так, будьласка спробуйте ще раз.');
+      case 'Request failed with status code 401':
+        return notyf.error('Необхідно авторизуватись.');
+      case 'Request failed with status code 403':
+        return notyf.error('Необхідно авторизуватись.');
+      case 'Request failed with status code 404':
+        return notyf.error('Сторінка не знайдена, будьласка спробуйте ще раз.');
+      case 'Request failed with status code 500':
+        return notyf.error('Проблеми із сервером, будьласка спробуйте пізніше.');
+      case 'Request failed with status code 501':
+        return notyf.error();
+      case 'Request failed with status code 503':
+        return notyf.error('Проблеми із сервером, будьласка спробуйте пізніше.');
+      default:
+        break;
+    }
+  };
+
   submitHandler = e => {
+    const { onRegister, history, error } = this.props;
     e.preventDefault();
     if (this.state.password === this.state.passwordConfirmation && this.state.password.length > 5) {
-      this.props.onRegister({ ...this.state });
-      setTimeout(() => this.props.history.push('/planning'), 1000);
+      onRegister({ ...this.state });
+    } else if (setTimeout(() => error, 1000)) {
+      notyf.error();
+    } else {
+      setTimeout(() => history.push('/planning'), 1000);
       this.setState({ name: '', email: '', password: '' });
       notyf.success(`${this.state.name}, ласкаво просимо, насолоджуйтесь додатком!`);
-    } else {
-      notyf.error();
     }
   };
 
@@ -42,6 +65,7 @@ class Register extends Component {
 
   render() {
     const { name, email, password, passwordConfirmation } = this.state;
+    const { error } = this.props;
     return (
       <>
         <div className={css.container}>
@@ -107,6 +131,7 @@ class Register extends Component {
               Зареєструватися
             </button>
           </form>
+          {error && this.errorNotyf(error.message)}
           <Link to="/login" className={css.regText}>
             Вже з нами? Увійти
           </Link>
@@ -117,16 +142,21 @@ class Register extends Component {
   }
 }
 
+const mapStatetoProps = state => ({
+  error: state.session.error
+});
+
 const mapDispatchToProps = dispatch => ({
   onRegister: data => dispatch(session.register(data))
 });
 
 Register.propTypes = {
   onRegister: PropTypes.func,
-  history: PropTypes.shape()
+  history: PropTypes.shape(),
+  error: PropTypes.shape()
 };
 
 export default connect(
-  null,
+  mapStatetoProps,
   mapDispatchToProps
 )(Register);
