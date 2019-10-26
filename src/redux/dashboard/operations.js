@@ -5,7 +5,10 @@ import {
   taskUpdateStart,
   taskUpdateSuccess,
   taskUpdateError,
-  setShowingTasks
+  setShowingTasks,
+  addTasksStart,
+  addTasksSuccess,
+  addTasksError
 } from './actions';
 // import selectors from './selectors';
 import api from '../../utils/api';
@@ -25,6 +28,19 @@ const tasksFetch = () => (dispatch, getState) => {
     });
 };
 
+const taskAdd = task => dispatch => {
+  dispatch(addTasksStart());
+
+  api
+    .fetchCreateTask(task)
+    .then(response => {
+      dispatch(addTasksSuccess(response.data));
+    })
+    .catch(error => {
+      dispatch(addTasksError(error));
+    });
+};
+
 const tasksUpdate = id => dispatch => {
   dispatch(taskUpdateStart());
 
@@ -40,5 +56,6 @@ const tasksUpdate = id => dispatch => {
 
 export default {
   tasksFetch,
+  taskAdd,
   tasksUpdate
 };

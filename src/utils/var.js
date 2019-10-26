@@ -1,3 +1,7 @@
+import moment from 'moment';
+import 'moment/locale/uk';
+moment.locale('uk');
+
 export const daysOfWeek = [
   { id: 1, largeName: 'Понеділок', shortName: 'Пн', pathname: 'monday' },
   { id: 2, largeName: 'Вівторок', shortName: 'Вт', pathname: 'tuesday' },
@@ -16,4 +20,37 @@ export const prizesStyles = {
   backgroundColor: 'transparent',
   justifyContent: 'space-between',
   margin: '0 auto'
+};
+
+export const weekRange = `${moment()
+  .startOf('week')
+  .format('DD MMMM')} - ${moment()
+  .startOf('week')
+  .add(6, 'days')
+  .format('DD MMMM')}`;
+
+export const currentWeekRange = `${moment()
+  .startOf('week')
+  .format('L')
+  .substring(0, 5)} - ${moment()
+  .startOf('week')
+  .add(6, 'days')
+  .format('L')}`;
+
+export const nextWeekRange = `${moment()
+  .startOf('week')
+  .add(1, 'week')
+  .format('L')
+  .substring(0, 5)} - ${moment()
+  .startOf('week')
+  .add(1, 'week')
+  .add(6, 'days')
+  .format('L')}`;
+
+export const getDay = num => {
+  const data = moment()
+    .startOf('week')
+    .add(num - 1, 'days')
+    .format('dddd, DD MMMM');
+  if (data) return data;
 };
