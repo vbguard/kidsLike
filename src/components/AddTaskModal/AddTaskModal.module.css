@@ -72,6 +72,8 @@
   background-position: center;
   background-size: contain;
   transition: transform 0.3s linear;
+  outline: none;
+  cursor: pointer;
 }
 
 .btn:hover {

@@ -14,24 +14,46 @@ class AddTaskModal extends Component {
     window.removeEventListener('keydown', this.handleKeyPress);
   }
 
+  state = {
+    value: ''
+  };
+
+  handleChange = event => {
+    this.setState({
+      value: event.target.value
+    });
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    const { onSubmit } = this.props;
+
+    onSubmit({ ...this.state });
+    this.setState({ value: '' });
+  };
+
   handleKeyPress = event => {
     if (event.code !== 'Escape') {
       return;
     }
+    const { closeModal } = this.props;
+
     console.log('close');
-    this.props.closeModal();
+    closeModal();
   };
 
   handleBackdropClick = event => {
     if (event.currentTarget !== event.target) {
       return;
     }
+    const { closeModal } = this.props;
+
     console.log('close');
-    this.props.closeModal();
+    closeModal();
   };
 
   render() {
-    const { closeModal } = this.props;
+    const { value } = this.state;
     return (
       <div
         className={styles.backdrop}
@@ -45,17 +67,19 @@ class AddTaskModal extends Component {
           <div className={styles.imgConteiner}>
             <Icon icon="GiftBox" className={styles.icon} />
           </div>
-          <form
-            className={styles.form}
-            onSubmit={e => {
-              e.preventDefault();
-              // onChange();
-            }}
-          >
+          <form className={styles.form} onSubmit={this.handleSubmit}>
             <label htmlFor="taskName">
-              <input type="text" id="taskName" className={styles.input} placeholder="Додай собі завдання" />
+              <input
+                type="text"
+                name="value"
+                value={value}
+                id="taskName"
+                onChange={this.handleChange}
+                className={styles.input}
+                placeholder="Додай собі завдання"
+              />
             </label>
-            <button type="submit" onClick={closeModal} className={styles.btn} aria-label="Save"></button>
+            <button type="submit" className={styles.btn} aria-label="Save"></button>
           </form>
         </div>
       </div>
@@ -64,7 +88,8 @@ class AddTaskModal extends Component {
 }
 
 AddTaskModal.propTypes = {
-  closeModal: PropTypes.func
+  closeModal: PropTypes.func,
+  onSubmit: PropTypes.func
 };
 
 export default AddTaskModal;

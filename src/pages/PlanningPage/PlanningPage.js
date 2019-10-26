@@ -12,6 +12,7 @@ import TaskList from '../../components/TaskList/TaskList';
 import * as planningOperations from '../../redux/planning/planningOperations';
 import { screenWidth, currentWeekRange, nextWeekRange } from '../../utils/var';
 import styles from './PlanningPage.module.css';
+import { addTasksSuccess } from '../../redux/dashboard/actions';
 moment.locale('uk');
 
 class PlanningPage extends Component {
@@ -34,7 +35,7 @@ class PlanningPage extends Component {
 
   render() {
     const { openModal } = this.state;
-    const { tasks, allPoints, activeDay } = this.props;
+    const { tasks, allPoints, activeDay, onSubmit } = this.props;
     return (
       <div className={styles.wrapper}>
         <WeekSelected activeDay={activeDay} currentWeekRange={currentWeekRange} nextWeekRange={nextWeekRange} />
@@ -46,7 +47,7 @@ class PlanningPage extends Component {
           </>
         )}
         <SelectedTasksPoints allPoints={allPoints} />
-        <AddTasks openModal={this.handleOpenModal} closeModal={this.handleCloseModal} />
+        <AddTasks openModal={this.handleOpenModal} closeModal={this.handleCloseModal} onSubmit={onSubmit} />
         {screenWidth >= 768 && (
           <>
             <TaskList tasks={tasks} isPlanning />
@@ -64,7 +65,8 @@ PlanningPage.propTypes = {
   tasks: PropTypes.array,
   fetchTasks: PropTypes.func,
   allPoints: PropTypes.number,
-  activeDay: PropTypes.number
+  activeDay: PropTypes.number,
+  onSubmit: PropTypes.func
 };
 
 const mapStateToProps = state => ({
@@ -73,9 +75,10 @@ const mapStateToProps = state => ({
   activeDay: state.dashboard.activeDay
 });
 
-const mapDispatchToProps = {
-  fetchTasks: planningOperations.fetchTasks
-};
+const mapDispatchToProps = dispatch => ({
+  fetchTasks: planningOperations.fetchTasks,
+  onSubmit: task => dispatch(addTasksSuccess(task))
+});
 
 export default connect(
   mapStateToProps,
