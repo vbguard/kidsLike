@@ -2,58 +2,19 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Notyf } from 'notyf';
 import session from '../../redux/session';
 import css from './Login.module.css';
-import 'notyf/notyf.min.css';
 import Footer from '../Footer/Footer';
 
-const notyf = new Notyf({
-  duration: 5000,
-  types: [
-    {
-      type: 'error',
-      backgroundColor: 'grey',
-      message: 'Неправильно введенi даннi. Спробуйте ще раз!'
-    }
-  ]
-});
-
 class Login extends Component {
-  state = { email: '', password: '', error: '' };
-
-  errorNotyf = error => {
-    switch (error.message) {
-      case 'Request failed with status code 400':
-        return notyf.error();
-      case 'Request failed with status code 401':
-        return notyf.error('Необхідно авторизуватись.');
-      case 'Request failed with status code 403':
-        return notyf.error('Необхідно авторизуватись.');
-      case 'Request failed with status code 404':
-        return notyf.error('Сторінка не знайдена, будьласка спробуйте ще раз.');
-      case 'Request failed with status code 500':
-        return notyf.error('Проблеми із сервером, будьласка спробуйте пізніше.');
-      case 'Request failed with status code 501':
-        return notyf.error();
-      case 'Request failed with status code 503':
-        return notyf.error('Проблеми із сервером, будьласка спробуйте пізніше.');
-      default:
-        break;
-    }
-  };
+  state = { email: '', password: '' };
 
   submitHandler = e => {
-    const { onLogin, history, error } = this.props;
+    const { onLogin } = this.props;
     e.preventDefault();
+
     onLogin({ ...this.state });
-    if (error) {
-      this.setState({ error });
-    } else {
-      setTimeout(() => history.push('/dashboard'), 1000);
-      this.setState({ email: '', password: '', error: '' });
-      notyf.success('Ласкаво просимо, насолоджуйтесь додатком!');
-    }
+    this.setState({ email: '', password: '' });
   };
 
   changeHandler = e => {
@@ -63,7 +24,7 @@ class Login extends Component {
   };
 
   render() {
-    const { email, password, error } = this.state;
+    const { email, password } = this.state;
     return (
       <>
         <div className={css.container}>
@@ -97,7 +58,6 @@ class Login extends Component {
               Вхід
             </button>
           </form>
-          {error && this.errorNotyf(error)}
           <Link to="/register" className={css.regText}>
             Не маєш акаунту? Зареєструйся
           </Link>
@@ -108,21 +68,15 @@ class Login extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  error: state.session.error
-});
-
 const mapDispatchToProps = dispatch => ({
   onLogin: data => dispatch(session.login(data))
 });
 
 Login.propTypes = {
-  onLogin: PropTypes.func,
-  history: PropTypes.shape(),
-  error: PropTypes.shape()
+  onLogin: PropTypes.func
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(Login);
