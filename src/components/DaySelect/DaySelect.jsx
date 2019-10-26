@@ -7,7 +7,6 @@ const stylesButton = [styles.stylesButton];
 
 const DaySelect = () => {
   const [daySelected, setDaySelected] = useState({
-    isPlaningDay: false,
     mon: false,
     tue: false,
     wed: false,
@@ -17,17 +16,19 @@ const DaySelect = () => {
     sun: false
   });
 
+  const [isPlaningDay, setIsPlaningDay] = useState([{ planing: true }]);
+
   const handlerOnChange = day => {
     setDaySelected({ ...daySelected, ...day });
   };
 
-  const handleOnClick = isPlaningDay => {
-    setDaySelected({ ...daySelected, isPlaningDay });
+  const handlerOnClick = planing => {
+    setIsPlaningDay({ planing: !planing });
   };
 
   return (
     <>
-      {daySelected.isPlaningDay ? (
+      {isPlaningDay.planing ? (
         <>
           <div className={stylesWeek}>
             <DayOne daytitle="Пн" day="mon" checked={daySelected.mon} onChange={handlerOnChange} />
@@ -38,12 +39,12 @@ const DaySelect = () => {
             <DayOne daytitle="Сб" day="sat" checked={daySelected.sat} onChange={handlerOnChange} />
             <DayOne daytitle="Вс" day="sun" checked={daySelected.sun} onChange={handlerOnChange} />
           </div>
-          <button className={stylesButton} type="button" onClick={handleOnClick}>
+          <button className={stylesButton} type="button" onClick={handlerOnClick}>
             +
           </button>
         </>
       ) : (
-        <button className={stylesButton} type="button" onClick={handleOnClick}>
+        <button className={stylesButton} type="button" onClick={handlerOnClick}>
           +
         </button>
       )}
