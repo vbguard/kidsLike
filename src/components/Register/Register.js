@@ -2,22 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Notyf } from 'notyf';
 import session from '../../redux/session';
 import css from './Register.module.css';
-import 'notyf/notyf.min.css';
+import notyf from '../../helpers/notyf';
 import Footer from '../Footer/Footer';
-
-const notyf = new Notyf({
-  duration: 5000,
-  types: [
-    {
-      type: 'error',
-      backgroundColor: 'grey',
-      message: 'Неправильно введений пароль. Спробуйте ще раз!'
-    }
-  ]
-});
 
 class Register extends Component {
   state = { nickname: '', email: '', password: '', passwordConfirmation: '' };
@@ -30,7 +18,7 @@ class Register extends Component {
       onRegister({ ...this.state }, history);
       this.setState({ nickname: '', email: '', password: '' });
     } else {
-      notyf.error();
+      notyf.passwordError();
     }
   };
 
