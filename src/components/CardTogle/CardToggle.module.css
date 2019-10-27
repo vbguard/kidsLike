@@ -5,7 +5,7 @@
   width: 28px;
   height: 9px;
   margin-right: 20px;
-  background-color: white;
+  background-color: var(--white-two);
   border-radius: 5px;
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.6);
   cursor: pointer;
@@ -22,10 +22,10 @@
   right: -4%;
   height: 17px;
   width: 17px;
-  background-color: green;
+  background-color: var(--apple);
   border-radius: 9px;
   box-shadow: inset 5px -5px 10px 5px rgba(0, 0, 0, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.7);
-  color: green;
+  color: var(--apple);
   text-align: center;
   line-height: 1;
   font-size: 1px;
@@ -37,12 +37,12 @@
   left: -4%;
   height: 17px;
   width: 17px;
-  background-color: red;
+  background-color: var(--watermelon);
   border-radius: 9px;
   box-shadow: inset 5px -5px 10px 5px rgba(0, 0, 0, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.7);
   text-align: center;
   line-height: 1;
   font-size: 15px;
   font-weight: bold;
-  color: white;
+  color: var(--off-white);
 }

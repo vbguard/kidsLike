@@ -30,10 +30,10 @@ const ContactsPage = () => (
         <li className={css.contact}>
           <img src={Ol} alt="avatar" className={css.img} />
           <a href="*" className={css.contact_title}>
-            Олег
+            Олег Матяш
           </a>
           <p className={css.contact_job}>Full Stack Developer</p>
-          <p className={css.contact_info}>Розробник</p>
+          <p className={css.contact_info}>Щодня вдосконалюватися, не зупинятися на досягнутому</p>
         </li>
         {/* 3 */}
         <li className={css.contact}>
