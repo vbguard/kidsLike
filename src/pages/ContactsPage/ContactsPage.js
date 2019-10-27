@@ -21,7 +21,7 @@ const ContactsPage = () => (
           </a>
           <p className={css.contact_job}>Full Stack Developer</p>
           <p className={css.contact_info}>
-            Професійні навички: Унiверсальний боєць
+            Професійні навички: Унiверсальний боєць{' '}
             <span role="img" aria-label="smile">
               😄
             </span>
@@ -43,7 +43,7 @@ const ContactsPage = () => (
             Олена Фролова
           </a>
           <p className={css.contact_job}>Full Stack Developer</p>
-          <p className={css.contact_info}>Kреативність завжди заохочуеться</p>
+          <p className={css.contact_info}>Kреативність завжди заохочується</p>
         </li>
         {/* 4 */}
         <li className={css.contact}>
