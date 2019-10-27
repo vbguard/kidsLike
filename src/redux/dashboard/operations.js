@@ -31,7 +31,8 @@ const tasksUpdate = id => dispatch => {
   api
     .fetchUpdateTask(id)
     .then(response => {
-      dispatch(taskUpdateSuccess(response.data.tasks));
+      console.log('toggle', response);
+      dispatch(taskUpdateSuccess(response.data.updatedTask));
     })
     .catch(error => {
       dispatch(taskUpdateError(error));

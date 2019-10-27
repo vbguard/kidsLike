@@ -25,15 +25,12 @@ export const fetchPlanningTasksError = error => ({
   }
 });
 
-export const addTasksSuccess = newTask => {
-  console.log('newTask', newTask);
-  return {
-    type: ADD_TASKS_SUCCESS,
-    payload: {
-      ...newTask
-    }
-  };
-};
+export const addTasksSuccess = newTask => ({
+  type: ADD_TASKS_SUCCESS,
+  payload: {
+    ...newTask
+  }
+});
 
 export const addTasksStart = () => ({
   type: ADD_TASKS_START

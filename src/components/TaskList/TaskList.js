@@ -18,7 +18,7 @@ const TaskList = ({ tasks, isPlanning }) => (
 
 TaskList.propTypes = {
   isPlanning: PropTypes.bool,
-  tasks: PropTypes.shape()
+  tasks: PropTypes.arrayOf()
 };
 
 TaskList.defaultProps = {

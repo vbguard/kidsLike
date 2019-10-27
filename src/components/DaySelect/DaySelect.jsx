@@ -16,7 +16,7 @@ const DaySelect = () => {
     sun: false
   });
 
-  const [isPlaningDay, setIsPlaningDay] = useState({ planing: true });
+  const [isPlaningDay, setIsPlaningDay] = useState({ planing: false });
 
   const handlerOnChange = day => {
     setDaySelected({ ...daySelected, ...day });
