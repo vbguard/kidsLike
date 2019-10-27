@@ -80,14 +80,14 @@
 @media (min-width: 768px) {
   .container {
     background-image: url('../../assets/images/bg-auth@2x.jpg');
-    background-size: 80%;
+    background-size: 85%;
     padding-top: 150px;
   }
 
   .title {
     width: 487px;
-    height: 85px;
-    font-size: 36px;
+    height: 100px;
+    font-size: 33px;
     letter-spacing: 1.8px;
     padding-bottom: 50px;
   }
@@ -95,19 +95,30 @@
   .btn {
     font-size: 20px;
     height: 40px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    line-height: 10px;
   }
 
   .regText {
-    font-size: 16px;
+    font-size: 14px;
     padding-top: 20px;
+    height: 40px;
   }
 }
 
 @media (min-width: 1280px) {
   .container {
     background-image: url('../../assets/images/bg-auth@3x.jpg');
-    background-size: 80%;
-    padding-top: 100px;
+    background-size: 76%;
+    /* padding-top: 100px; */
+    padding-top: 50px;
+  }
+
+  .title {
+    height: 130px;
+  }
+  .btn {
+    /* line-height: 10px; */
+    margin-top: 0;
   }
 }
