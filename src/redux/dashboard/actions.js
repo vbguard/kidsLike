@@ -37,10 +37,11 @@ export const taskUpdateStart = () => ({
   type: TASKS_UPDATE_START
 });
 
-export const taskUpdateSuccess = id => ({
+export const taskUpdateSuccess = (id, data) => ({
   type: TASKS_UPDATE_SUCCESS,
   payload: {
-    id
+    id,
+    ...data
   }
 });
 

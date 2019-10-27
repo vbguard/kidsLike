@@ -25,14 +25,13 @@ const tasksFetch = () => (dispatch, getState) => {
     });
 };
 
-const tasksUpdate = id => dispatch => {
+export const tasksUpdate = (id, data) => dispatch => {
   dispatch(taskUpdateStart());
 
   api
-    .fetchUpdateTask(id)
+    .fetchUpdateTask(id, data)
     .then(response => {
-      console.log('toggle', response);
-      dispatch(taskUpdateSuccess(response.data.updatedTask));
+      dispatch(taskUpdateSuccess(id, { ...response.data }));
     })
     .catch(error => {
       dispatch(taskUpdateError(error));

@@ -5,7 +5,7 @@ import CardToggle from '../CardTogle/CardToggle';
 import DaySelect from '../DaySelect/DaySelect';
 import defaultImage from '../../assets/images/tasksImage/pic-3@2x.png';
 
-const Card = ({ cardTitle, imageUrl, isPlanning, taskId }) => (
+const Card = ({ cardTitle, imageUrl, isPlanning, taskId, isDone }) => (
   <div className={styles.Card_container}>
     <div className={styles.Card_list}>
       <div className={styles.pic}>
@@ -13,7 +13,7 @@ const Card = ({ cardTitle, imageUrl, isPlanning, taskId }) => (
       </div>
       <div className={styles.pic_footer}>
         <h2 className={styles.title}>{cardTitle}</h2>
-        {isPlanning ? <DaySelect taskId={taskId} /> : <CardToggle taskId={taskId} />}
+        {isPlanning ? <DaySelect taskId={taskId} /> : <CardToggle taskId={taskId} checked={isDone} />}
       </div>
     </div>
   </div>
@@ -23,7 +23,8 @@ Card.propTypes = {
   cardTitle: PropTypes.string,
   imageUrl: PropTypes.string,
   isPlanning: PropTypes.bool,
-  taskId: PropTypes.string.isRequired
+  taskId: PropTypes.string.isRequired,
+  isDone: PropTypes.bool
 };
 
 Card.defaultProps = {
