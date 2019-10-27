@@ -17,7 +17,7 @@ const ContactsPage = () => (
         <li className={css.contact}>
           <img src={Vl} alt="avatar" className={css.img} />
           <a href="https://web.telegram.org/#/im?p=@VladimirZaicev" className={css.contact_title}>
-            Зайцев Володимир
+            Володимир Зайцев
           </a>
           <p className={css.contact_job}>Full Stack Developer</p>
           <p className={css.contact_info}>
