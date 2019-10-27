@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { taskUpdateSuccess } from '../../redux/dashboard/actions';
 import styles from './CardToggle.module.css';
 
 const checkbox = [styles.checkbox];
@@ -13,16 +16,34 @@ class CardTogle extends Component {
 
   render() {
     const { isTogleOn } = this.state;
+    const { onClick, taskId } = this.props;
     const circle = isTogleOn ? styles.circleOn : styles.circleOff;
     return (
       <label className={toggle}>
-        <input type="checkbox" className={checkbox} checked={isTogleOn} onClick={this.toggle} />
-        {/* {isTogleOn === true && <span className={circle} />}
-        {isTogleOn === false && <span className={circle}>!</span>} */}
+        <input
+          type="checkbox"
+          checked={isTogleOn}
+          className={checkbox}
+          onChange={this.toggle}
+          role="button"
+          onClick={() => onClick(taskId)}
+        />
         <span className={circle}>!</span>
       </label>
     );
   }
 }
 
-export default CardTogle;
+CardTogle.propTypes = {
+  taskId: PropTypes.string,
+  onClick: PropTypes.func
+};
+
+const mapDispatchToProps = dispatch => ({
+  onClick: id => dispatch(taskUpdateSuccess(id))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(CardTogle);
