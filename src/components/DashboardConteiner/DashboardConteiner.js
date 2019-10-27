@@ -23,7 +23,11 @@ const DashboardConteiner = ({ tasks, activeDay, allPoints, currentPoints }) => {
       <WeekRange weekRange={weekRange} />
       <CurrentDayTitle dayTitle={dayTitle} />
       {screenWidth >= 768 && <ProgressBar currentPoints={currentPoints} allPoints={allPoints} />}
-      {tasks && <TaskList tasks={tasks} />}
+      {tasks ? (
+        <TaskList tasks={tasks} />
+      ) : (
+        <p style={{ margin: 0, padding: 0, flex: '1 0', marginTop: '30px' }}>На цей день немає завдань {'🙁'}</p>
+      )}
       {screenWidth < 1280 && (
         <>
           <Prizes />

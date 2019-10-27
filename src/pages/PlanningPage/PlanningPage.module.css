@@ -1,13 +1,13 @@
 .wrapper {
   font-family: 'Montserrat', sans-serif;
   min-height: calc(100vh - 120px);
-  /* width: 280px; */
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   margin: 0 auto;
-  padding: 20px;
+  padding-bottom: 0;
 }
 
 @media (min-width: 768px) {

@@ -1,17 +1,17 @@
 .conteiner {
-  width: 280px;
   min-height: calc(100vh - 190px);
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
+  justify-content: space-between;
   margin: 0 auto;
   padding-bottom: 40px;
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .conteiner {
-    width: 580px;
+    width: 600px;
     min-height: calc(100vh - 150px);
     padding: 30px 0;
   }
@@ -19,12 +19,13 @@
 
 @media (min-width: 1280px) {
   .conteiner {
-    width: 880px;
+    width: 100%;
     flex-direction: row;
-    align-items: flex-start;
-    align-content: flex-start;
+    flex-wrap: wrap;
     justify-content: space-between;
-    height: calc(100vh - 80px);
-    padding: 50px 0;
+    align-content: space-between;
+    align-items: initial;
+    min-height: calc(100vh - 80px);
+    padding: 50px 50px 0px 50px;
   }
 }
