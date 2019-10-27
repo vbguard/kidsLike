@@ -125,7 +125,12 @@ class PlanningPage extends Component {
           this.props.history.push('/dashboard');
         }
       })
-      .catch(err => console.log('err', err));
+      .catch(err => {
+        if (err.response.status) {
+          notyf.errorNotyf(err.response.status);
+        }
+        console.log('err', err);
+      });
   };
 
   render() {
