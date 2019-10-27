@@ -28,8 +28,7 @@ function App() {
         <Route path="/register" component={Register} />
         <ProtectedComponent path="/dashboard" component={DashboardPage} />
         <ProtectedComponent path="/planning" component={PlanningPage} />
-        {/* <ProtectedComponent path="/contacts" component={ContactsPage} /> */}
-        <Route path="/contacts" component={ContactsPage} />
+        <ProtectedComponent path="/contacts" component={ContactsPage} />
         {/* <ProtectedComponent path="*" /> */}
       </Switch>
     </>
