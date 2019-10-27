@@ -26,8 +26,10 @@ function App() {
         <Route exact path="/" component={AuthPage} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-        <ProtectedComponent path="/dashboard" component={DashboardPage} />
-        <ProtectedComponent path="/planning" component={PlanningPage} />
+        <Route path="/dashboard" component={DashboardPage} />
+        <Route path="/planning" component={PlanningPage} />
+        {/* <ProtectedComponent path="/dashboard" component={DashboardPage} />
+        <ProtectedComponent path="/planning" component={PlanningPage} /> */}
         <ProtectedComponent path="/contacts" component={ContactsPage} />
         {/* <ProtectedComponent path="*" /> */}
       </Switch>

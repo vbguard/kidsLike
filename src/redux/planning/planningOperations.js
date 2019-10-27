@@ -22,11 +22,9 @@ export const fetchTasks = () => dispatch => {
 
 export const addCustomTask = task => dispatch => {
   dispatch(addTasksStart());
-  console.log('task', task);
   api
     .fetchCreatePlanningTask(task)
     .then(response => {
-      console.log('response.data.result', response.data.planningTask);
       dispatch(addTasksSuccess(response.data.planningTask));
     })
     .catch(error => {

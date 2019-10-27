@@ -21,7 +21,7 @@ const Card = ({ cardTitle, imageUrl, isPlanning, taskId }) => (
 
 Card.propTypes = {
   cardTitle: PropTypes.string,
-  imageUrl: PropTypes.object,
+  imageUrl: PropTypes.string,
   isPlanning: PropTypes.bool,
   taskId: PropTypes.string.isRequired
 };

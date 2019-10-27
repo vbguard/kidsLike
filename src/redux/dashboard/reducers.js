@@ -28,7 +28,14 @@ export const dashboardReducer = (state = initialState, { type, payload }) => {
     case TASKS_FETCH_SUCCESS:
       return { ...state, data: payload.data, loading: false };
     case TASKS_UPDATE_SUCCESS:
-      return { ...state, data: [], loading: false };
+      return {
+        ...state,
+        data: [
+          state.data.tasks
+            .find(task => task.day === state.activeDay)
+            .dayTasks.find(task => (task.id === payload.id ? { ...task, isDone: true } : task))
+        ]
+      };
     case TASKS_FETCH_ERROR:
     case TASKS_UPDATE_ERROR:
       return { ...state, error: payload.error, loading: false };

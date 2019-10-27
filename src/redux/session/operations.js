@@ -31,7 +31,6 @@ export const login = (credentials, history) => dispatch => {
 
 export const register = (credentials, history) => dispatch => {
   dispatch(registerStart());
-  console.log('credentials', credentials);
   api
     .fetchRegister(credentials)
     .then(response => {
@@ -58,7 +57,6 @@ export const logOut = () => dispatch => {
       }
     })
     .catch(error => {
-      console.log('error', error);
       notyf(error.response.status);
       dispatch(registerError(error));
     });
@@ -78,7 +76,6 @@ export const initUser = history => dispatch => {
         dispatch(loginSuccess(response.data));
       })
       .catch(error => {
-        console.log('error', error);
         notyf(error.response.status);
         dispatch(loginError(error));
       });

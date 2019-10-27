@@ -3,7 +3,6 @@ export const getAllTasks = state => state.dashboard.data.tasks;
 export const getShowingTasks = day => getAllTasks.filter(item => item.day === day).dayTasks;
 export const getShowingTasksInit = (state, day) => state.dashboard.data.tasks.filter(item => item.day === day).dayTasks;
 export const getDayTasks = state => {
-  // state.dashboard.data.tasks.find(task => task.day === state.dashboard.activeDay)[0].dayTasks;
   if (state.dashboard.data.tasks) {
     const tasks = state.dashboard.data.tasks.find(task => task.day === state.dashboard.activeDay);
     if (!tasks) {
