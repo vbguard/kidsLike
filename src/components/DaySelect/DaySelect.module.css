@@ -1,14 +1,14 @@
 .week {
   position: absolute;
-  top: -14px;
-  right: 10px;
+  top: -0px;
+  right: -12px;
   display: flex;
   flex-direction: column;
   padding: 16px 28px 16px 28px;
   background-color: var(--azure);
   border-radius: 5px;
   width: 116px;
-  height: 208px;
+  height: 200px;
   box-sizing: border-box;
 }
 .stylesButton {
