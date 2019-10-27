@@ -40,7 +40,7 @@ export class Header extends Component {
                 KidsLike
                 <Icon icon="Logo" className={styles.logoIcon} />
               </Link>
-              <Nav />
+              {/* <Nav /> */}
             </>
           )}
         </div>
