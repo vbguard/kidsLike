@@ -60,7 +60,7 @@ const ContactsPage = () => (
           <a href="*" className={css.contact_title}>
             Євгенія Гіщак
           </a>
-          <p className={css.contact_job}>Progect Manader</p>
+          <p className={css.contact_job}>Progect Manager</p>
           <p className={css.contact_info}>Value Proposition Canva, UX Backlog,UI Mockup,Team building</p>
         </li>
         {/* 6 */}
