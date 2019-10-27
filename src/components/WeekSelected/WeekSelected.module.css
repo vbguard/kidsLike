@@ -5,7 +5,7 @@
   align-items: center;
   height: 54px;
   width: 170px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .text {
@@ -22,14 +22,14 @@
   border-radius: 6px;
   border: 1px solid var(--macaroni-and-cheese);
   outline: none;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+/* @media (min-width: 768px) and (max-width: 1279px) {
   .conteiner {
     margin-bottom: 24px;
   }
-}
+} */
 
 @media (min-width: 1280px) {
   .conteiner {

@@ -2,32 +2,19 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Notyf } from 'notyf';
 import session from '../../redux/session';
 import css from './Login.module.css';
-import 'notyf/notyf.min.css';
 import Footer from '../Footer/Footer';
-
-const notyf = new Notyf({
-  duration: 5000,
-  types: [
-    {
-      type: 'error',
-      backgroundColor: 'grey',
-      message: 'Неправильно введенi даннi. Спробуйте ще раз!'
-    }
-  ]
-});
 
 class Login extends Component {
   state = { email: '', password: '' };
 
   submitHandler = e => {
+    const { onLogin, history } = this.props;
     e.preventDefault();
-    this.props.onLogin({ ...this.state });
-    setTimeout(() => this.props.history.push('/dashboard'), 1000);
+
+    onLogin({ ...this.state }, history);
     this.setState({ email: '', password: '' });
-    notyf.success('Ласкаво просимо, насолоджуйтесь додатком!');
   };
 
   changeHandler = e => {
@@ -44,7 +31,7 @@ class Login extends Component {
           <h2 className={css.title}>Вхід</h2>
           <form className={css.form} onSubmit={this.submitHandler}>
             <label htmlFor="email" className={css.label}>
-              E-mail*
+              E-mail (електронна пошта)*
             </label>
             <input
               className={css.input}
@@ -62,7 +49,7 @@ class Login extends Component {
               className={css.input}
               id="password"
               type="password"
-              placeholder="your password"
+              placeholder="Ваш пароль"
               value={password}
               onChange={this.changeHandler}
               required
@@ -82,7 +69,7 @@ class Login extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  onLogin: data => dispatch(session.login(data))
+  onLogin: (data, history) => dispatch(session.login(data, history))
 });
 
 Login.propTypes = {

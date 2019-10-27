@@ -1,17 +1,17 @@
-const getToken = () => {
+export const getToken = () => {
   const token = localStorage.getItem('token');
 
   if (token) {
-    return true;
+    return JSON.parse(token);
   }
   return false;
 };
 
-const setToken = data => {
+export const setToken = data => {
   localStorage.setItem('token', data);
 };
 
-const removeToken = () => {
+export const removeToken = () => {
   localStorage.removeItem('token');
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import 'moment/locale/uk';
 import styles from './WeekRange.module.css';
 
 const WeekRange = ({ weekRange }) => <p className={styles.text}>{`Тиждень: ${weekRange}`}</p>;

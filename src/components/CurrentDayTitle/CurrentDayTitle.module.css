@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   height: 34px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .text {
@@ -23,7 +23,7 @@
   .conteiner {
     flex-direction: row;
     justify-content: space-around;
-    width: 270px;
+    width: 280px;
   }
 
   .selectedDay {
@@ -35,6 +35,6 @@
   .conteiner {
     justify-content: space-between;
     height: 30px;
-    width: 270px;
+    width: 280px;
   }
 }

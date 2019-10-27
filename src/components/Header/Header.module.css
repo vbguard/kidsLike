@@ -1,16 +1,18 @@
 .container {
   width: 320px;
-  height: 60px;
+  height: 64px;
   margin: 0 auto;
+  padding-left: 21px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 2px 3.5px 8px 0 rgba(29, 29, 27, 0.1);
+  background-color: var(--white);
 }
 
 .logoIcon {
-  width: 35px;
+  width: 24px;
   height: 18px;
-  /* margin-top: 18px; */
   fill: var(--macaroni-and-cheese);
 }
 
@@ -20,8 +22,7 @@
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.31;
-  letter-spacing: 0.64px;
+  letter-spacing: 1.28px;
   text-align: left;
   color: var(--black);
   text-decoration: none;

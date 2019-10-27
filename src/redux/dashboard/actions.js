@@ -50,13 +50,3 @@ export const taskUpdateError = error => ({
     error
   }
 });
-
-export default {
-  taskFetchStart,
-  taskFetchSuccess,
-  taskFetchError,
-  taskUpdateStart,
-  taskUpdateSuccess,
-  taskUpdateError,
-  setShowingTasks
-};

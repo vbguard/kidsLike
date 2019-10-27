@@ -13,7 +13,6 @@ const activeDay = moment().isoWeekday();
 
 const initialState = {
   data: [],
-  showingTasks: null,
   loading: false,
   error: null,
   activeDay
@@ -29,10 +28,11 @@ export const dashboardReducer = (state = initialState, { type, payload }) => {
     case TASKS_FETCH_SUCCESS:
       return { ...state, data: payload.data, loading: false };
     case TASKS_UPDATE_SUCCESS:
-      return { ...state, loading: false };
+      return { ...state, data: [], loading: false };
     case TASKS_FETCH_ERROR:
     case TASKS_UPDATE_ERROR:
       return { ...state, error: payload.error, loading: false };
+
     default:
       return state;
   }

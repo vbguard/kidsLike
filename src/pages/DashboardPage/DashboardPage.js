@@ -1,39 +1,36 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Sidebar from '../../components/Sidebar/Sidebar';
-import DaysNavConteiner from '../../components/DaysNav/DaysNavConteiner';
-import DashboardConteiner from '../../components/DashboardConteiner/DashboardConteiner';
+import DaysNavContainer from '../../components/DaysNav/DaysNavConteiner';
+import DashboardContainer from '../../components/DashboardConteiner/DashboardConteiner';
 import operations from '../../redux/dashboard/operations';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import { screenWidth, daysOfWeek } from '../../utils/var';
 import styles from './DashboardPage.module.css';
 
-class DashboardPage extends Component {
-  componentDidMount() {
-    const { tasksFetch, activeDay } = this.props;
+const DashboardPage = ({ tasksFetch, activeDay, currentPoints, allPoints }) => {
+  const history = useHistory();
+  useEffect(() => {
     tasksFetch();
-    this.props.history.push(`/dashboard/${daysOfWeek[activeDay - 1].pathname}`);
-  }
+    history.push(`/dashboard/${daysOfWeek[activeDay - 1].pathname}`);
+  }, []);
 
-  render() {
-    const { currentPoints, allPoints } = this.props;
-    return (
-      <>
-        <div className={styles.wrapper}>
-          {screenWidth >= 1280 ? <Sidebar /> : <DaysNavConteiner />}
-          <DashboardConteiner />
-        </div>
-        {screenWidth < 768 && <ProgressBar currentPoints={currentPoints} allPoints={allPoints} />}
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <div className={styles.wrapper}>
+        {screenWidth >= 1280 ? <Sidebar /> : <DaysNavContainer />}
+        <DashboardContainer />
+      </div>
+      {screenWidth < 768 && <ProgressBar currentPoints={currentPoints} allPoints={allPoints} />}
+    </>
+  );
+};
 
 DashboardPage.propTypes = {
   tasksFetch: PropTypes.func,
   activeDay: PropTypes.number,
-  history: PropTypes.shape(),
   currentPoints: PropTypes.number,
   allPoints: PropTypes.number
 };

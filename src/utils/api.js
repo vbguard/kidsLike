@@ -1,40 +1,60 @@
 import axios from 'axios';
+import { getToken } from './storage';
 
 const baseUrl = 'https://kids-like.goit.co.ua/api/v1';
+// const baseUrl = 'http://localhost:5000/api/v1';
+
+const token = getToken();
 
 axios.defaults.baseURL = baseUrl;
-axios.defaults.headers.common.Authorization =
-  'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYjBiMjg2Y2QyNGM4NGYyMzUwNWRkNyIsImlhdCI6MTU3MTg2MTQzNn0.0C2sqbGA6XB_Rd_S2U4PZUELO9oqtYVLReL7t8U6qcA';
+
+if (token) {
+  axios.defaults.headers.common.Authorization = token || '';
+}
+
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 axios.defaults.headers.delete['Content-Type'] = 'application/json';
 axios.defaults.headers.put['Content-Type'] = 'application/json';
 
+const setToken = token => {
+  axios.defaults.headers.common.Authorization = token;
+};
+
 const endpoints = {
+  me: () => `/auth/me`,
   login: () => `/auth/login`,
   register: () => `/auth/register`,
   logout: () => `/auth/logout`,
   getTasks: () => `/tasks`,
   getPlanningTasks: () => `/tasks/planning`,
+  createPlanningTasks: () => `/tasks/planning`,
   createTask: () => `/tasks`,
   updateTask: taskId => `/tasks/${taskId}`,
   deleteTask: taskId => `/tasks/${taskId}`
 };
 
+const fetchUser = token => {
+  setToken(token);
+  return axios.get(endpoints.me());
+};
 const fetchLogin = data => axios.post(endpoints.login(), data);
 const fetchRegister = data => axios.post(endpoints.register(), data);
 const fetchLogout = () => axios.post(endpoints.logout());
 const fetchTasks = () => axios.get(endpoints.getTasks());
 const fetchPlaningTasks = () => axios.get(endpoints.getPlanningTasks());
+const fetchCreatePlanningTask = data => axios.post(endpoints.createPlanningTasks(), data);
 const fetchCreateTask = data => axios.post(endpoints.createTask(), data);
 const fetchDeleteTask = taskId => axios.delete(endpoints.deleteTask(taskId));
 const fetchUpdateTask = (taskId, data) => axios.put(endpoints.updateTask(taskId), data);
 
 export default {
+  fetchUser,
   fetchLogin,
   fetchRegister,
   fetchLogout,
   fetchTasks,
   fetchPlaningTasks,
+  fetchCreatePlanningTask,
   fetchCreateTask,
   fetchDeleteTask,
   fetchUpdateTask

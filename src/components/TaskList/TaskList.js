@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Card from '../Card/Card';
-import Card from '../card/Card';
+import Card from '../Card/Card';
 import styles from './TaskList.module.css';
 
 const TaskList = ({ tasks, isPlanning }) => (
   <div className={styles.container}>
-    <ul className={styles.list}>
+    <ul style={isPlanning ? { height: 'auto' } : { height: '290px', marginBottom: '50px' }} className={styles.list}>
       {tasks &&
         tasks.map(task => (
           <li key={task._id} className={styles.listItem}>
-            <Card {...task.task} isPlanning={isPlanning} taskId={task._id} />
+            <Card {...task} isPlanning={isPlanning} taskId={task._id} />
           </li>
         ))}
     </ul>
