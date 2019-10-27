@@ -5,6 +5,7 @@ import Vl from '../../assets/images/contacts/Vladimir.jpg';
 import Ol from '../../assets/images/contacts/O.jpg';
 import El from '../../assets/images/contacts/Elena.jpg';
 import Lar from '../../assets/images/contacts/IMG_5858.JPG';
+import Eugenia from '../../assets/images/contacts/Eugenia.jpg';
 
 const ContactsPage = () => (
   <>
@@ -55,12 +56,12 @@ const ContactsPage = () => (
         </li>
         {/* 5 */}
         <li className={css.contact}>
-          <img src="" alt="avatar" className={css.img} />
+          <img src={Eugenia} alt="avatar" className={css.img} />
           <a href="*" className={css.contact_title}>
-            Имя разработчика
+            Євгенія Гіщак
           </a>
-          <p className={css.contact_job}>Full Stack Developer</p>
-          <p className={css.contact_info}>Информация разработчика</p>
+          <p className={css.contact_job}>Progect Manager</p>
+          <p className={css.contact_info}>Value Proposition Canva, UX Backlog,UI Mockup,Team building</p>
         </li>
         {/* 6 */}
         <li className={css.contact}>
