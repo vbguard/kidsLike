@@ -1,5 +1,7 @@
 .label {
-  display: inline-block;
+  display: flex;
+  /* justify-content: center; */
+  align-content: center;
   cursor: pointer;
 }
 
@@ -8,13 +10,13 @@
 }
 
 .days {
-  margin-left: 12px;
+  margin-left: 10px;
   font-family: Montserrat;
   font-size: 13px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.5;
+  line-height: 24px;
   letter-spacing: 1.04px;
   text-align: left;
   color: var(--white);

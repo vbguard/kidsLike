@@ -13,18 +13,17 @@ import { setToken, getToken, removeToken } from '../../utils/storage';
 
 export const login = (credentials, history) => dispatch => {
   dispatch(loginStart());
-
   api
     .fetchLogin(credentials)
     .then(response => {
       const token = JSON.stringify(response.data.user.token);
       setToken(token);
-      notyf(response.status);
+      notyf.errorNotyf(response.status);
       history.push('/dashboard');
       dispatch(loginSuccess(response.data.user));
     })
     .catch(error => {
-      notyf(error.response.status);
+      notyf.errorNotyf(error.response.status);
       dispatch(loginError(error));
     });
 };
@@ -37,12 +36,12 @@ export const register = (credentials, history) => dispatch => {
       const token = JSON.stringify(response.data.user.token);
 
       setToken(token);
-      notyf(response.status);
+      notyf.errorNotyf(response.status);
       history.push('/planning');
       dispatch(registerSuccess({ ...response.data.user }));
     })
     .catch(error => {
-      notyf(error.response.status);
+      notyf.errorNotyf(error.response.status);
       dispatch(registerError(error));
     });
 };
@@ -57,7 +56,7 @@ export const logOut = () => dispatch => {
       }
     })
     .catch(error => {
-      notyf(error.response.status);
+      notyf.errorNotyf(error.response.status);
       dispatch(registerError(error));
     });
 };
@@ -71,12 +70,12 @@ export const initUser = history => dispatch => {
         const token = JSON.stringify(response.data.token);
 
         setToken(token);
-        notyf(response.status);
+        notyf.errorNotyf(response.status);
         history.push('/dashboard');
         dispatch(loginSuccess(response.data));
       })
       .catch(error => {
-        notyf(error.response.status);
+        notyf.errorNotyf(error.response.status);
         dispatch(loginError(error));
       });
   }

@@ -30,7 +30,8 @@ const endpoints = {
   createPlanningTasks: () => `/tasks/planning`,
   createTask: () => `/tasks`,
   updateTask: taskId => `/tasks/${taskId}`,
-  deleteTask: taskId => `/tasks/${taskId}`
+  deleteTask: taskId => `/tasks/${taskId}`,
+  createPlanningWeek: () => `/tasks/planning/week`
 };
 
 const fetchUser = token => {
@@ -45,9 +46,11 @@ const fetchPlaningTasks = () => axios.get(endpoints.getPlanningTasks());
 const fetchCreatePlanningTask = data => axios.post(endpoints.createPlanningTasks(), data);
 const fetchCreateTask = data => axios.post(endpoints.createTask(), data);
 const fetchDeleteTask = taskId => axios.delete(endpoints.deleteTask(taskId));
-const fetchUpdateTask = (taskId, data) => axios.put(endpoints.updateTask(taskId), data);
+const fetchUpdateTask = (taskId, data) => axios.patch(endpoints.updateTask(taskId), data);
+const fetchCreatePlanningWeek = data => axios.post(endpoints.createPlanningWeek(), data);
 
 export default {
+  fetchCreatePlanningWeek,
   fetchUser,
   fetchLogin,
   fetchRegister,

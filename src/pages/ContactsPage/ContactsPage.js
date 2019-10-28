@@ -21,7 +21,7 @@ const ContactsPage = () => (
           </a>
           <p className={css.contact_job}>Full Stack Developer</p>
           <p className={css.contact_info}>
-            Професійні навички: Унiверсальний боєць
+            Професійні навички: Унiверсальний боєць{' '}
             <span role="img" aria-label="smile">
               😄
             </span>
@@ -31,10 +31,10 @@ const ContactsPage = () => (
         <li className={css.contact}>
           <img src={Ol} alt="avatar" className={css.img} />
           <a href="*" className={css.contact_title}>
-            Олег
+            Олег Матяш
           </a>
           <p className={css.contact_job}>Full Stack Developer</p>
-          <p className={css.contact_info}>Розробник</p>
+          <p className={css.contact_info}>Щодня вдосконалюватися, не зупинятися на досягнутому</p>
         </li>
         {/* 3 */}
         <li className={css.contact}>
@@ -43,7 +43,7 @@ const ContactsPage = () => (
             Олена Фролова
           </a>
           <p className={css.contact_job}>Full Stack Developer</p>
-          <p className={css.contact_info}>Kреативність завжди заохочуеться</p>
+          <p className={css.contact_info}>Kреативність завжди заохочується</p>
         </li>
         {/* 4 */}
         <li className={css.contact}>

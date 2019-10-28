@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+/* eslint-disable no-restricted-syntax */
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import styles from './DaySelect.module.css';
 import DayOne from './DayOne';
 
 const stylesWeek = [styles.week];
 const stylesButton = [styles.stylesButton];
 
-const DaySelect = () => {
+const DaySelect = ({ checkedDays, taskId, planning }) => {
   const [daySelected, setDaySelected] = useState({
     mon: false,
     tue: false,
@@ -16,6 +18,20 @@ const DaySelect = () => {
     sun: false
   });
 
+  useEffect(() => {
+    planning.forEach(task => {
+      if (task.taskId === taskId) {
+        task.selectedDays.forEach(day => {
+          for (const dayName in day) {
+            if (dayName !== 'date') {
+              setDaySelected({ ...daySelected, [dayName]: day[dayName] });
+            }
+          }
+        });
+      }
+    });
+  }, []);
+
   const [isPlaningDay, setIsPlaningDay] = useState({ planing: false });
 
   const handlerOnChange = day => {
@@ -23,6 +39,9 @@ const DaySelect = () => {
   };
 
   const handlerOnClick = () => {
+    if (isPlaningDay.planing) {
+      checkedDays({ daySelected, taskId });
+    }
     setIsPlaningDay({ planing: !isPlaningDay.planing });
   };
 
@@ -50,6 +69,12 @@ const DaySelect = () => {
       )}
     </>
   );
+};
+
+DaySelect.propTypes = {
+  checkedDays: PropTypes.func,
+  taskId: PropTypes.string,
+  planning: PropTypes.array
 };
 
 export default DaySelect;

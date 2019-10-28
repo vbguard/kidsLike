@@ -10,7 +10,6 @@ import Header from './components/Header/Header';
 import ContactsPage from './pages/ContactsPage/ContactsPage';
 import ProtectedComponent from './hoc/ProtectedComponent';
 import { initUser } from './redux/session/operations';
-// import { initApp } from './redux/session/actions';
 
 function App() {
   const dispatch = useDispatch();
