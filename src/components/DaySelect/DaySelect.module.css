@@ -1,28 +1,33 @@
 .week {
   position: absolute;
-  top: -0px;
-  right: -12px;
+  top: -2px;
+  right: -6px;
   display: flex;
   flex-direction: column;
+  align-content: center;
   padding: 16px 28px 16px 28px;
   background-color: var(--azure);
+  box-shadow: 2px 3.5px 8px 0 var(--black-15);
   border-radius: 5px;
   width: 116px;
   height: 200px;
   box-sizing: border-box;
+  z-index: 3;
 }
+
 .stylesButton {
-  position: absolute;
-  right: 30px;
-  bottom: 36px;
-  width: 17px;
-  height: 17px;
-  padding: 1px;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  line-height: 1px;
-  border: solid var(--white-two);
+  line-height: 26px;
+  font-size: 24px;
+  text-align: center;
   background-color: var(--white-two);
   color: var(--apple);
-  font-weight: bold;
+  font-weight: 500;
   box-shadow: 0px 2px 4px 0 var(--copper-27);
 }

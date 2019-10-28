@@ -26,9 +26,10 @@
 .pic_footer {
   display: flex;
   justify-content: space-between;
+  align-content: center;
+  align-items: center;
   height: 69px;
-  padding-left: 29px;
-  padding-top: 29px;
+  padding: 0 24px;
   background-color: #efbb43;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
