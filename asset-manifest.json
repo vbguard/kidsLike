@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5cccfd58.chunk.css",
+    "main.js": "/static/js/main.a95f4936.chunk.js",
+    "main.js.map": "/static/js/main.a95f4936.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.058cbf93.chunk.css": "/static/css/2.058cbf93.chunk.css",
+    "static/js/2.8c8513ab.chunk.js": "/static/js/2.8c8513ab.chunk.js",
+    "static/js/2.8c8513ab.chunk.js.map": "/static/js/2.8c8513ab.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.25183a300564070064335c1f7fdee3d1.js": "/precache-manifest.25183a300564070064335c1f7fdee3d1.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.058cbf93.chunk.css.map": "/static/css/2.058cbf93.chunk.css.map",
+    "static/css/main.5cccfd58.chunk.css.map": "/static/css/main.5cccfd58.chunk.css.map",
+    "static/media/Elena.jpg": "/static/media/Elena.fea31bf7.jpg",
+    "static/media/Eugenia.jpg": "/static/media/Eugenia.45eaba1d.jpg",
+    "static/media/IMG_5858.JPG": "/static/media/IMG_5858.5bbfabce.JPG",
+    "static/media/O.jpg": "/static/media/O.33d5765a.jpg",
+    "static/media/Vladimir.jpg": "/static/media/Vladimir.cc5eec95.jpg",
+    "static/media/arrow_drop_down-24px.ebe1c3a6.svg": "/static/media/arrow_drop_down-24px.ebe1c3a6.svg",
+    "static/media/AuthPage.module.css": "/static/media/bg-auth@3x.ebd94b35.jpg",
+    "static/media/burger.a634cd7e.svg": "/static/media/burger.a634cd7e.svg",
+    "static/media/check_box-24px.svg": "/static/media/check_box-24px.3a608b84.svg",
+    "static/media/check_box_outline_blank-24px.svg": "/static/media/check_box_outline_blank-24px.6d816b8d.svg",
+    "static/media/AddTaskModal.module.css": "/static/media/ckeckbox.b6d43e8e.png",
+    "static/media/close.a471c5df.svg": "/static/media/close.a471c5df.svg",
+    "static/media/exit.3b96c499.svg": "/static/media/exit.3b96c499.svg",
+    "static/media/gift-box.80a38ba3.svg": "/static/media/gift-box.80a38ba3.svg",
+    "static/media/logo.8bbd4457.svg": "/static/media/logo.8bbd4457.svg"
+  }
+}
