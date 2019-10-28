@@ -21,7 +21,6 @@ export const planningReducer = (state = initialState, { type, payload }) => {
     case PLANNING_FETCH_SUCCESS:
       return { ...state, tasks: payload.tasks, loading: false };
     case ADD_TASKS_SUCCESS:
-      console.log('payload', payload);
       return { ...state, tasks: [...state.tasks, payload] };
     case ADD_TASKS_ERROR:
     case PLANNING_FETCH_ERROR:
