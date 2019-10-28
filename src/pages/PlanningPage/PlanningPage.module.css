@@ -10,6 +10,36 @@
   padding-bottom: 0;
 }
 
+.btn {
+  display: block;
+  width: 240px;
+  height: 48px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.8;
+  letter-spacing: 1.28px;
+  text-align: center;
+  color: var(--white);
+  border-radius: 6px;
+  box-shadow: 0px 4px 6px 0 var(--black-15);
+  background-color: var(--macaroni-and-cheese);
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 23px;
+  margin-bottom: 30px;
+  padding-top: 17px;
+  padding-bottom: 19px;
+  transition: all 0.3s ease-out 0.1s;
+}
+
+.btn:hover {
+  color: var(--macaroni-and-cheese);
+  background-color: var(--white);
+}
+
 @media (min-width: 768px) {
   .wrapper {
     width: 580px;

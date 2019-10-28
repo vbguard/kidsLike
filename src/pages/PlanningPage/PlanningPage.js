@@ -107,7 +107,7 @@ class PlanningPage extends Component {
         const refactoredSelectedDays = selectedDays
           .filter(day => {
             const keys = Object.keys(day);
-            if (day[keys[1]]) console.log('day', day);
+            if (day[keys[1]]);
             return day[keys[1]];
           })
           .map(el => el.date);
@@ -122,7 +122,7 @@ class PlanningPage extends Component {
         if (res.status === 200) {
           // TODO
           //! add notyf
-          console.log('res.data', res.data);
+          // console.log('res.data', res.data);
           this.props.history.push('/dashboard');
         }
       })
@@ -138,8 +138,8 @@ class PlanningPage extends Component {
         {screenWidth < 768 && (
           <>
             {planning.length !== 0 && (
-              <button type="button" style={{ width: '180px', height: '40px' }} onClick={this.handleSubmitPlanningWeek}>
-                Planning Week
+              <button type="button" className={styles.btn} onClick={this.handleSubmitPlanningWeek}>
+                Запланувати
               </button>
             )}
 
@@ -153,8 +153,8 @@ class PlanningPage extends Component {
         {screenWidth >= 768 && (
           <>
             {planning.length !== 0 && (
-              <button type="button" onClick={this.handleSubmitPlanningWeek}>
-                Planning Week
+              <button type="button" className={styles.btn} onClick={this.handleSubmitPlanningWeek}>
+                Запланувати
               </button>
             )}
             <TaskList tasks={tasks} isPlanning planning={planning} checkedDays={this.handleAddSelectedDays} />
