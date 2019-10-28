@@ -12,7 +12,7 @@ import Footer from '../../components/Footer/Footer';
 import TaskList from '../../components/TaskList/TaskList';
 import * as planningOperations from '../../redux/planning/planningOperations';
 import { screenWidth, currentWeekRange, nextWeekRange } from '../../utils/var';
-
+import notyf from '../../helpers/notyf';
 import api from '../../utils/api';
 import styles from './PlanningPage.module.css';
 moment.locale('uk');
@@ -120,18 +120,23 @@ class PlanningPage extends Component {
       .fetchCreatePlanningWeek(data)
       .then(res => {
         if (res.status === 200) {
-          // TODO
-          //! add notyf
-          // console.log('res.data', res.data);
+          notyf.createPlanningWeek();
+          console.log('res.data', res.data);
           this.props.history.push('/dashboard');
         }
       })
-      .catch(err => console.log('err', err));
+      .catch(err => {
+        if (err.response.status) {
+          notyf.errorNotyf(err.response.status);
+        }
+        console.log('err', err);
+      });
   };
 
   render() {
     const { openModal, planning } = this.state;
     const { tasks, allPoints, activeDay } = this.props;
+
     return (
       <div className={styles.wrapper}>
         <WeekSelected activeDay={activeDay} currentWeekRange={currentWeekRange} nextWeekRange={nextWeekRange} />
@@ -175,6 +180,10 @@ PlanningPage.propTypes = {
   activeDay: PropTypes.number,
   onSubmit: PropTypes.func,
   history: PropTypes.shape()
+};
+
+PlanningPage.defaultProps = {
+  allPoints: 0
 };
 
 const mapStateToProps = state => ({

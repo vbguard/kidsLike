@@ -26,7 +26,19 @@ const DashboardConteiner = ({ tasks, activeDay, allPoints, currentPoints }) => {
       {tasks ? (
         <TaskList tasks={tasks} />
       ) : (
-        <p style={{ margin: 0, padding: 0, flex: '1 0', marginTop: '30px' }}>На цей день немає завдань {'🙁'}</p>
+        <p
+          style={{
+            flex: '1 0',
+            textAlign: 'center',
+            // justifyContent: 'center',
+            // alignItems: 'center',
+            padding: 0,
+            marginTop: '10%',
+            marginBottom: '26%'
+          }}
+        >
+          На цей день немає завдань {'🙁'}
+        </p>
       )}
       {screenWidth < 1280 && (
         <>

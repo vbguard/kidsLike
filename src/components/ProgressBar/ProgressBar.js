@@ -18,4 +18,9 @@ ProgressBar.propTypes = {
   allPoints: PropTypes.number
 };
 
+ProgressBar.defaultProps = {
+  currentPoints: 0,
+  allPoints: 0
+};
+
 export default ProgressBar;
