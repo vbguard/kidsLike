@@ -126,9 +126,7 @@ class PlanningPage extends Component {
         }
       })
       .catch(err => {
-        if (err.response.status) {
-          notyf.errorNotyf(err.response.status);
-        }
+        notyf.errorNotyf(err.response);
         console.log('err', err);
       });
   };

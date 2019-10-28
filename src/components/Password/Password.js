@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import session from '../../redux/session';
-import css from './Register.module.css';
+import css from './Password.module.css';
 import notyf from '../../helpers/notyf';
 import Footer from '../Footer/Footer';
 
 class Register extends Component {
-  state = { nickname: '', email: '', password: '', passwordConfirmation: '', code: '' };
+  state = { email: '', password: '', passwordConfirmation: '', code: '' };
 
   submitHandler = e => {
     const { onRegister, history } = this.props;
@@ -16,7 +16,7 @@ class Register extends Component {
 
     if (this.state.password === this.state.passwordConfirmation && this.state.password.length > 5) {
       onRegister({ ...this.state }, history);
-      this.setState({ nickname: '', email: '', password: '', passwordConfirmation: '', code: '' });
+      this.setState({ email: '', password: '', passwordConfirmation: '', code: '' });
     } else {
       notyf.passwordError();
     }
@@ -29,16 +29,11 @@ class Register extends Component {
   };
 
   render() {
-    const { nickname, email, password, passwordConfirmation, code } = this.state;
+    const { email, password, passwordConfirmation, code } = this.state;
     return (
       <>
         <div className={css.container}>
-          <h2 className={css.title}>
-            Реєстрація
-            <div className={css.photoContainer}>
-              <span className={css.icon}>+</span>
-            </div>
-          </h2>
+          <h2 className={css.title}>Заміна пароля</h2>
           <form className={css.form} onSubmit={this.submitHandler}>
             <label htmlFor="email" className={css.label}>
               E-mail (електронна пошта) *
@@ -52,20 +47,6 @@ class Register extends Component {
               onChange={this.changeHandler}
               required
             />
-
-            <label htmlFor="nickname" className={css.label}>
-              Нікнейм *
-            </label>
-            <input
-              className={css.input}
-              id="nickname"
-              type="text"
-              placeholder="Ваш нікнейм"
-              value={nickname}
-              onChange={this.changeHandler}
-              required
-            />
-
             <label htmlFor="password" className={css.label}>
               Пароль (6+ символів) *
             </label>
@@ -103,10 +84,10 @@ class Register extends Component {
               required
             />
             <button type="submit" className={css.btn}>
-              Зареєструватися
+              Замінити
             </button>
-            <Link to="/login" className={css.regText}>
-              Вже з нами? Увійти
+            <Link to="/register" className={css.regText}>
+              Зареєструватися
             </Link>
           </form>
         </div>
