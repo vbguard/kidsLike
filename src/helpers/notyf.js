@@ -12,6 +12,10 @@ const notyf = new Notyf({
   ]
 });
 
+const passwordError = () => {
+  notyf.error('Неправильно введений пароль. Спробуйте ще раз!');
+};
+
 const errorNotyf = status => {
   switch (status) {
     case 200:
@@ -37,4 +41,4 @@ const errorNotyf = status => {
   }
 };
 
-export default errorNotyf;
+export default { errorNotyf, passwordError };

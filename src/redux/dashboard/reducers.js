@@ -28,7 +28,24 @@ export const dashboardReducer = (state = initialState, { type, payload }) => {
     case TASKS_FETCH_SUCCESS:
       return { ...state, data: payload.data, loading: false };
     case TASKS_UPDATE_SUCCESS:
-      return { ...state, data: [], loading: false };
+      console.log('payload', payload);
+      return {
+        ...state,
+        data: {
+          ...state.data,
+          totalAmount: payload.totalAmount,
+          totalDone: payload.totalDone,
+          tasks: state.data.tasks.map(day => ({
+            ...day,
+            dayTasks: day.dayTasks.map(task => {
+              if (task._id === payload.id) {
+                return payload.updatedTasks;
+              }
+              return task;
+            })
+          }))
+        }
+      };
     case TASKS_FETCH_ERROR:
     case TASKS_UPDATE_ERROR:
       return { ...state, error: payload.error, loading: false };

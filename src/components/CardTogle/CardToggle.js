@@ -1,28 +1,40 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import * as opr from '../../redux/dashboard/operations';
 import styles from './CardToggle.module.css';
-
 const checkbox = [styles.checkbox];
 const toggle = [styles.toggle];
 
-class CardTogle extends Component {
-  state = { isTogleOn: false };
+const CardToggle = ({ checked, onClick, taskId }) => {
+  const circle = checked ? styles.circleOn : styles.circleOff;
+  return (
+    <label className={toggle}>
+      <input
+        type="checkbox"
+        checked={checked}
+        className={checkbox}
+        onChange={() => {
+          onClick(taskId, { isDone: !checked });
+        }}
+        role="button"
+      />
+      <span className={circle}>!</span>
+    </label>
+  );
+};
 
-  toggle = () => {
-    this.setState(state => ({ isTogleOn: !state.isTogleOn }));
-  };
+CardToggle.propTypes = {
+  taskId: PropTypes.string,
+  checked: PropTypes.bool,
+  onClick: PropTypes.func
+};
 
-  render() {
-    const { isTogleOn } = this.state;
-    const circle = isTogleOn ? styles.circleOn : styles.circleOff;
-    return (
-      <label className={toggle}>
-        <input type="checkbox" className={checkbox} checked={isTogleOn} onClick={this.toggle} />
-        {/* {isTogleOn === true && <span className={circle} />}
-        {isTogleOn === false && <span className={circle}>!</span>} */}
-        <span className={circle}>!</span>
-      </label>
-    );
-  }
-}
+const mapDispatchToProps = dispatch => ({
+  onClick: (id, data) => dispatch(opr.default.tasksUpdate(id, data))
+});
 
-export default CardTogle;
+export default connect(
+  null,
+  mapDispatchToProps
+)(CardToggle);

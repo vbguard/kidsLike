@@ -21,6 +21,7 @@ export const prizesStyles = {
   justifyContent: 'space-between',
   margin: '0 auto'
 };
+export const weekStart = moment().startOf('week');
 
 export const weekRange = `${moment()
   .startOf('week')

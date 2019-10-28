@@ -57,9 +57,9 @@
     display: flex;
     flex-direction: column;
     width: 210px;
+    height: 44px;
     background-color: var(--off-white);
     border-radius: 5px;
-    padding: 20px;
     margin-bottom: 34px;
   }
 
@@ -94,6 +94,7 @@
     font-weight: 700;
     line-height: 21px;
     padding: 20px 0;
+    margin-top: 30px;
     margin-bottom: 0;
   }
 

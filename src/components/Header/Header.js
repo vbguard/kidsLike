@@ -21,7 +21,7 @@ export class Header extends Component {
     const { userData } = this.props;
     return (
       <div className={styles.border}>
-        <div className={styles.container}>
+        <header className={styles.container}>
           {userData !== null ? (
             <>
               <Link to="/dashboard" className={styles.link}>
@@ -40,10 +40,10 @@ export class Header extends Component {
                 KidsLike
                 <Icon icon="Logo" className={styles.logoIcon} />
               </Link>
-              <Nav />
+              {/* <Nav /> */}
             </>
           )}
-        </div>
+        </header>
       </div>
     );
   }
