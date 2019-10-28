@@ -28,7 +28,6 @@ export const dashboardReducer = (state = initialState, { type, payload }) => {
     case TASKS_FETCH_SUCCESS:
       return { ...state, data: payload.data, loading: false };
     case TASKS_UPDATE_SUCCESS:
-      console.log('payload', payload);
       return {
         ...state,
         data: {

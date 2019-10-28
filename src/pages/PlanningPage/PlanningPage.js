@@ -122,7 +122,6 @@ class PlanningPage extends Component {
         if (res.status === 200) {
           // TODO
           //! add notyf
-          console.log('res.data', res.data);
           this.props.history.push('/dashboard');
         }
       })
@@ -132,6 +131,7 @@ class PlanningPage extends Component {
   render() {
     const { openModal, planning } = this.state;
     const { tasks, allPoints, activeDay } = this.props;
+
     return (
       <div className={styles.wrapper}>
         <WeekSelected activeDay={activeDay} currentWeekRange={currentWeekRange} nextWeekRange={nextWeekRange} />
@@ -175,6 +175,10 @@ PlanningPage.propTypes = {
   activeDay: PropTypes.number,
   onSubmit: PropTypes.func,
   history: PropTypes.shape()
+};
+
+PlanningPage.defaultProps = {
+  allPoints: 0
 };
 
 const mapStateToProps = state => ({

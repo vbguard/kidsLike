@@ -50,6 +50,8 @@
 }
 
 .image {
+  width: 16px;
+  height: 20px;
 }
 
 @media (min-width: 769px) and (max-width: 1279px) {
@@ -98,10 +100,6 @@
     margin-bottom: 0;
   }
 
-  /* .prizeConteiner {
-    padding-left: 0;
-    margin-right: auto;
-  } */
   .prizeConteiner {
     margin: 0;
     border-top-right-radius: 0;

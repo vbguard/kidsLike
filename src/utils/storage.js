@@ -5,6 +5,7 @@ export const getToken = () => {
   }
   return false;
 };
+
 export const setToken = data => {
   localStorage.setItem('token', data);
 };
