@@ -40,7 +40,7 @@ const DaySelect = () => {
             <DayOne daytitle="Вс" day="sun" checked={daySelected.sun} onChange={handlerOnChange} />
           </div>
           <button className={stylesButton} type="button" onClick={handlerOnClick}>
-            +
+            v
           </button>
         </>
       ) : (
