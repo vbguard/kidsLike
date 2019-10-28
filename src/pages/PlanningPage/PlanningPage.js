@@ -136,6 +136,7 @@ class PlanningPage extends Component {
   render() {
     const { openModal, planning } = this.state;
     const { tasks, allPoints, activeDay } = this.props;
+
     return (
       <div className={styles.wrapper}>
         <WeekSelected activeDay={activeDay} currentWeekRange={currentWeekRange} nextWeekRange={nextWeekRange} />
@@ -179,6 +180,10 @@ PlanningPage.propTypes = {
   activeDay: PropTypes.number,
   onSubmit: PropTypes.func,
   history: PropTypes.shape()
+};
+
+PlanningPage.defaultProps = {
+  allPoints: 0
 };
 
 const mapStateToProps = state => ({
