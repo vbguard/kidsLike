@@ -12,6 +12,10 @@ const notyf = new Notyf({
   ]
 });
 
+const createPlanningWeek = () => {
+  notyf.success('Створено нові завдання!');
+};
+
 const passwordError = () => {
   notyf.error('Неправильно введений пароль. Спробуйте ще раз!');
 };
@@ -23,22 +27,19 @@ const errorNotyf = status => {
     case 201:
       return notyf.success('Реєстрація успішна, насолоджуйтесь додатком!');
     case 400:
-      return notyf.error();
-    case 401:
-      return notyf.error('Необхідно авторизуватись.');
-    case 403:
-      return notyf.error('Необхідно авторизуватись.');
-    case 404:
-      return notyf.error('Сторінка не знайдена, будьласка спробуйте ще раз.');
-    case 500:
-      return notyf.error('Проблеми із сервером, будьласка спробуйте пізніше.');
     case 501:
       return notyf.error();
+    case 401:
+    case 403:
+      return notyf.error('Необхідно авторизуватись!');
+    case 404:
+      return notyf.error('Сторінка не знайдена, будьласка спробуйте ще раз!');
+    case 500:
     case 503:
-      return notyf.error('Проблеми із сервером, будьласка спробуйте пізніше.');
+      return notyf.error('Проблеми із сервером, будьласка спробуйте пізніше!');
     default:
       break;
   }
 };
 
-export default { errorNotyf, passwordError };
+export default { errorNotyf, passwordError, createPlanningWeek };
