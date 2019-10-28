@@ -76,10 +76,10 @@ const ContactsPage = () => (
         <li className={css.contact}>
           <img src="" alt="avatar" className={css.img} />
           <a href="*" className={css.contact_title}>
-            Имя разработчика
+            Костянтин Черних
           </a>
           <p className={css.contact_job}>Full Stack Developer</p>
-          <p className={css.contact_info}>Информация разработчика</p>
+          <p className={css.contact_info}>Per aspera ad astra</p>
         </li>
         {/* 8 */}
         <li className={css.contact}>
