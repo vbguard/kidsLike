@@ -27,7 +27,7 @@ class Login extends Component {
     const { email, password } = this.state;
     return (
       <>
-        <div className={css.container}>
+        <main className={css.container}>
           <h2 className={css.title}>Вхід</h2>
           <form className={css.form} onSubmit={this.submitHandler}>
             <label htmlFor="email" className={css.label}>
@@ -60,11 +60,11 @@ class Login extends Component {
             <button type="submit" className={css.btn}>
               Вхід
             </button>
-            <Link to="/register" className={css.regText}>
-              Не маєш акаунту? Зареєструйся
-            </Link>
           </form>
-        </div>
+          <Link to="/register" className={css.regText}>
+            Не маєш акаунту? Зареєструйся
+          </Link>
+        </main>
         <Footer />
       </>
     );

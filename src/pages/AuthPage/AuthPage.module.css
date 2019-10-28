@@ -81,7 +81,7 @@
   .container {
     background-image: url('../../assets/images/bg-auth@2x.jpg');
     background-size: 85%;
-    padding-top: 150px;
+    padding-top: 50px;
   }
 
   .title {
@@ -95,7 +95,6 @@
   .btn {
     font-size: 20px;
     height: 40px;
-    /* margin-top: 50px; */
     line-height: 10px;
   }
 
@@ -109,16 +108,19 @@
 @media (min-width: 1280px) {
   .container {
     background-image: url('../../assets/images/bg-auth@3x.jpg');
-    background-size: 76%;
-    /* padding-top: 100px; */
-    padding-top: 50px;
+    background-size: 80%;
   }
 
   .title {
     height: 130px;
   }
   .btn {
-    /* line-height: 10px; */
     margin-top: 0;
+  }
+}
+
+@media (max-height: 678px) {
+  .container {
+    background-position: 50% 135%
   }
 }
