@@ -1,7 +1,7 @@
 .container {
   height: 64px;
   margin: 0 auto;
-  padding-left: 21px;
+  /* padding-left: 21px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,12 +59,11 @@
 
   .link {
     display: flex;
-    width: 90px;
+    /* width: 90px; */
+    width: 170px;
     font-size: 16px;
-    /* margin-top: 0; */
     height: 60px;
     align-items: center;
-    /* margin-left: 0; */
   }
 
   .logoIcon {
@@ -105,7 +104,8 @@
 
   .link {
     font-size: 18px;
-    width: 100px;
+    /* width: 100px; */
+    width: 480px;
   }
 
   .logoIcon {
