@@ -16,8 +16,8 @@ moment.locale('uk');
 
 class PlanningPage extends Component {
   state = {
-    openModal: false
-    // planning: [{ taskId: 'dsgdsgdsf32', selectedDays: [{ date: '24-10-2019', thu: true }, '26-10-2019'] }]
+    openModal: false,
+    planning: [{ taskId: '', selectedDays: [] }]
   };
 
   componentDidMount() {
