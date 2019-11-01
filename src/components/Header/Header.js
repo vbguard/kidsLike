@@ -20,8 +20,8 @@ export class Header extends Component {
     // const { isLogged } = this.state;
     const { userData } = this.props;
     return (
-      <div className={styles.border}>
-        <header className={styles.container}>
+      <header className={styles.border}>
+        <div className={styles.container}>
           {userData !== null ? (
             <>
               <Link to="/dashboard" className={styles.link}>
@@ -43,8 +43,8 @@ export class Header extends Component {
               {/* <Nav /> */}
             </>
           )}
-        </header>
-      </div>
+        </div>
+      </header>
     );
   }
 }

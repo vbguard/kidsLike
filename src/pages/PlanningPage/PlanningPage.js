@@ -120,6 +120,8 @@ class PlanningPage extends Component {
           })
           .map(el => el.date);
 
+        window.location.href = '/dashboard/';
+
         return { taskId, selectedDays: refactoredSelectedDays };
       })
     };
