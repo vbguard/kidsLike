@@ -119,6 +119,7 @@ class PlanningPage extends Component {
     api
       .fetchCreatePlanningWeek(data)
       .then(res => {
+        console.log('result', res);
         if (res.status === 200) {
           notyf.createPlanningWeek();
           console.log('res.data', res.data);
@@ -126,8 +127,8 @@ class PlanningPage extends Component {
         }
       })
       .catch(err => {
-        if (err.response.status) {
-          notyf.errorNotyf(err.response.status);
+        if (err.response) {
+          notyf.errorNotyf(err.response);
         }
         console.log('err', err);
       });
