@@ -20,8 +20,8 @@ const passwordError = () => {
   notyf.error('Неправильно введений пароль. Спробуйте ще раз!');
 };
 
-const errorNotyf = status => {
-  switch (status) {
+const errorNotyf = data => {
+  switch (data.status) {
     case 200:
       return notyf.success('Ласкаво просимо, насолоджуйтесь додатком!');
     case 201:
@@ -38,7 +38,7 @@ const errorNotyf = status => {
     case 503:
       return notyf.error('Проблеми із сервером, будьласка спробуйте пізніше!');
     default:
-      break;
+      return notyf.error('Упс');
   }
 };
 

@@ -6,6 +6,7 @@ import Ol from '../../assets/images/contacts/O.jpg';
 import El from '../../assets/images/contacts/Elena.jpg';
 import Lar from '../../assets/images/contacts/IMG_5858.JPG';
 import Eugenia from '../../assets/images/contacts/Eugenia.jpg';
+import KO from '../../assets/images/contacts/Konstantin.jpg';
 
 const ContactsPage = () => (
   <>
@@ -14,6 +15,15 @@ const ContactsPage = () => (
       <p className={css.text}>Завжди готовi до нових викликiв</p>
       <ul className={css.list}>
         {/* 1 */}
+        <li className={css.contact}>
+          <img src={Eugenia} alt="avatar" className={css.img} />
+          <a href="*" className={css.contact_title}>
+            Євгенія Гіщак
+          </a>
+          <p className={css.contact_job}>Progect Manager</p>
+          <p className={css.contact_info}>Value Proposition Canva, UX Backlog,UI Mockup,Team building</p>
+        </li>
+        {/* 2 */}
         <li className={css.contact}>
           <img src={Vl} alt="avatar" className={css.img} />
           <a href="https://web.telegram.org/#/im?p=@VladimirZaicev" className={css.contact_title}>
@@ -27,7 +37,7 @@ const ContactsPage = () => (
             </span>
           </p>
         </li>
-        {/* 2 */}
+        {/* 3 */}
         <li className={css.contact}>
           <img src={Ol} alt="avatar" className={css.img} />
           <a href="*" className={css.contact_title}>
@@ -36,7 +46,7 @@ const ContactsPage = () => (
           <p className={css.contact_job}>Full Stack Developer</p>
           <p className={css.contact_info}>Щодня вдосконалюватися, не зупинятися на досягнутому</p>
         </li>
-        {/* 3 */}
+        {/* 4 */}
         <li className={css.contact}>
           <img src={El} alt="avatar" className={css.img} />
           <a href="*" className={css.contact_title}>
@@ -45,7 +55,7 @@ const ContactsPage = () => (
           <p className={css.contact_job}>Full Stack Developer</p>
           <p className={css.contact_info}>Kреативність завжди заохочується</p>
         </li>
-        {/* 4 */}
+        {/* 5 */}
         <li className={css.contact}>
           <img src={Lar} alt="avatar" className={css.img} />
           <a href="*" className={css.contact_title}>
@@ -54,41 +64,14 @@ const ContactsPage = () => (
           <p className={css.contact_job}>Front-end Developer</p>
           <p className={css.contact_info}>Простота - запорука вдалого коду</p>
         </li>
-        {/* 5 */}
-        <li className={css.contact}>
-          <img src={Eugenia} alt="avatar" className={css.img} />
-          <a href="*" className={css.contact_title}>
-            Євгенія Гіщак
-          </a>
-          <p className={css.contact_job}>Progect Manager</p>
-          <p className={css.contact_info}>Value Proposition Canva, UX Backlog,UI Mockup,Team building</p>
-        </li>
         {/* 6 */}
         <li className={css.contact}>
-          <img src="" alt="avatar" className={css.img} />
-          <a href="*" className={css.contact_title}>
-            Имя разработчика
-          </a>
-          <p className={css.contact_job}>Full Stack Developer</p>
-          <p className={css.contact_info}>Информация разработчика</p>
-        </li>
-        {/* 7 */}
-        <li className={css.contact}>
-          <img src="" alt="avatar" className={css.img} />
+          <img src={KO} alt="avatar" className={css.img} />
           <a href="*" className={css.contact_title}>
             Костянтин Черних
           </a>
           <p className={css.contact_job}>Full Stack Developer</p>
           <p className={css.contact_info}>Per aspera ad astra</p>
-        </li>
-        {/* 8 */}
-        <li className={css.contact}>
-          <img src="" alt="avatar" className={css.img} />
-          <a href="*" className={css.contact_title}>
-            Имя разработчика
-          </a>
-          <p className={css.contact_job}>Full Stack Developer</p>
-          <p className={css.contact_info}>Информация разработчика</p>
         </li>
       </ul>
     </div>

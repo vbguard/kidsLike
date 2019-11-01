@@ -54,13 +54,16 @@ class Login extends Component {
               onChange={this.changeHandler}
               required
             />
+            <Link to="/password" className={css.passText}>
+              Забули пароль?
+            </Link>
             <button type="submit" className={css.btn}>
               Вхід
             </button>
+            <Link to="/register" className={css.regText}>
+              Не маєш акаунту? Зареєструйся
+            </Link>
           </form>
-          <Link to="/register" className={css.regText}>
-            Не маєш акаунту? Зареєструйся
-          </Link>
         </div>
         <Footer />
       </>

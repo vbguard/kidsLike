@@ -18,34 +18,33 @@ export const login = (credentials, history) => dispatch => {
     .then(response => {
       const token = JSON.stringify(response.data.user.token);
       setToken(token);
-      notyf.errorNotyf(response.status);
+      notyf.errorNotyf(response);
       history.push('/dashboard');
       dispatch(loginSuccess(response.data.user));
     })
     .catch(error => {
-      if (error.response.status) {
-        notyf.errorNotyf(error.response.status);
-      }
+      notyf.errorNotyf(error.response);
+
       dispatch(loginError(error));
     });
 };
 
 export const register = (credentials, history) => dispatch => {
   dispatch(registerStart());
+
   api
     .fetchRegister(credentials)
     .then(response => {
       const token = JSON.stringify(response.data.user.token);
 
       setToken(token);
-      notyf.errorNotyf(response.status);
+      notyf.errorNotyf(response);
       history.push('/planning');
       dispatch(registerSuccess({ ...response.data.user }));
     })
     .catch(error => {
-      if (error.response.status) {
-        notyf.errorNotyf(error.response.status);
-      }
+      notyf.errorNotyf(error.response);
+
       dispatch(registerError(error));
     });
 };
@@ -60,9 +59,8 @@ export const logOut = () => dispatch => {
       }
     })
     .catch(error => {
-      if (error.response.status) {
-        notyf.errorNotyf(error.response.status);
-      }
+      notyf.errorNotyf(error.response);
+
       dispatch(registerError(error));
     });
 };
@@ -76,14 +74,13 @@ export const initUser = history => dispatch => {
         const token = JSON.stringify(response.data.token);
 
         setToken(token);
-        notyf.errorNotyf(response.status);
+        notyf.errorNotyf(response);
         history.push('/dashboard');
         dispatch(loginSuccess(response.data));
       })
       .catch(error => {
-        if (error.response.status) {
-          notyf.errorNotyf(error.response.status);
-        }
+        notyf.errorNotyf(error.response);
+
         dispatch(loginError(error));
       });
   }
