@@ -130,7 +130,7 @@ class PlanningPage extends Component {
         console.log('result', res);
         if (res.status === 200) {
           notyf.createPlanningWeek();
-          console.log('res.data', res.data);
+          // console.log('res.data', res.data);
           this.props.history.push('/dashboard');
         }
       })
@@ -138,7 +138,7 @@ class PlanningPage extends Component {
         if (err.response) {
           notyf.errorNotyf(err.response);
         }
-        console.log('err', err);
+        // console.log('err', err);
       });
   };
 
