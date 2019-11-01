@@ -7,7 +7,8 @@ import DaysNavContainer from '../../components/DaysNav/DaysNavConteiner';
 import DashboardContainer from '../../components/DashboardConteiner/DashboardConteiner';
 import operations from '../../redux/dashboard/operations';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
-import { screenWidth, daysOfWeek } from '../../utils/var';
+import { daysOfWeek } from '../../utils/var';
+import useScreenWidth from '../../utils/utils';
 import styles from './DashboardPage.module.css';
 
 const DashboardPage = ({ tasksFetch, activeDay, currentPoints, allPoints }) => {
@@ -17,6 +18,7 @@ const DashboardPage = ({ tasksFetch, activeDay, currentPoints, allPoints }) => {
     history.push(`/dashboard/${daysOfWeek[activeDay - 1].pathname}`);
   }, []);
 
+  const screenWidth = useScreenWidth();
   return (
     <>
       <div className={styles.wrapper}>
