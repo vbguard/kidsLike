@@ -13,7 +13,7 @@ const Prizes = ({ isPlanning }) => (
       <p className={styles.text}>15 балів</p>
       <img src={kinder} width="24" height="33" alt="kinder" className={styles.image} />
     </div>
-    <div className={styles.prize_2}>
+    <div className={styles.prize_1}>
       <Icon icon="GiftBox" className={styles.icon} />
       <p className={styles.text}>25 балів</p>
       <img src={macdonalds} width="31" height="24" alt="macdonalds" className={styles.image} />

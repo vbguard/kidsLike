@@ -8,7 +8,8 @@ import ProgressBar from '../ProgressBar/ProgressBar';
 import Prizes from '../Prizes/Prizes';
 import Footer from '../Footer/Footer';
 import TaskList from '../TaskList/TaskList';
-import { screenWidth, weekRange, getDay } from '../../utils/var';
+import { weekRange, getDay } from '../../utils/var';
+import useScreenWidth from '../../utils/utils';
 import dashboard from '../../redux/dashboard';
 
 import styles from './DashboardConteiner.module.css';
@@ -17,7 +18,7 @@ moment.locale('uk');
 
 const DashboardConteiner = ({ tasks, activeDay, allPoints, currentPoints }) => {
   const dayTitle = getDay(activeDay);
-
+  const screenWidth = useScreenWidth();
   return (
     <div className={styles.conteiner}>
       <WeekRange weekRange={weekRange} />

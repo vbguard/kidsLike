@@ -11,14 +11,15 @@ import AddTaskModal from '../../components/AddTaskModal/AddTaskModal';
 import Footer from '../../components/Footer/Footer';
 import TaskList from '../../components/TaskList/TaskList';
 import * as planningOperations from '../../redux/planning/planningOperations';
-import { screenWidth, currentWeekRange, nextWeekRange } from '../../utils/var';
-
+import { currentWeekRange, nextWeekRange } from '../../utils/var';
+// import useScreenWidth from '../../utils/utils';
 import api from '../../utils/api';
 import styles from './PlanningPage.module.css';
 moment.locale('uk');
 
 class PlanningPage extends Component {
   state = {
+    screenWidth: 0,
     openModal: false,
     planning: []
   };
@@ -26,7 +27,14 @@ class PlanningPage extends Component {
   componentDidMount() {
     const { fetchTasks } = this.props;
     fetchTasks();
+    window.addEventListener('resize', this.updateWidth);
   }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWidth);
+  }
+
+  updateWidth = () => this.setState({ screenWidth: window.innerWidth });
 
   handleOpenModal = () => {
     this.setState({ openModal: true });
@@ -53,32 +61,32 @@ class PlanningPage extends Component {
         .format('DD-MM-YYYY'),
       tue: moment()
         .startOf('week')
-        .add(1, 'd')
+        .add(1, 'days')
         .format('DD-MM-YYYY'),
       wed: moment()
         .startOf('week')
-        .add(2, 'd')
+        .add(2, 'days')
         .format('DD-MM-YYYY'),
       thu: moment()
         .startOf('week')
-        .add(3, 'd')
+        .add(3, 'days')
         .format('DD-MM-YYYY'),
       fri: moment()
         .startOf('week')
-        .add(4, 'd')
+        .add(4, 'days')
         .format('DD-MM-YYYY'),
       sat: moment()
         .startOf('week')
-        .add(5, 'd')
+        .add(5, 'days')
         .format('DD-MM-YYYY'),
       sun: moment()
         .startOf('week')
-        .add(6, 'd')
+        .add(6, 'days')
         .format('DD-MM-YYYY')
     };
 
     const planningDay = [];
-
+    console.log('daySelected', data.daySelected);
     // eslint-disable-next-line guard-for-in
     // eslint-disable-next-line no-restricted-syntax
     for (const day in data.daySelected) {
@@ -131,7 +139,7 @@ class PlanningPage extends Component {
   render() {
     const { openModal, planning } = this.state;
     const { tasks, allPoints, activeDay } = this.props;
-
+    const { screenWidth } = this.state;
     return (
       <div className={styles.wrapper}>
         <WeekSelected activeDay={activeDay} currentWeekRange={currentWeekRange} nextWeekRange={nextWeekRange} />
