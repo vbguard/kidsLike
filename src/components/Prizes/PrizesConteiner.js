@@ -1,15 +1,16 @@
 import React from 'react';
-//  import PropTypes from 'prop-types';
-import styles from './Prizes.module.css';
+import useScreenWidth from '../../utils/utils';
 import Prizes from './Prizes';
+import styles from './Prizes.module.css';
 
-const screenWidth = window.innerWidth;
-
-const PrizesConteiner = () => (
-  <div>
-    <h3 className={styles.title}>Призи</h3>
-    {screenWidth >= 1280 && <Prizes />}
-  </div>
-);
+const PrizesConteiner = () => {
+  const screenWidth = useScreenWidth();
+  return (
+    <div>
+      <h3 className={styles.title}>Призи</h3>
+      {screenWidth >= 1280 && <Prizes />}
+    </div>
+  );
+};
 
 export default PrizesConteiner;

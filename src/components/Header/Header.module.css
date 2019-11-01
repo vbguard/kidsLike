@@ -1,11 +1,9 @@
 .container {
   height: 64px;
   margin: 0 auto;
-  /* padding-left: 21px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* box-shadow: 2px 3.5px 8px 0 rgba(29, 29, 27, 0.1); */
   background-color: var(--white);
 }
 
@@ -25,13 +23,13 @@
   text-align: left;
   color: var(--black);
   text-decoration: none;
+  padding-left: 20px;
 }
 
 .burger {
   width: 50px;
   height: 20px;
   display: block;
-  /* margin-top: 36px; */
   fill: #18191d;
 }
 .logOutLink {
@@ -59,7 +57,7 @@
 
   .link {
     display: flex;
-    /* width: 90px; */
+    padding-left: 0;
     width: 170px;
     font-size: 16px;
     height: 60px;
@@ -104,7 +102,6 @@
 
   .link {
     font-size: 18px;
-    /* width: 100px; */
     width: 480px;
   }
 

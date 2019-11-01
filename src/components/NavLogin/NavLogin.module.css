@@ -7,7 +7,7 @@
 
 .container {
   display: flex;
-  width: 70px;
+  width: 100px;
   align-items: center;
   justify-content: space-between;
 }
@@ -135,7 +135,7 @@
 @media screen and (min-width: 768px) {
   .container {
     justify-content: space-between;
-    width: 80px;
+    width: 90px;
     align-items: center;
     margin-left: 0;
   }
