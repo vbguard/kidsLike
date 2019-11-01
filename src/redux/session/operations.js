@@ -23,7 +23,9 @@ export const login = (credentials, history) => dispatch => {
       dispatch(loginSuccess(response.data.user));
     })
     .catch(error => {
-      notyf.errorNotyf(error.response.status);
+      if (error.response.status) {
+        notyf.errorNotyf(error.response.status);
+      }
       dispatch(loginError(error));
     });
 };
@@ -41,7 +43,9 @@ export const register = (credentials, history) => dispatch => {
       dispatch(registerSuccess({ ...response.data.user }));
     })
     .catch(error => {
-      notyf.errorNotyf(error.response.status);
+      if (error.response.status) {
+        notyf.errorNotyf(error.response.status);
+      }
       dispatch(registerError(error));
     });
 };
@@ -56,7 +60,9 @@ export const logOut = () => dispatch => {
       }
     })
     .catch(error => {
-      notyf.errorNotyf(error.response.status);
+      if (error.response.status) {
+        notyf.errorNotyf(error.response.status);
+      }
       dispatch(registerError(error));
     });
 };
@@ -75,7 +81,9 @@ export const initUser = history => dispatch => {
         dispatch(loginSuccess(response.data));
       })
       .catch(error => {
-        notyf.errorNotyf(error.response.status);
+        if (error.response.status) {
+          notyf.errorNotyf(error.response.status);
+        }
         dispatch(loginError(error));
       });
   }
