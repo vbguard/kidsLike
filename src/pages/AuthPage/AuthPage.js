@@ -5,7 +5,7 @@ import Footer from '../../components/Footer/Footer';
 
 const AuthPage = () => (
   <>
-    <div className={css.container}>
+    <main className={css.container}>
       <h2 className={css.title}>
         Виконуй завдання <br /> - отримай класні призи!
       </h2>
@@ -15,7 +15,7 @@ const AuthPage = () => (
       <Link to="/register" className={css.regText}>
         Реєстрація
       </Link>
-    </div>
+    </main>
     <Footer />
   </>
 );

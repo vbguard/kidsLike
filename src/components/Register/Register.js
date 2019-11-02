@@ -32,7 +32,7 @@ class Register extends Component {
     const { nickname, email, password, passwordConfirmation, code } = this.state;
     return (
       <>
-        <div className={css.container}>
+        <main className={css.container}>
           <h2 className={css.title}>
             Реєстрація
             <div className={css.photoContainer}>
@@ -105,11 +105,11 @@ class Register extends Component {
             <button type="submit" className={css.btn}>
               Зареєструватися
             </button>
-            <Link to="/login" className={css.regText}>
-              Вже з нами? Увійти
-            </Link>
           </form>
-        </div>
+          <Link to="/login" className={css.regText}>
+            Вже з нами? Увійти
+          </Link>
+        </main>
         <Footer />
       </>
     );

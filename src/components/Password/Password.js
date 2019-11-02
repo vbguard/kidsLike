@@ -32,7 +32,7 @@ class Register extends Component {
     const { email, password, passwordConfirmation, code } = this.state;
     return (
       <>
-        <div className={css.container}>
+        <main className={css.container}>
           <h2 className={css.title}>Заміна пароля</h2>
           <form className={css.form} onSubmit={this.submitHandler}>
             <label htmlFor="email" className={css.label}>
@@ -86,11 +86,11 @@ class Register extends Component {
             <button type="submit" className={css.btn}>
               Замінити
             </button>
-            <Link to="/register" className={css.regText}>
-              Зареєструватися
-            </Link>
           </form>
-        </div>
+          <Link to="/register" className={css.regText}>
+            Зареєструватися
+          </Link>
+        </main>
         <Footer />
       </>
     );
