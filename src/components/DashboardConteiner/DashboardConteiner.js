@@ -8,6 +8,7 @@ import ProgressBar from '../ProgressBar/ProgressBar';
 import Prizes from '../Prizes/Prizes';
 import Footer from '../Footer/Footer';
 import TaskList from '../TaskList/TaskList';
+import Message from '../Message/Message';
 import { weekRange, getDay } from '../../utils/var';
 import useScreenWidth from '../../utils/utils';
 import dashboard from '../../redux/dashboard';
@@ -24,23 +25,7 @@ const DashboardConteiner = ({ tasks, activeDay, allPoints, currentPoints }) => {
       <WeekRange weekRange={weekRange} />
       <CurrentDayTitle dayTitle={dayTitle} />
       {screenWidth >= 768 && <ProgressBar currentPoints={currentPoints} allPoints={allPoints} />}
-      {tasks ? (
-        <TaskList tasks={tasks} />
-      ) : (
-        <p
-          style={{
-            flex: '1 0',
-            textAlign: 'center',
-            // justifyContent: 'center',
-            // alignItems: 'center',
-            padding: 0,
-            marginTop: '10%',
-            marginBottom: '26%'
-          }}
-        >
-          На цей день немає завдань {'🙁'}
-        </p>
-      )}
+      {tasks ? <TaskList tasks={tasks} /> : <Message />}
       {screenWidth < 1280 && (
         <>
           <Prizes />
