@@ -11,7 +11,6 @@
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  margin-left: 27px;
   padding-top: 27px;
   width: 320px;
   margin: 0 auto;
@@ -75,7 +74,7 @@
 }
 
 .regText {
-  height: 13px;
+  height: 53px;
   font-family: Montserrat;
   font-size: 12px;
   font-weight: 500;
@@ -91,7 +90,23 @@
   transition: color 0.3s ease-out 0.1s;
 }
 
+.passText {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: end;
+  color: var(--blue-grey);
+  display: inline;
+  transition: color 0.3s ease-out 0.1s;
+}
+
 .regText:hover {
+  color: var(--macaroni-and-cheese);
+}
+
+.passText:hover {
   color: var(--macaroni-and-cheese);
 }
 

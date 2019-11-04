@@ -42,7 +42,7 @@ const errorNotyf = status => {
     case 503:
       return notyf.error('Проблеми із сервером, будьласка спробуйте пізніше!');
     default:
-      break;
+      return notyf.error('Упс');
   }
 };
 
