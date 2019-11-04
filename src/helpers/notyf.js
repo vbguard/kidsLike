@@ -20,6 +20,10 @@ const passwordError = () => {
   notyf.error('Неправильно введений пароль. Спробуйте ще раз!');
 };
 
+const toggleError = () => {
+  notyf.error('Нажаль ви не маєте можливості змінювати статус завдання, сбробуйте у актуальний день до 20 години');
+};
+
 const errorNotyf = status => {
   switch (status) {
     case 200:
@@ -42,4 +46,4 @@ const errorNotyf = status => {
   }
 };
 
-export default { errorNotyf, passwordError, createPlanningWeek };
+export default { errorNotyf, passwordError, createPlanningWeek, toggleError };

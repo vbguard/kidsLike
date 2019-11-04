@@ -15,7 +15,8 @@ const initialState = {
   data: [],
   loading: false,
   error: null,
-  activeDay
+  activeDay,
+  currentDay: activeDay
 };
 
 export const dashboardReducer = (state = initialState, { type, payload }) => {
