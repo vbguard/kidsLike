@@ -144,9 +144,7 @@ class PlanningPage extends Component {
         const refactoredSelectedDays = selectedDays
           .filter(day => {
             const keys = Object.keys(day);
-            console.log(keys);
             if (day[keys[1]]);
-            console.log(keys[1]);
             return day[keys[1]];
           })
           .map(el => el.date);
