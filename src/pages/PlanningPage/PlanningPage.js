@@ -115,7 +115,7 @@ class PlanningPage extends Component {
         passedTimeRange = true;
       }
 
-      if (isDiff && day !== 'sun' && passedTimeRange) {
+      if (isDiff && passedTimeRange) {
         planningDay.push({
           date: dayDate[day],
           [day]: data.daySelected[day]
@@ -144,7 +144,9 @@ class PlanningPage extends Component {
         const refactoredSelectedDays = selectedDays
           .filter(day => {
             const keys = Object.keys(day);
+            console.log(keys);
             if (day[keys[1]]);
+            console.log(keys[1]);
             return day[keys[1]];
           })
           .map(el => el.date);
@@ -176,6 +178,7 @@ class PlanningPage extends Component {
     const { openModal, planning } = this.state;
     const { tasks, allPoints, activeDay } = this.props;
     const { screenWidth } = this.state;
+
     return (
       <div className={styles.wrapper}>
         <WeekSelected activeDay={activeDay} currentWeekRange={currentWeekRange} nextWeekRange={nextWeekRange} />
