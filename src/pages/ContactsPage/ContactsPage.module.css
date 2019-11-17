@@ -141,6 +141,7 @@
 
   .list {
     width: 1000px;
+    justify-content: unset;
   }
 
   .contact {

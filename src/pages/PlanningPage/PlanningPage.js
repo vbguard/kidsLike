@@ -1,5 +1,6 @@
 /* eslint-disable guard-for-in */
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import { connect } from 'react-redux';
@@ -87,13 +88,41 @@ class PlanningPage extends Component {
 
     const planningDay = [];
     console.log('daySelected', data.daySelected);
+
     // eslint-disable-next-line guard-for-in
     // eslint-disable-next-line no-restricted-syntax
     for (const day in data.daySelected) {
-      planningDay.push({
-        date: dayDate[day],
-        [day]: data.daySelected[day]
-      });
+      const today = moment().format('DD-MM-YYYY');
+
+      // console.log(today);
+      // console.log(dayDate[day]);
+
+      const isDiff = moment(today).isSameOrBefore(dayDate[day]);
+
+      const currTime = moment();
+      const beforeTime = moment().startOf('day');
+      const afterTime = moment()
+        .startOf('day')
+        .add(20, 'h');
+
+      const sameDay = moment(dayDate[day]).isSame(today);
+      // console.log('same', sameDay);
+      const timeRange = currTime.isBetween(beforeTime, afterTime);
+      // console.log('timeRange', timeRange);
+
+      let passedTimeRange = false;
+      if ((sameDay && timeRange) || !sameDay) {
+        passedTimeRange = true;
+      }
+
+      if (isDiff && passedTimeRange) {
+        planningDay.push({
+          date: dayDate[day],
+          [day]: data.daySelected[day]
+        });
+      }
+
+      console.log(planningDay);
     }
 
     this.setState(prevState => {
@@ -140,12 +169,14 @@ class PlanningPage extends Component {
         }
         // console.log('err', err);
       });
+    notyf.createPlanningTask();
   };
 
   render() {
     const { openModal, planning } = this.state;
     const { tasks, allPoints, activeDay } = this.props;
     const { screenWidth } = this.state;
+
     return (
       <div className={styles.wrapper}>
         <WeekSelected activeDay={activeDay} currentWeekRange={currentWeekRange} nextWeekRange={nextWeekRange} />
@@ -206,7 +237,9 @@ const mapDispatchToProps = dispatch => ({
   onSubmit: task => dispatch(planningOperations.addCustomTask(task))
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PlanningPage);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(PlanningPage)
+);

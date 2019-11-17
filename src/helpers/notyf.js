@@ -20,6 +20,9 @@ const passwordError = () => {
   notyf.error('Неправильно введений пароль. Спробуйте ще раз!');
 };
 
+const createPlanningTask = () => {
+  notyf.error('Неможливо запланувати мінулі дні');
+};
 const errorNotyf = data => {
   switch (data.status) {
     case 200:
@@ -42,4 +45,4 @@ const errorNotyf = data => {
   }
 };
 
-export default { errorNotyf, passwordError, createPlanningWeek };
+export default { errorNotyf, passwordError, createPlanningWeek, createPlanningTask };

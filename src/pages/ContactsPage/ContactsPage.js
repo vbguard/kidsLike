@@ -21,7 +21,7 @@ const ContactsPage = () => (
             Євгенія Гіщак
           </a>
           <p className={css.contact_job}>Progect Manager</p>
-          <p className={css.contact_info}>Value Proposition Canva, UX Backlog,UI Mockup,Team building</p>
+          <p className={css.contact_info}>Всі цілі досяжні, якщо є мотівація!</p>
         </li>
         {/* 2 */}
         <li className={css.contact}>
